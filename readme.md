@@ -1,19 +1,52 @@
-# Vite Landing Template
+# Vite Landing Template / Vite Landing Шаблон
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS">
+  <img src="https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white" alt="Handlebars">
+</div>
+
+---
+
+## 🇺🇸 English
 
 A modern, fast, and efficient landing page builder built with Vite, TypeScript, SCSS, and Handlebars templates. Perfect for creating responsive landing pages with hot reload and optimized builds.
 
-## ✨ Features
+### ✨ Features
 
-- ⚡ **Vite 5** - Lightning-fast build tool with HMR
+- ⚡ **Vite 7** - Lightning-fast build tool with HMR
 - 📝 **TypeScript 5.4** - Type-safe JavaScript development
 - 🎨 **SCSS** - Advanced CSS preprocessing with variables and mixins
 - 📄 **Handlebars** - Template engine for reusable components
 - 🔧 **ESLint + Prettier** - Code quality and formatting
 - 📱 **Responsive Design** - Mobile-first approach with custom breakpoints
-- 🎯 **Swiper 11** - Modern slider component included
+- 🎯 **Swiper 12** - Modern slider component included
 - 🚀 **Optimized Build** - Production-ready with code splitting and minification
+- 🔤 **Space Mono Font** - Modern monospace typography
+- 🛡️ **No-Index Setup** - SEO protection with robots.txt and meta tags
 
-## 📁 Project Structure
+### 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd vite-landing-template
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### 📁 Project Structure
 
 ```
 vite-landing-template/
@@ -44,314 +77,241 @@ vite-landing-template/
 │       ├── header.html         # Header template
 │       └── footer.html         # Footer template
 ├── public/                     # Static assets
+│   ├── fonts/                  # Space Mono font files
+│   └── robots.txt              # SEO protection
 ├── dist/                       # Production build output
-├── .eslintrc.js               # ESLint configuration
+├── eslint.config.js           # ESLint configuration
 ├── .prettierrc                # Prettier configuration
 ├── .gitignore                 # Git ignore rules
-├── package.json               # Project dependencies and scripts
-├── vite.config.js             # Vite configuration
+├── package.json               # Dependencies and scripts
 ├── tsconfig.json              # TypeScript configuration
-└── getHTMLFileNames.js        # Auto HTML file detection
+├── vite.config.js             # Vite configuration
+└── CHANGELOG.md               # Project changelog
 ```
 
-## 🚀 Quick Start
+### 🛠️ Available Scripts
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm 9+ or yarn 1.22+
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd vite-landing-template
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server:**
-   ```bash
-  npm run dev
-```
-
-   The server will start at `http://localhost:3000` with hot reload enabled.
-
-## 📋 Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with HMR |
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server with hot reload |
 | `npm run build` | Build for production |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint to check code quality |
-| `npm run lint:fix` | Run ESLint and auto-fix issues |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+| `npm run lint:fix` | Fix ESLint errors |
 | `npm run format` | Format code with Prettier |
 | `npm run type-check` | Run TypeScript type checking |
 
-## 📝 Creating New Pages
-
-1. **Create an HTML file** in the `src/` directory (e.g., `about.html`)
-2. **The file will be automatically** included in the build process
-3. **Use Handlebars partials** for consistent layout:
-
-```html
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - {{siteName}}</title>
-  <link rel="stylesheet" href="/styles/main.scss">
-  <script type="module" src="/js/main.js" defer></script>
-</head>
-<body>
-  {{> header }}
-  <main>
-    <h1>About Us</h1>
-    <p>Welcome to our landing page!</p>
-  </main>
-  {{> footer }}
-</body>
-</html>
-```
-
-## 🎨 Working with Styles
-
-### SCSS Architecture
-
-The project uses a modular SCSS architecture:
-
-- **Variables** (`_variables.scss`) - Colors, fonts, spacing, breakpoints
-- **Mixins** (`_mixins.scss`) - Reusable style patterns
-- **Functions** (`_functions.scss`) - SCSS utility functions
-- **Adaptive** (`_adaptive.scss`) - Responsive design helpers
-- **Typography** (`_typography.scss`) - Text styles and hierarchy
-- **Forms** (`_forms.scss`) - Form element styling
-- **Helpers** (`_helpers.scss`) - Utility classes
-
-### Responsive Breakpoints
-
-Pre-configured breakpoints for responsive design:
-
-```scss
-$breakpoints: (
-  'xs-phone': 320px,
-  'phone': 480px,
-  'tablet': 768px,
-  'tablet_x': 860px,
-  'desktop': 1024px,
-  'widescreen': 1200px
-);
-```
-
-Usage example:
-
-```scss
-.my-component {
-  padding: 1rem;
-  
-  @include media('>=tablet') {
-    padding: 2rem;
-  }
-  
-  @include media('>=desktop') {
-    padding: 3rem;
-  }
-}
-```
-
-## 📄 Handlebars Templates
-
-### Creating Components
-
-1. **Create a partial** in `src/templates/` (e.g., `navigation.html`)
-2. **Use in your HTML:**
-
-```html
-{{> navigation }}
-```
-
-### Template Context
-
-Global context variables are available in all templates:
-
-```javascript
-// Available in all templates
-{{siteName}}        // "Vite Landing Template"
-{{currentYear}}     // Current year (e.g., 2024)
-```
-
-### Custom Context
-
-Add custom data in `vite.config.js`:
-
-```javascript
-handlebars({ 
-  partialDirectory: resolve(__dirname, 'src/templates'),
-  context: {
-    siteName: 'My Awesome Site',
-    currentYear: new Date().getFullYear(),
-    // Add your custom data here
-  }
-})
-```
-
-## 🔧 JavaScript Development
-
-### Main Entry Point
-
-The main JavaScript file (`src/js/main.js`) is where you initialize your application:
-
-```javascript
-// Import styles
-import '../styles/main.scss';
-
-// Your main JavaScript code here
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Landing page loaded successfully!');
-  
-  // Initialize any components or functionality here
-  initializeApp();
-});
-
-function initializeApp() {
-  // Add your initialization logic here
-  console.log('App initialized');
-}
-```
-
-### Using Swiper
-
-Swiper is included for creating sliders:
-
-```javascript
-import { Swiper, Navigation, Pagination } from 'swiper';
-
-// Initialize Swiper
-const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-});
-```
-
-## 📦 Included Libraries
-
-- **Swiper 11.1.4** - Modern touch slider
-- **Normalize.css** - CSS reset for cross-browser consistency
-- **include-media** - SCSS mixins for media queries
-
-## ⚙️ Configuration
-
-### Vite Configuration
-
-Enhanced Vite config with:
-
-- **Code splitting** - Vendor chunks for better caching
-- **Source maps** - For debugging in development
-- **Terser minification** - Optimized production builds
-- **Auto-open browser** - Development server opens automatically
-- **Host access** - Access from other devices on network
-
-### TypeScript Configuration
-
-Strict TypeScript setup with:
-
-- **ES2020 target** - Modern JavaScript features
-- **Strict mode** - Enhanced type checking
-- **DOM types** - Browser API support
-- **Unused variable detection** - Clean code enforcement
-
-### ESLint Configuration
-
-Comprehensive linting with:
-
-- **TypeScript support** - Type-aware linting
-- **Import organization** - Automatic import sorting
-- **Code quality rules** - Best practices enforcement
-- **Prettier integration** - No conflicts with formatting
-
-## 🚀 Deployment
-
-### Production Build
-
-```bash
-npm run build
-```
-
-This creates an optimized build in the `dist/` folder with:
-
-- Minified CSS and JavaScript
-- Optimized images
-- Code splitting
-- Source maps (optional)
-
-### GitHub Pages
-
-For GitHub Pages deployment, update the `base` in `vite.config.js`:
-
-```javascript
-export default defineConfig({
-  base: '/your-repo-name/', // For GitHub Pages
-  // or
-  base: '/', // For custom domain
-});
-```
-
-### Netlify/Vercel
-
-The build output is ready for deployment on any static hosting service.
-
-## 🔧 Development Tips
-
-### Code Quality
-
-- Run `npm run lint` before committing
-- Use `npm run format` to format code
-- Enable your editor's ESLint and Prettier extensions
-
-### Performance
-
-- Images are automatically optimized by Vite
-- CSS is automatically purged in production
-- JavaScript is tree-shaken and minified
-
-### Browser Support
-
-- Modern browsers (ES2020+)
-- IE11+ with polyfills (if needed)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes and test them
-4. Run linting: `npm run lint`
-5. Commit your changes: `git commit -m 'Add amazing feature'`
-6. Push to the branch: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Vite](https://vitejs.dev/) - Next generation frontend tooling
-- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
-- [Swiper](https://swiperjs.com/) - Modern touch slider
-- [Handlebars](https://handlebarsjs.com/) - Template engine
+### 🎨 Customization
+
+#### Colors and Variables
+Edit `src/styles/base/_variables.scss` to customize:
+- Color palette
+- Typography settings
+- Breakpoints
+- Spacing values
+
+#### Fonts
+The template uses **Space Mono** font family. Font files are located in `public/fonts/` and configured in `src/styles/base/_fonts.scss`.
+
+#### Templates
+Modify Handlebars templates in `src/templates/` to customize:
+- Header structure
+- Footer content
+- Navigation menus
+
+### 🔧 Configuration
+
+#### Vite Configuration
+The build process is configured in `vite.config.js`:
+- Base path: `/vite-landing-template`
+- Handlebars context variables
+- Build optimization settings
+- Development server settings
+
+#### ESLint & Prettier
+- ESLint configuration: `eslint.config.js`
+- Prettier configuration: `.prettierrc`
+- Both tools work together for code quality
+
+### 📱 Responsive Design
+
+The template uses a mobile-first approach with custom breakpoints:
+- **xs-phone**: 320px
+- **phone**: 480px
+- **tablet**: 768px
+- **tablet_x**: 860px
+- **desktop**: 1024px
+- **widescreen**: 1200px
+
+### 🛡️ SEO Protection
+
+The template includes built-in SEO protection:
+- `robots.txt` - Blocks all search engine crawlers
+- Meta tags - Prevents indexing and caching
+- No-index directives for all major search engines
 
 ---
 
-**Made with ❤️ for fast and efficient landing page development**
+## 🇺🇦 Українська
+
+Сучасний, швидкий та ефективний конструктор лендінг-сторінок, створений з Vite, TypeScript, SCSS та шаблонами Handlebars. Ідеально підходить для створення адаптивних лендінг-сторінок з гарячою перезавантаженням та оптимізованими збірками.
+
+### ✨ Можливості
+
+- ⚡ **Vite 7** - Надзвичайно швидкий інструмент збірки з HMR
+- 📝 **TypeScript 5.4** - Розробка JavaScript з типізацією
+- 🎨 **SCSS** - Розширена попередня обробка CSS з змінними та міксинами
+- 📄 **Handlebars** - Движок шаблонів для багаторазових компонентів
+- 🔧 **ESLint + Prettier** - Якість коду та форматування
+- 📱 **Адаптивний дизайн** - Mobile-first підхід з власними breakpoints
+- 🎯 **Swiper 12** - Сучасний слайдер включений
+- 🚀 **Оптимізована збірка** - Готовий до продакшену з розділенням коду та мінімізацією
+- 🔤 **Шрифт Space Mono** - Сучасна моноширинна типографіка
+- 🛡️ **Налаштування No-Index** - Захист SEO з robots.txt та мета-тегами
+
+### 🚀 Швидкий старт
+
+```bash
+# Клонувати репозиторій
+git clone <repository-url>
+cd vite-landing-template
+
+# Встановити залежності
+npm install
+
+# Запустити сервер розробки
+npm run dev
+
+# Зібрати для продакшену
+npm run build
+
+# Попередній перегляд продакшен збірки
+npm run preview
+```
+
+### 📁 Структура проекту
+
+```
+vite-landing-template/
+├── src/
+│   ├── index.html              # Головна точка входу сторінки
+│   ├── js/
+│   │   └── main.js             # Головний JavaScript файл
+│   ├── styles/
+│   │   ├── main.scss           # Головна точка входу SCSS
+│   │   ├── base/               # Базові стилі та утиліти
+│   │   │   ├── _variables.scss # SCSS змінні
+│   │   │   ├── _mixins.scss    # Багаторазові міксини
+│   │   │   ├── _functions.scss # SCSS функції
+│   │   │   ├── _adaptive.scss  # Адаптивні міксини
+│   │   │   ├── _fonts.scss     # Імпорти шрифтів
+│   │   │   ├── _reset.scss     # CSS скидання
+│   │   │   ├── _typography.scss# Стилі типографіки
+│   │   │   ├── _forms.scss     # Стилі форм
+│   │   │   └── _helpers.scss   # Утилітарні класи
+│   │   ├── layout/             # Стилі макету
+│   │   │   ├── _header.scss    # Стилі заголовка
+│   │   │   ├── _footer.scss    # Стилі підвалу
+│   │   │   └── _common.scss    # Загальні стилі макету
+│   │   └── vendors/            # Сторонні стилі
+│   │       ├── _normalize.scss # Normalize.css
+│   │       └── _include-media.scss # Міксини медіа-запитів
+│   └── templates/              # Часткові шаблони Handlebars
+│       ├── header.html         # Шаблон заголовка
+│       └── footer.html         # Шаблон підвалу
+├── public/                     # Статичні ресурси
+│   ├── fonts/                  # Файли шрифту Space Mono
+│   └── robots.txt              # Захист SEO
+├── dist/                       # Вихід продакшен збірки
+├── eslint.config.js           # Конфігурація ESLint
+├── .prettierrc                # Конфігурація Prettier
+├── .gitignore                 # Правила ігнорування Git
+├── package.json               # Залежності та скрипти
+├── tsconfig.json              # Конфігурація TypeScript
+├── vite.config.js             # Конфігурація Vite
+└── CHANGELOG.md               # Журнал змін проекту
+```
+
+### 🛠️ Доступні скрипти
+
+| Скрипт | Опис |
+|--------|------|
+| `npm run dev` | Запустити сервер розробки з гарячою перезавантаженням |
+| `npm run build` | Зібрати для продакшену |
+| `npm run preview` | Попередній перегляд продакшен збірки |
+| `npm run lint` | Запустити ESLint |
+| `npm run lint:fix` | Виправити помилки ESLint |
+| `npm run format` | Форматувати код з Prettier |
+| `npm run type-check` | Запустити перевірку типів TypeScript |
+
+### 🎨 Налаштування
+
+#### Кольори та змінні
+Редагуйте `src/styles/base/_variables.scss` для налаштування:
+- Кольорової палітри
+- Налаштувань типографіки
+- Breakpoints
+- Значень відступів
+
+#### Шрифти
+Шаблон використовує сімейство шрифтів **Space Mono**. Файли шрифтів знаходяться в `public/fonts/` та налаштовані в `src/styles/base/_fonts.scss`.
+
+#### Шаблони
+Модифікуйте шаблони Handlebars в `src/templates/` для налаштування:
+- Структури заголовка
+- Вмісту підвалу
+- Навігаційних меню
+
+### 🔧 Конфігурація
+
+#### Конфігурація Vite
+Процес збірки налаштований в `vite.config.js`:
+- Базовий шлях: `/vite-landing-template`
+- Змінні контексту Handlebars
+- Налаштування оптимізації збірки
+- Налаштування сервера розробки
+
+#### ESLint & Prettier
+- Конфігурація ESLint: `eslint.config.js`
+- Конфігурація Prettier: `.prettierrc`
+- Обидва інструменти працюють разом для якості коду
+
+### 📱 Адаптивний дизайн
+
+Шаблон використовує mobile-first підхід з власними breakpoints:
+- **xs-phone**: 320px
+- **phone**: 480px
+- **tablet**: 768px
+- **tablet_x**: 860px
+- **desktop**: 1024px
+- **widescreen**: 1200px
+
+### 🛡️ Захист SEO
+
+Шаблон включає вбудований захист SEO:
+- `robots.txt` - Блокує всіх пошукових роботів
+- Мета-теги - Запобігає індексації та кешуванню
+- Директиви no-index для всіх основних пошукових систем
+
+---
+
+## 📄 License / Ліцензія
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Цей проект ліцензовано під ліцензією MIT - дивіться файл [LICENSE](LICENSE) для деталей.
+
+---
+
+## 🤝 Contributing / Внесок
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+Внески вітаються! Будь ласка, не соромтеся надсилати Pull Request.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ using Vite, TypeScript, and SCSS</p>
+  <p>Зроблено з ❤️ використовуючи Vite, TypeScript та SCSS</p>
+</div>
