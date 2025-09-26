@@ -61,6 +61,9 @@
 - chore: обновление проекта
   - Изменены файлы: .husky/pre-commit, .husky/prepare-commit-msg
 
+- chore: обновление проекта
+  - Изменены файлы: CHANGELOG-SYSTEM.md
+
 ### Изменено (Changed)
 - Update CHANGELOG.md
   - Изменены файлы: CHANGELOG.md
