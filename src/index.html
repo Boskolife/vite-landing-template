@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern landing page built with Vite, TypeScript, and SCSS">
+  <meta name="robots" content="noindex,nofollow">
+
+  <title>{{siteName}} - Modern Landing Page</title>
+  <link rel="stylesheet" href="/styles/main.scss">
+  <script type="module" src="/js/main.js" defer></script>
+</head>
+
+<body>
+  {{> header }}
+  <main>
+    <section class="hero">
+      <div class="hero__container">
+        <h1 class="hero__title">Welcome to {{siteName}}</h1>
+        <p class="hero__subtitle">A modern, fast, and efficient landing page builder</p>
+        <a href="#features" class="hero__cta">Get Started</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="features__container">
+        <h2 class="features__title">Features</h2>
+        <div class="features__grid">
+          <div class="feature">
+            <h3 class="feature__title">⚡ Fast Development</h3>
+            <p class="feature__description">Built with Vite for lightning-fast development and hot
+              reload.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">📝 TypeScript</h3>
+            <p class="feature__description">Type-safe JavaScript development for better code
+              quality.</p>
+          </div>
+          <div class="feature">
+            <h3 class="feature__title">🎨 SCSS</h3>
+            <p class="feature__description">Advanced CSS preprocessing with variables and mixins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  {{> footer }}
+</body>
+
+</html>

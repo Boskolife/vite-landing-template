@@ -1,0 +1,44 @@
+{
+  "name": "vite-landing-template",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modern landing page builder with Vite, TypeScript, SCSS, and Handlebars",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "changelog:check": "node .cursor/rules/changelog-check.js",
+    "pre-commit": "npm run lint && npm run build && npm run changelog:check"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.71.1",
+    "terser": "^5.44.0",
+    "typescript": "^5.4.5",
+    "vite": "^7.1.7",
+    "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "swiper": "^12.0.2"
+  },
+  "keywords": [
+    "vite",
+    "typescript",
+    "scss",
+    "handlebars",
+    "landing-page",
+    "template"
+  ],
+  "author": "",
+  "license": "MIT"
+}
