@@ -1,1 +1,1 @@
-npm run changelog:check
+npm run changelog:update && npm run changelog:check

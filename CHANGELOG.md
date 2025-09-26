@@ -58,6 +58,9 @@
 - chore: очистка финального тестового файла
   - Изменены файлы: CHANGELOG.md, test-final.js
 
+- chore: обновление проекта
+  - Изменены файлы: .husky/pre-commit, .husky/prepare-commit-msg
+
 ### Изменено (Changed)
 - Update CHANGELOG.md
   - Изменены файлы: CHANGELOG.md
