@@ -18,6 +18,9 @@
   - Изменены файлы: test-feature.js
 
 
+- feat: тестирование нового потока обновления ченджлога
+  - Изменены файлы: test-new-flow.txt
+
 ### Техническая часть (Technical)
 - chore: очистка тестовых файлов
   - Обновлены зависимости в package.json
@@ -36,6 +39,9 @@
 
 
 ### Изменено (Changed)
+- Update CHANGELOG.md
+  - Изменены файлы: CHANGELOG.md
+
 - Update CHANGELOG.md
   - Изменены файлы: CHANGELOG.md
 
