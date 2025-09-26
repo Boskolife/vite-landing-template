@@ -21,6 +21,9 @@ build/
 *.swp
 *.swo
 
+# Cursor rules (development tools)
+.cursor/rules/
+
 # OS
 .DS_Store
 Thumbs.db
