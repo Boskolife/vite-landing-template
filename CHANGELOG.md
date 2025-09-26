@@ -38,6 +38,9 @@
   - Изменены файлы: .husky/post-commit, .husky/pre-commit, CHANGELOG.md, package-lock.json, package.json
 
 
+- chore: очистка тестового файла для нового потока
+  - Изменены файлы: CHANGELOG.md, test-new-flow.txt
+
 ### Изменено (Changed)
 - Update CHANGELOG.md
   - Изменены файлы: CHANGELOG.md
