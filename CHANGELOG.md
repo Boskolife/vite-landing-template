@@ -64,6 +64,9 @@
 - chore: обновление проекта
   - Изменены файлы: CHANGELOG-SYSTEM.md
 
+- chore: обновление проекта
+  - Изменены файлы: src/js/final-test.js
+
 ### Изменено (Changed)
 - Update CHANGELOG.md
   - Изменены файлы: CHANGELOG.md
