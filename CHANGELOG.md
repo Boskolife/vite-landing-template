@@ -29,6 +29,9 @@
 
 - feat: заменен шрифт Roboto на Space Mono с полным набором начертаний
 
+- feat: добавлены расширенные настройки noindex для запрета индексации сайта
+  - Изменены файлы: CHANGELOG.md, public/robots.txt, robots.txt, src/index.html
+
 ### Техническая часть (Technical)
 - chore: очистка тестовых файлов
   - Обновлены зависимости в package.json
