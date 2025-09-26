@@ -32,6 +32,9 @@
 - feat: добавлены расширенные настройки noindex для запрета индексации сайта
   - Изменены файлы: CHANGELOG.md, public/robots.txt, robots.txt, src/index.html
 
+- feat: добавлены новые файлы
+  - Изменены файлы: test-new-logic.txt
+
 ### Техническая часть (Technical)
 - chore: очистка тестовых файлов
   - Обновлены зависимости в package.json
