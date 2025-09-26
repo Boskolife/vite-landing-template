@@ -34,6 +34,11 @@
 - install husky
   - Изменены файлы: .husky/post-commit, .husky/pre-commit, CHANGELOG.md, package-lock.json, package.json
 
+
+### Изменено (Changed)
+- Update CHANGELOG.md
+  - Изменены файлы: CHANGELOG.md
+
 ## [1.2.0] - 2024-01-15
 
 ### Исправлено (Fixed)
