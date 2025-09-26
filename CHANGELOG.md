@@ -62,6 +62,12 @@
 - Update CHANGELOG.md
   - Изменены файлы: CHANGELOG.md
 
+- Update CHANGELOG.md
+  - Изменены файлы: CHANGELOG.md
+
+- Update CHANGELOG.md
+  - Изменены файлы: CHANGELOG.md, test-new-logic.txt
+
 ## [1.2.0] - 2024-01-15
 
 ### Исправлено (Fixed)
