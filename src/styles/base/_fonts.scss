@@ -13,4 +13,8 @@
 }
 
 
-@include font("Roboto", "Roboto-Black", 900, normal);
+// Space Mono font family
+@include font("SpaceMono", "SpaceMono-Regular", 400, normal);
+@include font("SpaceMono", "SpaceMono-Italic", 400, italic);
+@include font("SpaceMono", "SpaceMono-Bold", 700, normal);
+@include font("SpaceMono", "SpaceMono-BoldItalic", 700, italic);
