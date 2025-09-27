@@ -4,7 +4,7 @@
 
 **Modern, fast, and efficient landing page builder**
 
-*Сучасний, швидкий та ефективний конструктор лендінгових сторінок*
+_Сучасний, швидкий та ефективний конструктор лендінгових сторінок_
 
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -23,10 +23,10 @@
 
 ## 🌍 Choose Your Language / Оберіть мову
 
-| 🇺🇸 **English** | 🇺🇦 **Українська** |
-|:---:|:---:|
-| [📖 **Complete Documentation**<br/>*Full English guide*](README_EN.md) | [📖 **Повна документація**<br/>*Повний український гід*](README_UA.md) |
-| [👉 **Read in English**](README_EN.md) | [👉 **Читати українською**](README_UA.md) |
+|                             🇺🇸 **English**                             |                           🇺🇦 **Українська**                            |
+| :--------------------------------------------------------------------: | :--------------------------------------------------------------------: |
+| [📖 **Complete Documentation**<br/>_Full English guide_](README_EN.md) | [📖 **Повна документація**<br/>_Повний український гід_](README_UA.md) |
+|                 [👉 **Read in English**](README_EN.md)                 |               [👉 **Читати українською**](README_UA.md)                |
 
 </div>
 
@@ -45,7 +45,7 @@
 ### 🎯 Perfect For / Ідеально для
 
 - 🚀 **Fast landing pages** / **Швидкі лендінги**
-- 📱 **Responsive websites** / **Адаптивні сайти** 
+- 📱 **Responsive websites** / **Адаптивні сайти**
 - 🎨 **Custom designs** / **Кастомні дизайни**
 - ⚡ **High performance** / **Висока продуктивність**
 - 🔧 **Easy customization** / **Легка кастомізація**
@@ -80,13 +80,13 @@ npm run dev
 
 <div align="center">
 
-| Command / Команда | Description / Опис |
-|:---:|:---|
-| `npm run dev` | 🚀 Start development server / Запуск сервера розробки |
-| `npm run build` | 🏗️ Build for production / Збірка для продакшену |
+| Command / Команда | Description / Опис                                       |
+| :---------------: | :------------------------------------------------------- |
+|   `npm run dev`   | 🚀 Start development server / Запуск сервера розробки    |
+|  `npm run build`  | 🏗️ Build for production / Збірка для продакшену          |
 | `npm run preview` | 👀 Preview production build / Попередній перегляд збірки |
-| `npm run lint` | 🔍 Run code linting / Запуск перевірки коду |
-| `npm run format` | 💅 Format code / Форматування коду |
+|  `npm run lint`   | 🔍 Run code linting / Запуск перевірки коду              |
+| `npm run format`  | 💅 Format code / Форматування коду                       |
 
 </div>
 
@@ -97,26 +97,31 @@ npm run dev
 <div align="center">
 
 ### ⚡ **Performance** / **Продуктивність**
+
 - **Vite 7** - Lightning-fast builds / Швидкі збірки
 - **ES6+ JavaScript** - Modern development / Сучасна розробка
 - **Optimized assets** - Minimal bundle size / Мінімальний розмір
 
 ### 🎨 **Styling** / **Стилізація**
+
 - **SCSS** - Advanced CSS preprocessing / Розширений CSS
 - **Responsive design** - Mobile-first approach / Мобільний підхід
 - **Modern CSS** - Flexbox, Grid, Custom properties / Сучасний CSS
 
 ### 📄 **Templates** / **Шаблони**
+
 - **Handlebars** - Powerful templating / Потужні шаблони
 - **Component system** - Reusable blocks / Система компонентів
 - **Partials** - Modular structure / Модульна структура
 
 ### 🖼️ **Images** / **Зображення**
+
 - **WebP support** - Automatic optimization / Автоматична оптимізація
 - **Lazy loading** - Performance boost / Покращення продуктивності
 - **Responsive images** - Perfect on all devices / Ідеально на всіх пристроях
 
 ### 🔧 **Development** / **Розробка**
+
 - **Hot reload** - Instant updates / Миттєві оновлення
 - **ESLint** - Code quality / Якість коду
 - **Git hooks** - Automated checks / Автоматичні перевірки
@@ -129,12 +134,12 @@ npm run dev
 
 <div align="center">
 
-| 📖 **Complete Guides** / **Повні гіди** | 📋 **Quick References** / **Швидкі довідники** |
-|:---:|:---:|
-| [**🚀 Quick Start**<br/>*Get up and running*](docs/guides/QUICK_START.md) | [**📝 Commands**<br/>*All NPM commands*](docs/COMMANDS.md) |
-| [**🛠️ Development**<br/>*Development workflow*](docs/guides/DEVELOPMENT.md) | [**📁 Project Structure**<br/>*File organization*](docs/PROJECT_STRUCTURE_CENTRAL.md) |
-| [**🚀 Deployment**<br/>*Deploy your site*](docs/guides/DEPLOYMENT.md) | [**🖼️ WebP Guide**<br/>*Image optimization*](docs/WEBP_GUIDE.md) |
-| [**📦 Release System**<br/>*Manage versions*](docs/guides/RELEASE_SYSTEM.md) | [**🔧 Technologies**<br/>*Tech stack details*](docs/technologies/) |
+|                   📖 **Complete Guides** / **Повні гіди**                    |                    📋 **Quick References** / **Швидкі довідники**                     |
+| :--------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+|  [**🚀 Quick Start**<br/>_Get up and running_](docs/guides/QUICK_START.md)   |              [**📝 Commands**<br/>_All NPM commands_](docs/COMMANDS.md)               |
+| [**🛠️ Development**<br/>_Development workflow_](docs/guides/DEVELOPMENT.md)  | [**📁 Project Structure**<br/>_File organization_](docs/PROJECT_STRUCTURE_CENTRAL.md) |
+|    [**🚀 Deployment**<br/>_Deploy your site_](docs/guides/DEPLOYMENT.md)     |           [**🖼️ WebP Guide**<br/>_Image optimization_](docs/WEBP_GUIDE.md)            |
+| [**📦 Release System**<br/>_Manage versions_](docs/guides/RELEASE_SYSTEM.md) |          [**🔧 Technologies**<br/>_Tech stack details_](docs/technologies/)           |
 
 </div>
 
@@ -163,7 +168,7 @@ npm run dev
 ### 🎉 **Latest Updates** / **Останні оновлення**
 
 - ✨ **Simplified release system** with 3 commands / Спрощена система релізів з 3 командами
-- 🚀 **GitHub integration** for automated releases / Інтеграція з GitHub для автоматичних релізів  
+- 🚀 **GitHub integration** for automated releases / Інтеграція з GitHub для автоматичних релізів
 - 🖼️ **WebP optimization** for better performance / Оптимізація WebP для кращої продуктивності
 - 📚 **Comprehensive documentation** in English & Ukrainian / Вичерпна документація англійською та українською
 - 🔧 **Modern tooling** with ESLint, Prettier, and Git hooks / Сучасні інструменти з ESLint, Prettier та Git хуками
@@ -183,7 +188,7 @@ We welcome contributions! Here's how you can help:
 </div>
 
 - 🐛 **Report bugs** / **Повідомляйте про помилки**
-- 💡 **Suggest features** / **Пропонуйте функції**  
+- 💡 **Suggest features** / **Пропонуйте функції**
 - 📝 **Improve documentation** / **Покращуйте документацію**
 - 🔧 **Submit pull requests** / **Надсилайте pull requests**
 
