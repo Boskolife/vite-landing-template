@@ -1,105 +1,223 @@
 <div align="center">
-  # Vite Landing Template / Vite Landing Шаблон
-</div>
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS">
-  <img src="https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white" alt="Handlebars">
-</div>
+# 🚀 Vite Landing Template
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Version-0.9.0-blue?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/Status-Pre--release-orange?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+**Modern, fast, and efficient landing page builder**
+
+*Сучасний, швидкий та ефективний конструктор лендінгових сторінок*
+
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+[![Handlebars](https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white)](https://handlebarsjs.com/)
+
+[![Version](https://img.shields.io/badge/Version-1.0.3-blue?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/releases)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template)
+
 </div>
 
 ---
-<div align="center">
-  ## 🌍 Choose Language / Оберіть мову
-</div>
 
 <div align="center">
 
-| 🇺🇸 English                             | 🇺🇦 Українська                             |
-| -------------------------------------- | ----------------------------------------- |
-| [📖 **README_EN.md**](README_EN.md)    | [📖 **README_UA.md**](README_UA.md)       |
-| Complete English documentation         | Повна українська документація             |
+## 🌍 Choose Your Language / Оберіть мову
+
+| 🇺🇸 **English** | 🇺🇦 **Українська** |
+|:---:|:---:|
+| [📖 **Complete Documentation**<br/>*Full English guide*](README_EN.md) | [📖 **Повна документація**<br/>*Повний український гід*](README_UA.md) |
 | [👉 **Read in English**](README_EN.md) | [👉 **Читати українською**](README_UA.md) |
 
 </div>
 
 ---
 
-## 🚀 Quick Overview / Швидкий огляд
+## ✨ What's This? / Що це?
 
-A modern, fast, and efficient landing page builder built with Vite, JavaScript, SCSS, and Handlebars templates. Perfect for creating responsive landing pages with hot reload, optimized builds, and automated deployment.
+<div align="center">
 
-Сучасний, швидкий та ефективний конструктор лендінгових сторінок, побудований на Vite, JavaScript, SCSS та Handlebars шаблонах. Ідеальний для створення адаптивних лендінгових сторінок з гарячою заміною, оптимізованими збірками та автоматизованим розгортанням.
+**A powerful, modern landing page template** that combines the speed of Vite with the flexibility of modern web technologies.
 
-### ✨ Key Features / Ключові особливості
+**Потужний, сучасний шаблон лендінгової сторінки**, який поєднує швидкість Vite з гнучкістю сучасних веб-технологій.
 
-- ⚡ **Vite 7** - Lightning-fast build tool / Швидкий інструмент збірки
-- 📝 **JavaScript ES6+** - Modern development / Сучасна розробка
-- 🎨 **SCSS** - Advanced CSS preprocessing / Розширений CSS препроцесинг
-- 📄 **Handlebars** - Template engine / Движок шаблонів
-- 🖼️ **WebP Support** - Automatic image optimization / Автоматична оптимізація зображень
+</div>
 
-### 🛠️ Quick Start / Швидкий старт
+### 🎯 Perfect For / Ідеально для
+
+- 🚀 **Fast landing pages** / **Швидкі лендінги**
+- 📱 **Responsive websites** / **Адаптивні сайти** 
+- 🎨 **Custom designs** / **Кастомні дизайни**
+- ⚡ **High performance** / **Висока продуктивність**
+- 🔧 **Easy customization** / **Легка кастомізація**
+
+---
+
+## 🚀 Quick Start / Швидкий старт
+
+<div align="center">
 
 ```bash
-# Clone and setup / Клонування та налаштування
-git clone <repository-url>
+# 1️⃣ Clone the repository / Клонуйте репозиторій
+git clone https://github.com/Boskolife/vite-landing-template.git
 cd vite-landing-template
+
+# 2️⃣ Install dependencies / Встановіть залежності
 npm install
 
-# Development / Розробка
-npm run dev              # Start dev server / Запуск сервера
-
-# Production / Продакшен
-npm run build            # Build project / Збірка проекту
-npm run preview          # Preview build / Попередній перегляд
+# 3️⃣ Start development / Запустіть розробку
+npm run dev
 ```
 
-### 📚 Documentation / Документація
+**🎉 That's it! Your server is running at `http://localhost:3000`**
 
-| Type / Тип                                     | English                                                          | Українська                                                       |
-| ---------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| **Complete Guide** / **Повне керівництво**     | [README_EN.md](README_EN.md)                                     | [README_UA.md](README_UA.md)                                     |
-| **Usage Guide** / **Керівництво використання** | [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)                       | [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)                       |
-| **Quick Start** / **Швидкий старт**            | [docs/guides/QUICK_START.md](docs/guides/QUICK_START.md)         | [docs/guides/QUICK_START.md](docs/guides/QUICK_START.md)         |
-| **Development** / **Розробка**                 | [docs/guides/DEVELOPMENT.md](docs/guides/DEVELOPMENT.md)         | [docs/guides/DEVELOPMENT.md](docs/guides/DEVELOPMENT.md)         |
+**🎉 Готово! Ваш сервер працює на `http://localhost:3000`**
 
-### 🎯 Current Status / Поточний статус
+</div>
 
-- **Version / Версія**: 0.9.0 (Pre-release)
-- **Status / Статус**: Active development / Активна розробка
-- **Last Release / Останній реліз**: [v0.9.0](https://github.com/Boskolife/vite-landing-template/releases/tag/v0.9.0)
+---
 
-### 🔗 Links / Посилання
+## 🛠️ Available Commands / Доступні команди
 
-- **📖 Full English Documentation** / **📖 Повна англійська документація**: [README_EN.md](README_EN.md)
-- **📖 Full Ukrainian Documentation** / **📖 Повна українська документація**: [README_UA.md](README_UA.md)
-- **📚 Complete Documentation** / **📚 Повна документація**: [docs/README.md](docs/README.md)
-- **🚀 Latest Release** / **🚀 Останній реліз**: [GitHub Releases](https://github.com/Boskolife/vite-landing-template/releases)
+<div align="center">
+
+| Command / Команда | Description / Опис |
+|:---:|:---|
+| `npm run dev` | 🚀 Start development server / Запуск сервера розробки |
+| `npm run build` | 🏗️ Build for production / Збірка для продакшену |
+| `npm run preview` | 👀 Preview production build / Попередній перегляд збірки |
+| `npm run lint` | 🔍 Run code linting / Запуск перевірки коду |
+| `npm run format` | 💅 Format code / Форматування коду |
+
+</div>
+
+---
+
+## 🎨 Key Features / Ключові особливості
+
+<div align="center">
+
+### ⚡ **Performance** / **Продуктивність**
+- **Vite 7** - Lightning-fast builds / Швидкі збірки
+- **ES6+ JavaScript** - Modern development / Сучасна розробка
+- **Optimized assets** - Minimal bundle size / Мінімальний розмір
+
+### 🎨 **Styling** / **Стилізація**
+- **SCSS** - Advanced CSS preprocessing / Розширений CSS
+- **Responsive design** - Mobile-first approach / Мобільний підхід
+- **Modern CSS** - Flexbox, Grid, Custom properties / Сучасний CSS
+
+### 📄 **Templates** / **Шаблони**
+- **Handlebars** - Powerful templating / Потужні шаблони
+- **Component system** - Reusable blocks / Система компонентів
+- **Partials** - Modular structure / Модульна структура
+
+### 🖼️ **Images** / **Зображення**
+- **WebP support** - Automatic optimization / Автоматична оптимізація
+- **Lazy loading** - Performance boost / Покращення продуктивності
+- **Responsive images** - Perfect on all devices / Ідеально на всіх пристроях
+
+### 🔧 **Development** / **Розробка**
+- **Hot reload** - Instant updates / Миттєві оновлення
+- **ESLint** - Code quality / Якість коду
+- **Git hooks** - Automated checks / Автоматичні перевірки
+
+</div>
+
+---
+
+## 📚 Documentation / Документація
+
+<div align="center">
+
+| 📖 **Complete Guides** / **Повні гіди** | 📋 **Quick References** / **Швидкі довідники** |
+|:---:|:---:|
+| [**🚀 Quick Start**<br/>*Get up and running*](docs/guides/QUICK_START.md) | [**📝 Commands**<br/>*All NPM commands*](docs/COMMANDS.md) |
+| [**🛠️ Development**<br/>*Development workflow*](docs/guides/DEVELOPMENT.md) | [**📁 Project Structure**<br/>*File organization*](docs/PROJECT_STRUCTURE_CENTRAL.md) |
+| [**🚀 Deployment**<br/>*Deploy your site*](docs/guides/DEPLOYMENT.md) | [**🖼️ WebP Guide**<br/>*Image optimization*](docs/WEBP_GUIDE.md) |
+| [**📦 Release System**<br/>*Manage versions*](docs/guides/RELEASE_SYSTEM.md) | [**🔧 Technologies**<br/>*Tech stack details*](docs/technologies/) |
+
+</div>
+
+---
+
+## 🎯 Current Status / Поточний статус
+
+<div align="center">
+
+[![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.0.3-blue?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/releases/tag/v1.0.3)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](#)
+[![Code Quality](https://img.shields.io/badge/Code%20Quality-A%20Grade-brightgreen?style=for-the-badge)](#)
+
+</div>
+
+**Version / Версія**: `1.0.3` - Production Ready / Готовий до продакшену  
+**Status / Статус**: ✅ Stable / Стабільний  
+**Last Update / Останнє оновлення**: September 2025 / Вересень 2025
+
+---
+
+## 🌟 What's New? / Що нового?
+
+<div align="center">
+
+### 🎉 **Latest Updates** / **Останні оновлення**
+
+- ✨ **Simplified release system** with 3 commands / Спрощена система релізів з 3 командами
+- 🚀 **GitHub integration** for automated releases / Інтеграція з GitHub для автоматичних релізів  
+- 🖼️ **WebP optimization** for better performance / Оптимізація WebP для кращої продуктивності
+- 📚 **Comprehensive documentation** in English & Ukrainian / Вичерпна документація англійською та українською
+- 🔧 **Modern tooling** with ESLint, Prettier, and Git hooks / Сучасні інструменти з ESLint, Prettier та Git хуками
+
+</div>
+
+---
+
+## 🤝 Contributing / Внесок
+
+<div align="center">
+
+We welcome contributions! Here's how you can help:
+
+Ми вітаємо внески! Ось як ви можете допомогти:
+
+</div>
+
+- 🐛 **Report bugs** / **Повідомляйте про помилки**
+- 💡 **Suggest features** / **Пропонуйте функції**  
+- 📝 **Improve documentation** / **Покращуйте документацію**
+- 🔧 **Submit pull requests** / **Надсилайте pull requests**
+
+[![Contributors](https://img.shields.io/github/contributors/Boskolife/vite-landing-template?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/Boskolife/vite-landing-template?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Boskolife/vite-landing-template?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/pulls)
 
 ---
 
 ## 📄 License / Ліцензія
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<div align="center">
 
-Цей проект ліцензовано під ліцензією MIT - дивіться файл [LICENSE](LICENSE) для деталей.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+Цей проект ліцензовано під **ліцензією MIT** - дивіться файл [LICENSE](LICENSE) для деталей.
+
+</div>
 
 ---
 
 <div align="center">
-  <p><strong>Made with ❤️ by the Vite Landing Template Team</strong></p>
-  <p><strong>Зроблено з ❤️ командою Vite Landing Template</strong></p>
-  
-  [![GitHub stars](https://img.shields.io/github/stars/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template)
-  [![GitHub forks](https://img.shields.io/github/forks/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template/fork)
-  [![GitHub issues](https://img.shields.io/github/issues/Boskolife/vite-landing-template)](https://github.com/Boskolife/vite-landing-template/issues)
-  [![GitHub pull requests](https://img.shields.io/github/issues-pr/Boskolife/vite-landing-template)](https://github.com/Boskolife/vite-landing-template/pulls)
+
+## 💝 Made with Love / Зроблено з любов'ю
+
+**Built by developers, for developers**  
+**Побудовано розробниками, для розробників**
+
+[![GitHub Stars](https://img.shields.io/github/stars/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template)
+[![GitHub Forks](https://img.shields.io/github/forks/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template/fork)
+[![GitHub Watchers](https://img.shields.io/github/watchers/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template)
+
+**⭐ Star this repository if you found it helpful!**
+
+**⭐ Поставте зірку цьому репозиторію, якщо він був корисним!**
+
 </div>
