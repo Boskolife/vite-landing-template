@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Обновлены зависимости в package.json
   - Изменены файлы: .gitignore, docs/guides/GITHUB_RELEASES.md, package.json, scripts/update-changelog.js
 
+- feat: added new files
+  - Изменены файлы: test-file.txt
+
 ### Changed
 
 - chore: project update
