@@ -164,30 +164,10 @@ The template includes built-in SEO protection:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
-
-We welcome contributions!
-
-### How to Contribute
-
-1. **Fork the repository**
-2. **Create a feature branch**
-3. **Make your changes**
-4. **Run tests and linting**
-5. **Submit a pull request**
-
-## 🆘 Support
-
-If you encounter any issues or need help:
-
-1. **Check the documentation**
-2. **Search existing issues**
-3. **Create a new issue**
-
 ---
 
 <div align="center">
-  <p><strong>Made with ❤️ by the Vite Landing Template Team</strong></p>
+  <p><strong>Made with ❤️</strong></p>
   
   [![GitHub stars](https://img.shields.io/github/stars/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template)
   [![GitHub forks](https://img.shields.io/github/forks/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template/fork)
