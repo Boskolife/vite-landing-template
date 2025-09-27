@@ -23,10 +23,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added / Додано
 - feat: replaced Roboto font with Space Mono with full character set / feat: замінено шрифт Roboto на Space Mono з повним набором начертань
 - feat: added extended noindex settings to prevent site indexing / feat: додано розширені налаштування noindex для запобігання індексації сайту
+- feat: added WebP image optimization with automatic conversion / feat: додано оптимізацію зображень WebP з автоматичною конвертацією
+- feat: added custom Vite plugin for WebP conversion / feat: додано користувацький Vite плагін для конвертації WebP
+- feat: added comprehensive documentation structure in docs/ folder / feat: додано комплексну структуру документації в папці docs/
+- feat: added multilingual documentation support (Ukrainian + English) / feat: додано підтримку багатомовної документації (українська + англійська)
+- feat: added JavaScript utilities for WebP detection and support / feat: додано JavaScript утиліти для виявлення та підтримки WebP
+- feat: added SCSS mixins for WebP background images / feat: додано SCSS міксини для WebP фонових зображень
 
 ### Technical / Технічна частина
 - chore: added .cursor/rules to .gitignore to exclude service files / chore: додано .cursor/rules в .gitignore для виключення службових файлів
 - chore: fixed CHANGELOG.md update logic - now updates before commit / chore: виправлено логіку оновлення CHANGELOG.md - тепер оновлюється до коміту
+- feat: integrated vite-plugin-imagemin for image optimization / feat: інтегровано vite-plugin-imagemin для оптимізації зображень
+- feat: added Sharp library for high-performance WebP conversion / feat: додано бібліотеку Sharp для високопродуктивної конвертації WebP
+- feat: created custom WebP conversion plugin with build hooks / feat: створено користувацький плагін конвертації WebP з хуками збірки
 
 ---
 
@@ -213,3 +222,6 @@ npm run format
 
 - chore: обновлена конфигурация
   - Обновлены зависимости в package.json
+
+- chore: обновление проекта
+  - Изменены файлы: CHANGELOG.md
