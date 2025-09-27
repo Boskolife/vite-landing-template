@@ -1,7 +1,7 @@
 {
   "name": "vite-landing-template",
   "private": true,
-  "version": "0.9.1",
+  "version": "0.9.2",
   "type": "module",
   "description": "Modern landing page builder with Vite, JavaScript, SCSS, and Handlebars",
   "scripts": {

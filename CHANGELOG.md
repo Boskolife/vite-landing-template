@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - In Development
+## [0.9.2] - 2025-09-27
 
 ### Added
 - feat: implement release-only CHANGELOG management system
@@ -243,3 +243,15 @@ npm run format
 - Code follows JavaScript and SCSS best practices
 - Includes automated GitHub releases
 - Supports both English and Ukrainian documentation
+
+
+## [Unreleased] - In Development
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Technical
+
