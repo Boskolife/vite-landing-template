@@ -261,6 +261,21 @@ npm run format
 
 
 
+## [0.10.0] - 2025-09-27
+
+### Added
+- Add new simplified release system with GitHub integration
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Technical
+
+
+
 ## [Unreleased] - In Development
 
 ### Added
