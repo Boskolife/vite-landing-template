@@ -14,8 +14,12 @@
 @use 'base/reset' as *;
 @use 'base/typography' as *;
 @use 'base/forms' as *;
+@use 'base/webp' as *;
 
 // Import layout styles
 @use 'layout/header' as *;
 @use 'layout/common' as *;
 @use 'layout/footer' as *;
+
+// Import component styles
+@use 'components/image-examples' as *;

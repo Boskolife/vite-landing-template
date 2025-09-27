@@ -11,8 +11,8 @@
   <meta name="slurp" content="noindex,nofollow,noarchive,nosnippet,notranslate,noimageindex">
 
   <title>{{siteName}} - Modern Landing Page</title>
-  <link rel="stylesheet" href="/styles/main.scss">
-  <script type="module" src="/js/main.js" defer></script>
+  <link rel="stylesheet" href="./styles/main.scss">
+  <script type="module" src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -23,6 +23,105 @@
         <h1 class="hero__title">Welcome to {{siteName}}</h1>
         <p class="hero__subtitle">A modern, fast, and efficient landing page builder</p>
         <a href="#features" class="hero__cta">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Image usage examples -->
+    <section class="image-examples">
+      <div class="image-examples__container">
+        <h2 class="image-examples__title">Image Examples</h2>
+
+        <!-- 1. Hero фоновое изображение с WebP -->
+        <div class="example-section">
+          <h3 class="example-section__title">1. Hero Background with WebP</h3>
+          <div class="hero-bg-example">
+            <div class="hero-bg-example__content">
+              <h4>Hero Section with Background</h4>
+              <p>This section uses a background image with WebP optimization</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Обычные изображения с WebP fallback -->
+        <div class="example-section">
+          <h3 class="example-section__title">2. Regular Images with WebP Fallback</h3>
+          <div class="regular-images-example">
+            <img 
+              src="./images/logo-js.png" 
+              alt="JavaScript Logo" 
+              class="regular-images-example__img"
+              loading="lazy">
+            <p class="regular-images-example__caption">Regular image with WebP optimization</p>
+          </div>
+        </div>
+
+        <!-- 3. Picture element (рекомендуется) -->
+        <div class="example-section">
+          <h3 class="example-section__title">3. Picture Element (Recommended)</h3>
+          <div class="picture-example">
+            <picture>
+              <source srcset="./images/bg.webp" type="image/webp">
+              <img src="./images/bg.jpg" alt="Background image" class="picture-example__img">
+            </picture>
+            <p class="picture-example__caption">Picture element with WebP source</p>
+          </div>
+        </div>
+
+        <!-- 4. Логотипы и иконки -->
+        <div class="example-section">
+          <h3 class="example-section__title">4. Logos and Icons</h3>
+          <div class="logos-example">
+            <div class="logo-item">
+              <img 
+                src="./images/logo-html5.png" 
+                alt="HTML5 Logo" 
+                class="logo-item__img">
+              <span class="logo-item__label">HTML5</span>
+            </div>
+            <div class="logo-item">
+              <img 
+                src="./images/logo-css3.png" 
+                alt="CSS3 Logo" 
+                class="logo-item__img">
+              <span class="logo-item__label">CSS3</span>
+            </div>
+            <div class="logo-item">
+              <img 
+                src="./images/logo-js.png" 
+                alt="JavaScript Logo" 
+                class="logo-item__img">
+              <span class="logo-item__label">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Галерея изображений -->
+        <div class="example-section">
+          <h3 class="example-section__title">5. Image Gallery</h3>
+          <div class="gallery-example">
+            <div class="gallery-example__item">
+              <img 
+                src="./images/logo-html5.png" 
+                alt="HTML5 Logo" 
+                class="gallery-example__img"
+                loading="lazy">
+            </div>
+            <div class="gallery-example__item">
+              <img 
+                src="./images/logo-css3.png" 
+                alt="CSS3 Logo" 
+                class="gallery-example__img"
+                loading="lazy">
+            </div>
+            <div class="gallery-example__item">
+              <img 
+                src="./images/logo-js.png" 
+                alt="JavaScript Logo" 
+                class="gallery-example__img"
+                loading="lazy">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -37,7 +136,8 @@
           </div>
           <div class="feature">
             <h3 class="feature__title">📝 JavaScript</h3>
-            <p class="feature__description">Modern JavaScript development with ES6+ features for better code
+            <p class="feature__description">Modern JavaScript development with ES6+ features for
+              better code
               quality.</p>
           </div>
           <div class="feature">

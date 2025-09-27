@@ -2,6 +2,8 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
+import viteImagemin from 'vite-plugin-imagemin';
+import { webpPlugin } from './vite-webp-plugin.js';
 import { htmlFiles } from './getHTMLFileNames';
 
 const input = { main: resolve(__dirname, 'src/index.html') };
@@ -21,6 +23,37 @@ export default defineConfig({
         currentYear: new Date().getFullYear()
       }
     }),
+    viteImagemin({
+      gifsicle: {
+        optimizationLevel: 7,
+        interlaced: false,
+      },
+      optipng: {
+        optimizationLevel: 7,
+      },
+      mozjpeg: {
+        quality: 80,
+      },
+      pngquant: {
+        quality: [0.8, 0.9],
+        speed: 4,
+      },
+      svgo: {
+        plugins: [
+          {
+            name: 'removeViewBox',
+          },
+          {
+            name: 'removeEmptyAttrs',
+            active: false,
+          },
+        ],
+      },
+    }),
+    webpPlugin({
+      quality: 80,
+      generateWebp: true
+    }),
   ],
   build: {
     rollupOptions: {
@@ -34,7 +67,7 @@ export default defineConfig({
     outDir: '../dist/',
     emptyOutDir: true,
     sourcemap: true,
-    minify: 'terser',
+    minify: false,
     terserOptions: {
       compress: {
         drop_console: true,

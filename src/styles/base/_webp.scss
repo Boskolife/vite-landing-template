@@ -1,0 +1,56 @@
+/**
+ * Simplified Image Utilities
+ * Упрощенные утилиты для работы с изображениями
+ */
+
+// Simple mixin for background image
+// WebP version will be automatically created during build
+@mixin bg-image($image-path) {
+  background-image: url('#{$image-path}');
+}
+
+
+// Simple utility mixins for images
+
+// Mixin for background image with cover
+@mixin bg-cover($image-path) {
+  @include bg-image($image-path);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Mixin for background image with contain
+@mixin bg-contain($image-path) {
+  @include bg-image($image-path);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Mixin for hero section with background image
+@mixin hero-bg($image-path, $height: 100vh) {
+  position: relative;
+  height: $height;
+  overflow: hidden;
+  
+  @include bg-cover($image-path);
+  
+  // Overlay для читаемости текста
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  // Content over image
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}

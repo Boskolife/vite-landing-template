@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Примеры использования WebP изображений">
+  <title>WebP Examples - {{siteName}}</title>
+  <link rel="stylesheet" href="./styles/main.scss">
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body>
+  {{> header }}
+  
+  <main class="webp-examples">
+    <div class="container">
+      <h1>Примеры использования WebP изображений</h1>
+      
+      <!-- Example 1: Regular image with WebP fallback -->
+      <section class="example-section">
+        <h2>1. Обычное изображение с WebP fallback</h2>
+        <div class="example">
+          <img 
+            src="./images/example.jpg" 
+            data-webp="/images/example.webp"
+            alt="Пример изображения"
+            class="webp-image"
+            loading="lazy"
+          >
+        </div>
+        <p>Изображение автоматически заменится на WebP версию если браузер поддерживает этот формат.</p>
+      </section>
+
+      <!-- Example 2: Picture element with WebP -->
+      <section class="example-section">
+        <h2>2. Picture element с WebP</h2>
+        <div class="example">
+          <picture>
+            <source srcset="./images/example.webp" type="image/webp">
+            <img src="./images/example.jpg" alt="Пример изображения" loading="lazy">
+          </picture>
+        </div>
+        <p>Использует элемент &lt;picture&gt; для выбора оптимального формата.</p>
+      </section>
+
+      <!-- Example 3: Background image with WebP -->
+      <section class="example-section">
+        <h2>3. Фоновое изображение с WebP</h2>
+        <div class="example">
+          <div class="webp-bg-example">
+            <h3>Контент поверх фонового изображения</h3>
+            <p>Этот блок имеет фоновое изображение, которое автоматически оптимизируется в WebP.</p>
+          </div>
+        </div>
+        <p>Фоновое изображение оптимизируется с помощью SCSS миксинов.</p>
+      </section>
+
+      <!-- Example 4: Responsive images -->
+      <section class="example-section">
+        <h2>4. Responsive изображения с WebP</h2>
+        <div class="example">
+          <img 
+            src="./images/example.jpg" 
+            data-webp="/images/example.webp"
+            alt="Responsive изображение"
+            class="responsive-webp-image"
+            loading="lazy"
+          >
+        </div>
+        <p>Изображение адаптируется под разные размеры экрана и использует WebP.</p>
+      </section>
+
+      <!-- Example 5: Hero image -->
+      <section class="example-section">
+        <h2>5. Hero изображение с WebP</h2>
+        <div class="example">
+          <div class="hero-webp-example">
+            <div class="hero-content">
+              <h3>Hero секция</h3>
+              <p>Пример hero секции с оптимизированным фоновым изображением.</p>
+              <button class="hero-button">Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <p>Hero секция с фоновым изображением, оптимизированным для WebP.</p>
+      </section>
+
+      <!-- Example 6: Logo with WebP -->
+      <section class="example-section">
+        <h2>6. Логотип с WebP</h2>
+        <div class="example">
+          <div class="logo-example">
+            <img 
+              src="./images/logo.png" 
+              data-webp="./images/logo.webp"
+              alt="Логотип"
+              class="webp-logo"
+            >
+          </div>
+        </div>
+        <p>Логотип автоматически оптимизируется в WebP формат.</p>
+      </section>
+
+      <!-- Example 7: Icons with WebP -->
+      <section class="example-section">
+        <h2>7. Иконки с WebP</h2>
+        <div class="example">
+          <div class="icons-example">
+            <img 
+              src="./images/icon-heart.png" 
+              data-webp="/images/icon-heart.webp"
+              alt="Иконка сердца"
+              class="webp-icon"
+            >
+            <img 
+              src="./images/icon-star.png" 
+              data-webp="/images/icon-star.webp"
+              alt="Иконка звезды"
+              class="webp-icon"
+            >
+            <img 
+              src="./images/icon-check.png" 
+              data-webp="/images/icon-check.webp"
+              alt="Иконка галочки"
+              class="webp-icon"
+            >
+          </div>
+        </div>
+        <p>Иконки оптимизируются для WebP и автоматически заменяются.</p>
+      </section>
+
+      <!-- Example 8: Image gallery -->
+      <section class="example-section">
+        <h2>8. Галерея изображений с WebP</h2>
+        <div class="example">
+          <div class="gallery-example">
+            <div class="gallery-item">
+              <img 
+                src="./images/gallery-1.jpg" 
+                data-webp="/images/gallery-1.webp"
+                alt="Галерея 1"
+                loading="lazy"
+              >
+            </div>
+            <div class="gallery-item">
+              <img 
+                src="./images/gallery-2.jpg" 
+                data-webp="/images/gallery-2.webp"
+                alt="Галерея 2"
+                loading="lazy"
+              >
+            </div>
+            <div class="gallery-item">
+              <img 
+                src="./images/gallery-3.jpg" 
+                data-webp="/images/gallery-3.webp"
+                alt="Галерея 3"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+        <p>Галерея с lazy loading и автоматической оптимизацией в WebP.</p>
+      </section>
+
+      <!-- WebP support information -->
+      <section class="example-section">
+        <h2>Информация о поддержке WebP</h2>
+        <div class="webp-info">
+          <p class="webp-support">✅ Ваш браузер поддерживает WebP формат!</p>
+          <p class="no-webp-support">❌ Ваш браузер не поддерживает WebP формат. Используются fallback изображения.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  {{> footer }}
+
+  <style>
+    .webp-examples {
+      padding: 2rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .example-section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+
+    .example {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+
+    .webp-bg-example {
+      @include webp-bg-image('/images/example', 'jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .hero-webp-example {
+      @include webp-hero-image('/images/hero-bg', 'jpg', 300px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    .logo-example {
+      text-align: center;
+    }
+
+    .webp-logo {
+      height: 80px;
+      width: auto;
+    }
+
+    .icons-example {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .webp-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .gallery-example {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .responsive-webp-image {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .webp-info {
+      padding: 1rem;
+      background: #e8f5e8;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .webp-support,
+    .no-webp-support {
+      margin: 0;
+      font-weight: bold;
+    }
+  </style>
+</body>
+
+</html>

@@ -25,6 +25,7 @@ A modern, fast, and efficient landing page builder built with Vite, JavaScript, 
 - 🚀 **Optimized Build** - Production-ready with code splitting and minification
 - 🔤 **Space Mono Font** - Modern monospace typography
 - 🛡️ **No-Index Setup** - SEO protection with robots.txt and meta tags
+- 🖼️ **WebP Support** - Automatic image optimization with WebP conversion
 
 ### 🚀 Quick Start
 
@@ -150,6 +151,26 @@ The template includes built-in SEO protection:
 - Meta tags - Prevents indexing and caching
 - No-index directives for all major search engines
 
+### 🖼️ WebP Image Optimization
+
+The template includes automatic WebP conversion:
+- **Automatic conversion** - PNG, JPG, JPEG, GIF → WebP
+- **Fallback support** - Automatic format selection
+- **Lazy loading** - Performance optimization
+- **SCSS mixins** - Ready-to-use WebP mixins
+- **JavaScript utilities** - WebP detection and optimization
+
+See [WebP Guide](docs/WEBP_GUIDE.md) for detailed usage instructions.
+
+### 📚 Documentation
+
+- **[Complete Documentation](docs/README.md)** - Full project documentation
+- **[Quick Start](docs/guides/QUICK_START.md)** - Get started quickly
+- **[Technologies](docs/technologies/)** - Detailed technology guides
+- **[Development Guide](docs/guides/DEVELOPMENT.md)** - Development workflow
+- **[Deployment Guide](docs/guides/DEPLOYMENT.md)** - Deployment instructions
+- **[Examples](docs/examples/)** - Code examples and usage patterns
+
 ---
 
 ## 🇺🇦 Українська
@@ -168,6 +189,7 @@ The template includes built-in SEO protection:
 - 🚀 **Оптимізована збірка** - Готовий до продакшену з розділенням коду та мінімізацією
 - 🔤 **Шрифт Space Mono** - Сучасна моноширинна типографіка
 - 🛡️ **Налаштування No-Index** - Захист SEO з robots.txt та мета-тегами
+- 🖼️ **WebP Підтримка** - Автоматична оптимізація зображень з конвертацією в WebP
 
 ### 🚀 Швидкий старт
 
@@ -292,6 +314,26 @@ vite-landing-template/
 - `robots.txt` - Блокує всіх пошукових роботів
 - Мета-теги - Запобігає індексації та кешуванню
 - Директиви no-index для всіх основних пошукових систем
+
+### 🖼️ WebP Оптимізація Зображень
+
+Шаблон включає автоматичну конвертацію WebP:
+- **Автоматична конвертація** - PNG, JPG, JPEG, GIF → WebP
+- **Fallback підтримка** - Автоматичний вибір формату
+- **Lazy loading** - Оптимізація продуктивності
+- **SCSS міксини** - Готові до використання WebP міксини
+- **JavaScript утиліти** - Детекція та оптимізація WebP
+
+Дивіться [WebP Гід](docs/WEBP_GUIDE.md) для детальних інструкцій з використання.
+
+### 📚 Документація
+
+- **[Повна документація](docs/README.md)** - Повна документація проекту
+- **[Швидкий старт](docs/guides/QUICK_START.md)** - Швидке початок роботи
+- **[Технології](docs/technologies/)** - Детальні гіди по технологіям
+- **[Гід розробки](docs/guides/DEVELOPMENT.md)** - Процес розробки
+- **[Гід деплою](docs/guides/DEPLOYMENT.md)** - Інструкції по розгортанню
+- **[Приклади](docs/examples/)** - Приклади коду та шаблони використання
 
 ---
 

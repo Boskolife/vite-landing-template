@@ -1,17 +1,23 @@
 @use '../vendors/include-media' as *;
+@use '../base/webp' as *;
 
 
 // Hero section
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  @include hero-bg('/images/bg.jpg', 70vh);
   color: white;
   padding: 4rem 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
