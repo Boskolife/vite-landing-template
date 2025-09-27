@@ -24,6 +24,9 @@ build/
 # Cursor rules (development tools)
 .cursor/rules/
 
+# Husky temporary files (keep .husky/ directory)
+.husky/_
+
 # OS
 .DS_Store
 Thumbs.db
