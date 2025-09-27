@@ -5,11 +5,6 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS">
   <img src="https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white" alt="Handlebars">
-</div>
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Version-0.9.0-blue?style=for-the-badge" alt="Версія">
-  <img src="https://img.shields.io/badge/Status-Pre--release-orange?style=for-the-badge" alt="Статус">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="Ліцензія">
 </div>
 
