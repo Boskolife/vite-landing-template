@@ -245,6 +245,21 @@ npm run format
 - Supports both English and Ukrainian documentation
 
 
+## [0.9.3] - 2025-09-27
+
+### Fixed
+- Fix ESLint configuration and simplify release system
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Technical
+
+
+
 ## [Unreleased] - In Development
 
 ### Added
