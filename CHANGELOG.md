@@ -51,6 +51,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore: обновление проекта
   - Изменены файлы: .husky/pre-commit
 
+- chore: обновлена конфигурация
+  - Обновлены зависимости в package.json
+  - Изменены файлы: docs/guides/RELEASE.md, package.json, scripts/release.js
+
 ## [1.2.0] - 2024-01-15
 
 ### Исправлено (Fixed)

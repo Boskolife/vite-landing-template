@@ -15,7 +15,11 @@
     "changelog:check": "node .cursor/rules/changelog-check.js",
     "changelog:update": "node .cursor/rules/changelog-auto-update.js",
     "pre-commit": "npm run lint && npm run build && npm run changelog:check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "node scripts/release.js",
+    "release:patch": "npm run release patch",
+    "release:minor": "npm run release minor",
+    "release:major": "npm run release major"
   },
   "devDependencies": {
     "eslint": "^9.36.0",
