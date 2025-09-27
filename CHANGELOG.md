@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Формат заснований на [Keep a Changelog](https://keepachangelog.com/ru/1.0.0/),
 і цей проект дотримується [Semantic Versioning](https://semver.org/lang/ru/).
 
-## [1.1.0] - 2025-09-27
+## [0.9.0] - 2025-09-27
 
 ### Changed / Змінено
 - feat: migrated project from TypeScript to JavaScript / feat: мігровано проект з TypeScript на JavaScript
@@ -55,7 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Обновлены зависимости в package.json
   - Изменены файлы: docs/guides/RELEASE.md, package.json, scripts/release.js
 
-## [1.2.0] - 2024-01-15
+## [0.8.0] - 2024-01-15
 
 ### Исправлено (Fixed)
 - Исправлены все Sass deprecation warnings в include-media библиотеке
@@ -82,7 +82,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.1.0] - 2024-01-15
+## [0.7.0] - 2024-01-15
 
 ### Добавлено (Added)
 - Полная поддержка Handlebars шаблонов
@@ -124,7 +124,7 @@ npm install vite@latest eslint@latest swiper@latest
 
 ---
 
-## [1.0.0] - 2024-01-10
+## [0.6.0] - 2024-01-10
 
 ### Добавлено (Added)
 - Базовая структура проекта с Vite
@@ -248,6 +248,10 @@ npm run format
 
 - chore: обновление проекта
   - Изменены файлы: .gitignore
+
+- chore: обновлена конфигурация
+  - Обновлены зависимости в package.json
+  - Изменены файлы: CHANGELOG.md, package.json
 
 ## [Unreleased] - In Development / [Не випущено] - В розробці
 
