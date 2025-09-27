@@ -1,1 +1,11 @@
-npm run changelog:update && npm run changelog:check
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Pre-commit hook for CHANGELOG.md updates
+echo "🔄 Pre-commit hook: Updating CHANGELOG.md..."
+
+# Always update changelog before commit
+npm run changelog:update
+
+# Check changelog
+npm run changelog:check

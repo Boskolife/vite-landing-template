@@ -42,6 +42,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore: обновление проекта
   - Изменены файлы: CHANGELOG.md
 
+- chore: обновление проекта
+  - Изменены файлы: .husky/pre-commit
+
+- chore: обновление проекта
+  - Изменены файлы: .husky/pre-commit, CHANGELOG.md
+
 ## [1.2.0] - 2024-01-15
 
 ### Исправлено (Fixed)
