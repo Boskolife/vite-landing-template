@@ -2,9 +2,9 @@
 
 /**
  * GitHub Release Script - Simplified Version
- * Автоматическое создание GitHub релизов с обновлением CHANGELOG
+ * Automated script for creating GitHub releases with CHANGELOG updates
  * 
- * Usage / Использование:
+ * Usage:
  * node scripts/github-release.js major "Breaking change description"
  * node scripts/github-release.js feature "New feature description"  
  * node scripts/github-release.js fix "Bug fix description"
@@ -159,24 +159,23 @@ function main() {
 
   // Validate arguments
   if (!type || !description) {
-    log('❌ Error: Missing arguments / Помилка: Відсутні аргументи', 'red');
+    log('❌ Error: Missing arguments', 'red');
     log('');
-    log('📖 Usage / Використання:', 'bright');
+    log('📖 Usage:', 'bright');
     log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'cyan');
     log('');
-    log('🔧 Release Types / Типи релізів:', 'yellow');
-    log('  major    - Breaking changes / Критичні зміни (1.0.0 → 2.0.0)', 'reset');
-    log('  feature  - New features / Нові функції (1.0.0 → 1.1.0)', 'reset');
-    log('  fix      - Bug fixes / Виправлення помилок (1.0.0 → 1.0.1)', 'reset');
+    log('🔧 Release Types:', 'yellow');
+    log('  major    - Breaking changes (1.0.0 → 2.0.0)', 'reset');
+    log('  feature  - New features (1.0.0 → 1.1.0)', 'reset');
+    log('  fix      - Bug fixes (1.0.0 → 1.0.1)', 'reset');
     log('');
-    log('💡 Examples / Приклади:', 'yellow');
+    log('💡 Examples:', 'yellow');
     log('  node scripts/github-release.js major "Breaking API changes"', 'reset');
     log('  node scripts/github-release.js feature "Add WebP optimization"', 'reset');
     log('  node scripts/github-release.js fix "Fix login bug"', 'reset');
     log('');
-    log('⚠️  Note / Примітка:', 'yellow');
+    log('⚠️  Note:', 'yellow');
     log('  Description is required for all releases', 'reset');
-    log('  Опис обов\'язковий для всіх релізів', 'reset');
     log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'cyan');
     process.exit(1);
   }
@@ -240,7 +239,7 @@ function main() {
     log('❌ Release failed!', 'red');
     log(`Error: ${err.message}`, 'red');
     log('');
-    log('🔄 To rollback / Для відкату:', 'yellow');
+    log('🔄 To rollback:', 'yellow');
     log(`   git reset --hard HEAD~1`, 'cyan');
     log(`   git tag -d v${newVersion}`, 'cyan');
     process.exit(1);

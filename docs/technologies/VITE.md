@@ -172,11 +172,15 @@ plugins: [
 
 ## 📁 Структура проекта для Vite
 
-См. [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) для подробной структуры проекта.
+See [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) for detailed project structure.
+
+Дивіться [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) для детальної структури проекту.
 
 ## 🚀 Команды и скрипты
 
-См. [COMMANDS.md](../COMMANDS.md) для полного списка команд.
+See [COMMANDS.md](../COMMANDS.md) for full command list.
+
+Дивіться [COMMANDS.md](../COMMANDS.md) для повного списку команд.
 
 ## 🔥 Hot Module Replacement (HMR)
 

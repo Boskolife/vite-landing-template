@@ -2,7 +2,7 @@
 
 ## 📋 Overview / Огляд
 
-The project uses modern JavaScript with ES6+ syntax support, modular architecture, and modern language features. Code is organized in modules for better maintainability and reusability.
+The project uses modern JavaScript with ES6+ syntax support, modular architecture, and modern language features. The code is organized into modules for better maintainability and reusability.
 
 Проект використовує сучасний JavaScript з підтримкою ES6+ синтаксису, модульної архітектури та сучасних можливостей мови. Код організований у модулі для кращої підтримуваності та перевикористання.
 
@@ -549,7 +549,7 @@ window.addEventListener('unhandledrejection', (event) => {
 
 ## 🚨 Troubleshooting
 
-### Проблема: Модули не загружаются
+### Problem: Modules not loading / Проблема: Модулі не завантажуються
 **Решение:**
 ```javascript
 // Make sure import paths are correct / Переконайтеся в правильності шляхів імпорту
@@ -561,7 +561,7 @@ export const functionName = () => {
 };
 ```
 
-### Проблема: События не работают
+### Problem: Events not working / Проблема: Події не працюють
 **Решение:**
 ```javascript
 // Make sure DOM is loaded / Переконайтеся, що DOM завантажений

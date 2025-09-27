@@ -10,10 +10,7 @@ _Сучасний, швидкий та ефективний конструкто
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
 [![Handlebars](https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white)](https://handlebarsjs.com/)
-
-[![Version](https://img.shields.io/badge/Version-1.0.3-blue?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/releases)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template)
 
 </div>
 
@@ -37,7 +34,6 @@ _Сучасний, швидкий та ефективний конструкто
 **A powerful, modern landing page template** that combines the speed of Vite with the flexibility of modern web technologies.
 
 **Потужний, сучасний шаблон лендінгової сторінки**, який поєднує швидкість Vite з гнучкістю сучасних веб-технологій.
-
 
 ### 🎯 Perfect For / Ідеально для
 
@@ -111,7 +107,6 @@ npm run dev
 
 ---
 
-
 <div align="center">
 
 ## 📚 Documentation / Документація
@@ -126,36 +121,6 @@ npm run dev
 </div>
 
 ---
-
-## 🎯 Current Status / Поточний статус
-
-[![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.0.3-blue?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/releases/tag/v1.0.3)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](#)
-[![Code Quality](https://img.shields.io/badge/Code%20Quality-A%20Grade-brightgreen?style=for-the-badge)](#)
-
-**Version / Версія**: `1.0.3` - Production Ready / Готовий до продакшену  
-**Status / Статус**: ✅ Stable / Стабільний  
-**Last Update / Останнє оновлення**: September 2025 / Вересень 2025
-
----
-
-## 🤝 Contributing / Внесок
-
-We welcome contributions! Here's how you can help:
-
-Ми вітаємо внески! Ось як ви можете допомогти:
-
-- 🐛 **Report bugs** / **Повідомляйте про помилки**
-- 💡 **Suggest features** / **Пропонуйте функції**
-- 📝 **Improve documentation** / **Покращуйте документацію**
-- 🔧 **Submit pull requests** / **Надсилайте pull requests**
-
-[![Contributors](https://img.shields.io/github/contributors/Boskolife/vite-landing-template?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/graphs/contributors)
-[![Issues](https://img.shields.io/github/issues/Boskolife/vite-landing-template?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/Boskolife/vite-landing-template?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/pulls)
-
----
-
 
 <div align="center">
 

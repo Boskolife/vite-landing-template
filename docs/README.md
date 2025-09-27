@@ -45,7 +45,7 @@ Welcome to the project documentation! Here you will find detailed guides for all
 
 ## 📋 Main Commands / Основні команди
 
-Полный список команд см. в [COMMANDS.md](./COMMANDS.md) / Повний список команд див. в [COMMANDS.md](./COMMANDS.md)
+See full command list in [COMMANDS.md](./COMMANDS.md) / Дивіться повний список команд в [COMMANDS.md](./COMMANDS.md)
 
 | Command / Команда | Description / Опис |
 |---------|----------|

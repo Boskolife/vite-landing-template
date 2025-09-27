@@ -111,13 +111,13 @@ dist/
 
 ## 🔧 Конфигурационные файлы / Configuration Files
 
-### Основные / Main
+### Main / Основні
 - `vite.config.js` - Vite configuration / Конфігурація Vite
 - `package.json` - Dependencies and scripts / Залежності та скрипти
 - `eslint.config.js` - ESLint configuration / Конфігурація ESLint
 - `.prettierrc` - Prettier configuration / Конфігурація Prettier
 
-### Дополнительные / Additional
+### Additional / Додаткові
 - `getHTMLFileNames.js` - HTML files detection / Виявлення HTML файлів
 - `vite-webp-plugin.js` - Custom WebP plugin / Користувацький WebP плагін
 - `.gitignore` - Git exclusions / Git виключення

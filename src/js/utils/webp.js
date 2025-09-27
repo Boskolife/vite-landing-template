@@ -1,10 +1,10 @@
 /**
- * WebP Support Utilities / Утиліти підтримки WebP
+ * WebP Support Utilities
  * Simplified version - only essential functions
  */
 
 /**
- * Check WebP support in browser / Перевірка підтримки WebP в браузері
+ * Check WebP support in browser
  * @returns {Promise<boolean>} Whether browser supports WebP
  */
 export const isWebPSupported = () => {
@@ -19,8 +19,8 @@ export const isWebPSupported = () => {
 };
 
 /**
- * Add WebP support class to body / Додавання класу підтримки WebP до body
- * @param {string} className - Class name to add / Назва класу для додавання
+ * Add WebP support class to body
+ * @param {string} className - Class name to add
  */
 export const addWebPClass = (className = 'webp') => {
   isWebPSupported().then(supported => {
@@ -35,15 +35,15 @@ export const addWebPClass = (className = 'webp') => {
 };
 
 /**
- * Initialize WebP support / Ініціалізація підтримки WebP
- * Called on page load / Викликається при завантаженні сторінки
+ * Initialize WebP support
+ * Called on page load
  */
 export const initWebPSupport = () => {
-  // Add support class / Додаємо клас підтримки
+  // Add support class
   addWebPClass();
 };
 
-// Auto-initialize on DOM load / Автоматична ініціалізація при завантаженні DOM
+// Auto-initialize on DOM load
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initWebPSupport);
 } else {

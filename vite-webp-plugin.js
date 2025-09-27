@@ -1,6 +1,6 @@
 /**
  * Custom Vite Plugin for WebP Conversion
- * Простой и надежный плагин для конвертации в WebP
+ * Simple and reliable WebP conversion plugin
  */
 
 import sharp from 'sharp';

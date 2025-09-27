@@ -1,20 +1,22 @@
-# 🚀 Руководство по деплою
+# 🚀 Deployment Guide / Керівництво з розгортання
 
-## 📋 Обзор
+## 📋 Overview / Огляд
 
-Это руководство описывает различные способы развертывания проекта Vite Landing Template на различных платформах и хостингах.
+This guide describes various ways to deploy the Vite Landing Template project on different platforms and hosting services.
 
-## 🛠️ Подготовка к деплою
+Це керівництво описує різні способи розгортання проекту Vite Landing Template на різних платформах та хостингах.
 
-### 1. **Финальная сборка**
+## 🛠️ Deployment Preparation / Підготовка до розгортання
+
+### 1. **Final Build / Фінальна збірка**
 ```bash
-# Убедитесь, что все работает локально
+# Make sure everything works locally / Переконайтеся, що все працює локально
 npm run dev
 
-# Создайте продакшен сборку
+# Create production build / Створіть продакшн збірку
 npm run build
 
-# Проверьте сборку
+# Check the build / Перевірте збірку
 npm run preview
 ```
 
@@ -47,10 +49,10 @@ export default defineConfig({
 <meta name="slurp" content="noindex,nofollow,noarchive,nosnippet,notranslate,noimageindex"> -->
 
 <!-- REPLACE with SEO-optimized tags / ЗАМІНІТЬ на SEO-оптимізовані теги -->
-<meta name="description" content="Описание вашего сайта">
-<meta name="keywords" content="ключевые, слова, для, поиска">
-<meta property="og:title" content="Название вашего сайта">
-<meta property="og:description" content="Описание для социальных сетей">
+<meta name="description" content="Your site description">
+<meta name="keywords" content="keywords, for, search">
+<meta property="og:title" content="Your site title">
+<meta property="og:description" content="Description for social networks">
 <meta property="og:image" content="/images/og-image.jpg">
 <meta property="og:url" content="https://yourdomain.com">
 <meta name="twitter:card" content="summary_large_image">
@@ -385,7 +387,7 @@ window.addEventListener('error', (event) => {
 
 ## 🚨 Troubleshooting
 
-### Проблема: 404 ошибки на SPA
+### Problem: 404 errors on SPA / Проблема: 404 помилки на SPA
 **Решение:**
 ```apache
 # .htaccess для Apache
@@ -395,7 +397,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 ```
 
-### Проблема: Неправильные пути к ресурсам
+### Problem: Incorrect resource paths / Проблема: Неправильні шляхи до ресурсів
 **Решение:**
 ```javascript
 // Check base in vite.config.js / Перевірте base в vite.config.js
@@ -404,14 +406,14 @@ export default defineConfig({
 });
 ```
 
-### Проблема: Медленная загрузка
+### Problem: Slow loading / Проблема: Повільне завантаження
 **Решение:**
 - Включите сжатие на сервере
 - Используйте CDN
 - Оптимизируйте изображения
 - Включите кеширование
 
-### Проблема: CORS ошибки
+### Problem: CORS errors / Проблема: CORS помилки
 **Решение:**
 ```javascript
 // Configure CORS on server / Налаштуйте CORS на сервері

@@ -1,6 +1,5 @@
 /**
  * Simplified Image Utilities
- * Упрощенные утилиты для работы с изображениями
  */
 
 // Simple mixin for background image
@@ -36,7 +35,7 @@
   
   @include bg-cover($image-path);
   
-  // Overlay для читаемости текста
+  // Overlay for text readability
   &::before {
     content: '';
     position: absolute;

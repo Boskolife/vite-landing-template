@@ -27,6 +27,9 @@ build/
 # Husky temporary files (keep .husky/ directory)
 .husky/_
 
+# Language rules
+LANGUAGE_RULES.md
+
 # OS
 .DS_Store
 Thumbs.db

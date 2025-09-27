@@ -29,7 +29,7 @@ src/
 
 ## ⚙️ Configuration in Vite / Конфігурація в Vite
 
-### Плагин vite-plugin-handlebars
+### vite-plugin-handlebars Plugin / Плагін vite-plugin-handlebars
 
 ```javascript
 // vite.config.js
@@ -46,7 +46,7 @@ plugins: [
 ]
 ```
 
-### Настройки плагина
+### Plugin Settings / Налаштування плагіна
 
 - **partialDirectory** - Папка с партиалами
 - **context** - Глобальный контекст для всех шаблонов

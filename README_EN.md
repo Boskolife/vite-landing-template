@@ -25,7 +25,6 @@ A modern, fast, and efficient landing page builder built with Vite, JavaScript, 
 - 🔤 **Space Mono Font** - Modern monospace typography
 - 🛡️ **No-Index Setup** - SEO protection with robots.txt and meta tags
 - 🖼️ **WebP Support** - Automatic image optimization with WebP conversion
-- 🔄 **Release Automation** - Automated GitHub releases with changelog
 - 📚 **Multilingual Docs** - Complete documentation in Ukrainian and English
 
 ## 🚀 Quick Start
@@ -67,7 +66,7 @@ vite-landing-template/
 │   ├── images/                 # Project images
 │   └── fonts/                  # Font files
 ├── docs/                       # Documentation
-├── scripts/                    # Build and release scripts
+├── scripts/                    # Build scripts
 ├── .github/workflows/          # GitHub Actions
 └── dist/                       # Built files (generated)
 ```
@@ -88,16 +87,6 @@ npm run lint:fix         # Fix code style issues
 npm run format           # Format code with Prettier
 ```
 
-### Release Management
-```bash
-npm run release patch "description"     # Create patch release
-npm run release minor "description"     # Create minor release
-npm run release major "description"     # Create major release
-
-npm run github:patch "description"      # Create GitHub patch release
-npm run github:minor "description"      # Create GitHub minor release
-npm run github:major "description"      # Create GitHub major release
-```
 
 ## 🎨 Technologies Used
 
