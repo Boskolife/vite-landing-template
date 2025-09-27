@@ -4,10 +4,8 @@
  */
 
 import sharp from 'sharp';
-import { readdir, stat, mkdir, copyFile } from 'fs/promises';
+import { readdir, mkdir, copyFile } from 'fs/promises';
 import { join, extname, dirname, basename, resolve } from 'path';
-import { createReadStream, createWriteStream } from 'fs';
-import { pipeline } from 'stream/promises';
 
 // Function for recursive file search
 async function findImageFiles(dir, extensions = ['.png', '.jpg', '.jpeg']) {

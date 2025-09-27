@@ -9,7 +9,7 @@
  */
 export const isWebPSupported = () => {
   return new Promise(resolve => {
-    const webP = new Image();
+       const webP = new window.Image();
     webP.onload = webP.onerror = () => {
       resolve(webP.height === 2);
     };

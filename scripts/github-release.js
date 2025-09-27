@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * GitHub Release Script
- * Скрипт для создания GitHub релизов
+ * GitHub Release Script - Simplified Version
+ * Автоматическое создание GitHub релизов с обновлением CHANGELOG
  * 
  * Usage / Использование:
- * node scripts/github-release.js patch "fix: description"
- * node scripts/github-release.js minor "feat: new feature"
- * node scripts/github-release.js major "feat: breaking change"
+ * node scripts/github-release.js major "Breaking change description"
+ * node scripts/github-release.js feature "New feature description"  
+ * node scripts/github-release.js fix "Bug fix description"
  */
 
 import fs from 'fs';
@@ -19,6 +19,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PROJECT_ROOT = path.join(__dirname, '..');
+const CHANGELOG_PATH = path.join(PROJECT_ROOT, 'CHANGELOG.md');
+const PACKAGE_JSON_PATH = path.join(PROJECT_ROOT, 'package.json');
 
 // Colors for console output
 const colors = {
@@ -52,129 +54,199 @@ function exec(command, options = {}) {
 }
 
 function getCurrentVersion() {
-  const packageJson = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'package.json'), 'utf8'));
+  const packageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH, 'utf8'));
   return packageJson.version;
 }
 
-function getNewVersion(versionType, currentVersion) {
-  if (versionType.match(/^\d+\.\d+\.\d+$/)) {
-    return versionType;
-  }
-
+function bumpVersion(currentVersion, type) {
   const [major, minor, patch] = currentVersion.split('.').map(Number);
-
-  switch (versionType.toLowerCase()) {
-    case 'patch':
-      return `${major}.${minor}.${patch + 1}`;
-    case 'minor':
-      return `${major}.${minor + 1}.0`;
+  
+  switch (type) {
     case 'major':
       return `${major + 1}.0.0`;
+    case 'feature':
+      return `${major}.${minor + 1}.0`;
+    case 'fix':
+      return `${major}.${minor}.${patch + 1}`;
     default:
-      throw new Error(`Invalid version type: ${versionType}`);
+      throw new Error(`Unknown version type: ${type}`);
   }
 }
 
-function createReleaseArchive(version) {
-  log(`📦 Creating release archive...`, 'blue');
-  
-  const archiveName = `vite-landing-template-v${version}.tar.gz`;
-  const archivePath = path.join(PROJECT_ROOT, archiveName);
-  
-  // Create archive with essential files
-  exec(`tar -czf ${archiveName} dist/ docs/ README.md LICENSE package.json`, { silent: true });
-  
-  log(`✅ Archive created: ${archiveName}`, 'green');
-  return archivePath;
+function updatePackageJson(newVersion) {
+  const packageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH, 'utf8'));
+  packageJson.version = newVersion;
+  fs.writeFileSync(PACKAGE_JSON_PATH, JSON.stringify(packageJson, null, 2) + '\n');
+  log(`✅ package.json updated to version ${newVersion}`, 'green');
 }
 
-function generateReleaseNotes(version) {
-  log(`📝 Generating release notes...`, 'blue');
+function updateChangelog(newVersion, description, type) {
+  const changelogContent = fs.readFileSync(CHANGELOG_PATH, 'utf8');
+  const today = new Date().toISOString().split('T')[0];
   
-  const changelogPath = path.join(PROJECT_ROOT, 'CHANGELOG.md');
-  const changelogContent = fs.readFileSync(changelogPath, 'utf8');
+  // Find unreleased section
+  const unreleasedPattern = /## \[Unreleased\] - In Development/;
   
-  // Extract changelog content for this version
-  const versionRegex = new RegExp(`## \\[${version}\\][\\s\\S]*?(?=## \\[|$)`);
-  const match = changelogContent.match(versionRegex);
-  
-  if (!match) {
-    log(`⚠️  No changelog found for version ${version}`, 'yellow');
-    return `Release ${version}`;
+  if (!unreleasedPattern.test(changelogContent)) {
+    throw new Error('Unreleased section not found in CHANGELOG.md!');
   }
-  
-  let releaseNotes = match[0];
-  
-  // Clean up the content
-  releaseNotes = releaseNotes.replace(/## \[.*?\] - .*?\n/, '');
-  releaseNotes = releaseNotes.replace(/^---\n/gm, '');
-  releaseNotes = releaseNotes.trim();
-  
-  return releaseNotes;
+
+  // Determine category based on type
+  let category;
+  switch (type) {
+    case 'major':
+      category = '### Changed';
+      break;
+    case 'feature':
+      category = '### Added';
+      break;
+    case 'fix':
+      category = '### Fixed';
+      break;
+    default:
+      category = '### Added';
+  }
+
+  // Create new version section
+  const newVersionSection = `## [${newVersion}] - ${today}
+
+${category}
+- ${description}
+
+`;
+
+  // Replace [Unreleased] with new version section
+  const updatedChangelog = changelogContent.replace(
+    unreleasedPattern,
+    newVersionSection.trim()
+  );
+
+  // Add new unreleased section at the end
+  const newUnreleasedSection = `
+
+## [Unreleased] - In Development
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Technical
+
+`;
+
+  const finalChangelog = updatedChangelog + newUnreleasedSection;
+  fs.writeFileSync(CHANGELOG_PATH, finalChangelog);
+  log(`✅ CHANGELOG.md updated with version ${newVersion}`, 'green');
 }
 
-function pushToGitHub(version, description) {
-  log(`🚀 Pushing to GitHub...`, 'blue');
-  
-  // Push commits
+function createGitCommit(newVersion) {
+  exec('git add package.json CHANGELOG.md');
+  exec(`git commit -m "chore: release v${newVersion}"`);
+  log(`✅ Git commit created`, 'green');
+}
+
+function createGitTag(newVersion) {
+  exec(`git tag -a v${newVersion} -m "Release v${newVersion}"`);
+  log(`✅ Git tag v${newVersion} created`, 'green');
+}
+
+function pushToRemote() {
   exec('git push origin main');
-  
-  // Push tags
-  exec(`git push origin v${version}`);
-  
-  log(`✅ Pushed to GitHub`, 'green');
+  exec('git push origin --tags');
+  log(`✅ Pushed to remote repository`, 'green');
 }
 
 function main() {
-  const args = process.argv.slice(2);
-  
-  if (args.length < 2) {
-    log(`❌ Error: Missing arguments`, 'red');
-    log(`Usage: node scripts/github-release.js <version_type> "<description>"`, 'yellow');
-    log(`Example: node scripts/github-release.js minor "feat: add new feature"`, 'yellow');
+  const [,, type, description] = process.argv;
+
+  // Validate arguments
+  if (!type || !description) {
+    log('❌ Error: Missing arguments / Помилка: Відсутні аргументи', 'red');
+    log('');
+    log('📖 Usage / Використання:', 'bright');
+    log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'cyan');
+    log('');
+    log('🔧 Release Types / Типи релізів:', 'yellow');
+    log('  major    - Breaking changes / Критичні зміни (1.0.0 → 2.0.0)', 'reset');
+    log('  feature  - New features / Нові функції (1.0.0 → 1.1.0)', 'reset');
+    log('  fix      - Bug fixes / Виправлення помилок (1.0.0 → 1.0.1)', 'reset');
+    log('');
+    log('💡 Examples / Приклади:', 'yellow');
+    log('  node scripts/github-release.js major "Breaking API changes"', 'reset');
+    log('  node scripts/github-release.js feature "Add WebP optimization"', 'reset');
+    log('  node scripts/github-release.js fix "Fix login bug"', 'reset');
+    log('');
+    log('⚠️  Note / Примітка:', 'yellow');
+    log('  Description is required for all releases', 'reset');
+    log('  Опис обов\'язковий для всіх релізів', 'reset');
+    log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'cyan');
     process.exit(1);
   }
 
-  const [versionType, ...descriptionParts] = args;
-  const releaseDescription = descriptionParts.join(' ');
+  // Validate type
+  if (!['major', 'feature', 'fix'].includes(type)) {
+    log(`❌ Error: Invalid release type '${type}'`, 'red');
+    log('Valid types: major, feature, fix', 'yellow');
+    process.exit(1);
+  }
+
+  // Check if working directory is clean
+  try {
+    exec('git diff-index --quiet HEAD --', { silent: true });
+  } catch (error) {
+    log('❌ Error: Working directory is not clean', 'red');
+    log('Please commit or stash your changes before creating a release', 'yellow');
+    process.exit(1);
+  }
+
+  const currentVersion = getCurrentVersion();
+  const newVersion = bumpVersion(currentVersion, type);
+
+  log('🚀 Starting GitHub release process...', 'bright');
+  log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'cyan');
+  log(`📦 Current version: ${currentVersion}`, 'yellow');
+  log(`🎯 Target version: ${newVersion}`, 'yellow');
+  log(`📝 Description: ${description}`, 'yellow');
+  log('');
 
   try {
-    log(`🚀 Starting GitHub release process...`, 'bright');
-    log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`, 'cyan');
+    // Update package.json
+    log('📦 Updating package.json...', 'blue');
+    updatePackageJson(newVersion);
 
-    const currentVersion = getCurrentVersion();
-    const newVersion = getNewVersion(versionType, currentVersion);
+    // Update CHANGELOG.md
+    log('📝 Updating CHANGELOG.md...', 'blue');
+    updateChangelog(newVersion, description, type);
 
-    log(`📦 Current version: ${currentVersion}`, 'yellow');
-    log(`🎯 Target version: ${newVersion}`, 'yellow');
-    log(`📝 Description: ${releaseDescription}`, 'yellow');
+    // Create git commit
+    log('📋 Creating git commit...', 'blue');
+    createGitCommit(newVersion);
 
-    // Check if we're in a clean git state
-    try {
-      exec('git diff-index --quiet HEAD --', { silent: true });
-    } catch {
-      log(`⚠️  Warning: Working directory has uncommitted changes`, 'yellow');
-    }
+    // Create git tag
+    log(`🏷️  Creating git tag v${newVersion}...`, 'blue');
+    createGitTag(newVersion);
 
-    // Create release archive
-    const archivePath = createReleaseArchive(newVersion);
-    
-    // Generate release notes
-    const releaseNotes = generateReleaseNotes(newVersion);
-    
-    // Push to GitHub
-    pushToGitHub(newVersion, releaseDescription);
+    // Push to remote
+    log('🚀 Pushing to remote repository...', 'blue');
+    pushToRemote();
 
-    log(`\n🎉 GitHub Release Summary`, 'bright');
-    log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`, 'cyan');
-    log(`📦 Version: ${currentVersion} → ${newVersion}`, 'green');
-    log(`📝 Description: ${releaseDescription}`, 'green');
-    log(`📁 Archive: ${path.basename(archivePath)}`, 'green');
-    log(`🌐 GitHub Release: https://github.com/Boskolife/vite-landing-template/releases/tag/v${newVersion}`, 'green');
-    log(`\n✅ GitHub release completed!`, 'bright');
+    log('');
+    log('🎉 GitHub release completed successfully!', 'bright');
+    log(`📦 Version: ${newVersion}`, 'green');
+    log(`🏷️  Tag: v${newVersion}`, 'green');
+    log(`📝 Description: ${description}`, 'green');
+    log('');
+    log('✅ All done! Check your GitHub repository for the new release.', 'green');
 
-  } catch (error) {
-    log(`❌ Release failed: ${error.message}`, 'red');
+  } catch (err) {
+    log('❌ Release failed!', 'red');
+    log(`Error: ${err.message}`, 'red');
+    log('');
+    log('🔄 To rollback / Для відкату:', 'yellow');
+    log(`   git reset --hard HEAD~1`, 'cyan');
+    log(`   git tag -d v${newVersion}`, 'cyan');
     process.exit(1);
   }
 }

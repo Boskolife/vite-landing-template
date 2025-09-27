@@ -1,8 +1,5 @@
-# Pre-commit hook for CHANGELOG.md updates
-echo "🔄 Pre-commit hook: Updating CHANGELOG.md..."
+# Pre-commit hook for code quality checks
+echo "🔄 Pre-commit hook: Running code quality checks..."
 
-# Always update changelog before commit
-npm run changelog:update
-
-# Check changelog
-npm run changelog:check
+# Run linting and build checks
+npm run pre-commit
