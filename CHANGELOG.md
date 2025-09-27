@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fix pre-push hook to remove CHANGELOG management references
 
+## [1.1.0] - 2025-09-27
+
+### Added
+- Redesign main README with modern, professional layout and improved user experience
+
 
 ## [1.0.2] - 2025-09-27
 
