@@ -1,0 +1,12 @@
+# Pre-push hook for code quality checks
+echo "🚀 Pre-push hook: Running final checks..."
+
+# Run linting to ensure code quality
+echo "🔍 Running ESLint..."
+npm run lint
+
+# Build project to ensure everything compiles
+echo "🏗️  Building project..."
+npm run build
+
+echo "✅ Pre-push checks completed successfully!"
