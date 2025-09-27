@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Формат заснований на [Keep a Changelog](https://keepachangelog.com/ru/1.0.0/),
 і цей проект дотримується [Semantic Versioning](https://semver.org/lang/ru/).
 
-## [Unreleased] - In Development / [Не випущено] - В розробці
+## [1.1.0] - 2025-09-27
 
 ### Changed / Змінено
 - feat: migrated project from TypeScript to JavaScript / feat: мігровано проект з TypeScript на JavaScript
@@ -238,3 +238,21 @@ npm run format
 
 - chore: обновление проекта
   - Изменены файлы: CHANGELOG.md
+
+
+
+### Technical / Технічна частина
+- chore: обновлена конфигурация
+  - Обновлены зависимости в package.json
+  - Изменены файлы: CHANGELOG.md, package.json
+
+## [Unreleased] - In Development / [Не випущено] - В розробці
+
+### Added / Додано
+
+### Changed / Змінено
+
+### Fixed / Виправлено
+
+### Technical / Технічна частина
+
