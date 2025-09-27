@@ -134,8 +134,6 @@ The template includes comprehensive WebP support:
 - **[Quick Start](docs/guides/QUICK_START.md)** - Get started quickly
 - **[Development Guide](docs/guides/DEVELOPMENT.md)** - Development workflow
 - **[Deployment Guide](docs/guides/DEPLOYMENT.md)** - Deployment instructions
-- **[Release Guide](docs/guides/RELEASE.md)** - Release management
-- **[GitHub Releases](docs/guides/GITHUB_RELEASES.md)** - GitHub releases automation
 
 ### Technology Guides
 - **[Vite Guide](docs/technologies/VITE.md)** - Vite build tool
@@ -147,19 +145,6 @@ The template includes comprehensive WebP support:
 - **[WebP Guide](docs/WEBP_GUIDE.md)** - Image optimization
 - **[Project Structure](docs/PROJECT_STRUCTURE_CENTRAL.md)** - Detailed project structure
 - **[Commands Reference](docs/COMMANDS.md)** - All available commands
-
-## 🚀 Release Management
-
-### Current Version
-- **Version**: 0.9.0 (Pre-release)
-- **Status**: Active development
-- **Last Release**: [v0.9.0](https://github.com/Boskolife/vite-landing-template/releases/tag/v0.9.0)
-
-### Automated Releases
-- ✅ **GitHub Actions** - Automatic release creation
-- ✅ **Changelog Integration** - Automatic release notes
-- ✅ **Archive Generation** - Ready-to-download packages
-- ✅ **Pre-release Detection** - Automatic status detection
 
 ## 📱 Responsive Design
 
@@ -203,25 +188,6 @@ If you encounter any issues or need help:
 1. **Check the documentation**
 2. **Search existing issues**
 3. **Create a new issue**
-4. **Contact the maintainers**
-
-## 🎯 Roadmap
-
-### Upcoming Features
-
-- 🔄 **Version 1.0.0** - First stable release
-- 📱 **PWA Support** - Progressive Web App features
-- 🎨 **Theme System** - Multiple color themes
-- 📊 **Analytics Integration** - Built-in analytics
-- 🌐 **i18n Support** - Internationalization
-
-### Current Status
-
-- ✅ **Core functionality** - Complete
-- ✅ **Documentation** - Complete
-- ✅ **Release automation** - Complete
-- 🔄 **Testing** - In progress
-- 🔄 **Performance optimization** - In progress
 
 ---
 
