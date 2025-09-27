@@ -19,7 +19,11 @@
     "release": "node scripts/release.js",
     "release:patch": "npm run release patch",
     "release:minor": "npm run release minor",
-    "release:major": "npm run release major"
+    "release:major": "npm run release major",
+    "github:release": "node scripts/github-release.js",
+    "github:patch": "npm run github:release patch",
+    "github:minor": "npm run github:release minor",
+    "github:major": "npm run github:release major"
   },
   "devDependencies": {
     "eslint": "^9.36.0",
