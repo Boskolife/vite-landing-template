@@ -84,13 +84,6 @@ function updateChangelog(newVersion, description, type) {
   const changelogContent = fs.readFileSync(CHANGELOG_PATH, 'utf8');
   const today = new Date().toISOString().split('T')[0];
   
-  // Find unreleased section
-  const unreleasedPattern = /## \[Unreleased\] - In Development/;
-  
-  if (!unreleasedPattern.test(changelogContent)) {
-    throw new Error('Unreleased section not found in CHANGELOG.md!');
-  }
-
   // Determine category based on type
   let category;
   switch (type) {
@@ -115,32 +108,18 @@ ${category}
 
 `;
 
-  // Add new version section right after the header and before existing versions
-  const headerEndIndex = changelogContent.indexOf('\n## [Unreleased]');
-  if (headerEndIndex === -1) {
-    throw new Error('Could not find [Unreleased] section in CHANGELOG.md!');
+  // Find the end of the header section
+  const headerEndMatch = changelogContent.match(/(.*and this project adheres to \[Semantic Versioning\].*\n)/);
+  if (!headerEndMatch) {
+    throw new Error('Could not find header section in CHANGELOG.md!');
   }
   
-  const beforeUnreleased = changelogContent.substring(0, headerEndIndex);
-  const afterUnreleased = changelogContent.substring(headerEndIndex);
+  const headerEndIndex = headerEndMatch.index + headerEndMatch[0].length;
+  const headerPart = changelogContent.substring(0, headerEndIndex);
+  const contentPart = changelogContent.substring(headerEndIndex);
   
-  // Remove the [Unreleased] section temporarily
-  const withoutUnreleased = afterUnreleased.replace(/## \[Unreleased\] - In Development[\s\S]*?(?=## \[|$)/, '');
-  
-  // Combine: header + new version + existing versions + new unreleased section
-  const newUnreleasedSection = `## [Unreleased] - In Development
-
-### Added
-
-### Changed
-
-### Fixed
-
-### Technical
-
-`;
-
-  const finalChangelog = beforeUnreleased + newVersionSection + withoutUnreleased + newUnreleasedSection;
+  // Add new version section right after header
+  const finalChangelog = headerPart + newVersionSection + contentPart;
   fs.writeFileSync(CHANGELOG_PATH, finalChangelog);
   log(`✅ CHANGELOG.md updated with version ${newVersion}`, 'green');
 }

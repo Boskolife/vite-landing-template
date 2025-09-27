@@ -1,4 +1,6 @@
-# Vite Landing Template / Vite Landing Шаблон
+<div align="center">
+  # Vite Landing Template / Vite Landing Шаблон
+</div>
 
 <div align="center">
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
@@ -14,8 +16,9 @@
 </div>
 
 ---
-
-## 🌍 Choose Language / Оберіть мову
+<div align="center">
+  ## 🌍 Choose Language / Оберіть мову
+</div>
 
 <div align="center">
 

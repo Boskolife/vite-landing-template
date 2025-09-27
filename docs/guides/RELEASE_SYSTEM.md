@@ -45,16 +45,6 @@ node scripts/github-release.js fix "Resolve mobile navigation issues"
 ### CHANGELOG Structure / Структура CHANGELOG
 
 ```markdown
-## [Unreleased] - In Development
-
-### Added
-
-### Changed
-
-### Fixed
-
-### Technical
-
 ## [1.1.0] - 2025-01-15
 
 ### Added
@@ -121,16 +111,6 @@ node scripts/github-release.js fix "Вирішено проблеми мобіл
 ### Структура CHANGELOG / CHANGELOG Structure
 
 ```markdown
-## [Unreleased] - In Development
-
-### Added
-
-### Changed
-
-### Fixed
-
-### Technical
-
 ## [1.1.0] - 2025-01-15
 
 ### Added
