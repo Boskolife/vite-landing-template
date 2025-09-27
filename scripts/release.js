@@ -100,7 +100,7 @@ function updateChangelog(newVersion, releaseDescription) {
   const today = new Date().toISOString().split('T')[0];
   
   // Replace [Unreleased] with new version
-  const unreleasedPattern = /## \[Unreleased\] - In Development \/ \[Не випущено\] - В розробці/;
+  const unreleasedPattern = /## \[Unreleased\] - In Development/;
   
   if (!unreleasedPattern.test(changelogContent)) {
     throw new Error('Unreleased section not found in CHANGELOG.md!');
@@ -116,15 +116,15 @@ function updateChangelog(newVersion, releaseDescription) {
   if (!hasNewUnreleased) {
     const newUnreleasedSection = `
 
-## [Unreleased] - In Development / [Не випущено] - В розробці
+## [Unreleased] - In Development
 
-### Added / Додано
+### Added
 
-### Changed / Змінено
+### Changed
 
-### Fixed / Виправлено
+### Fixed
 
-### Technical / Технічна частина
+### Technical
 
 `;
     fs.writeFileSync(CHANGELOG_PATH, updatedChangelog + newUnreleasedSection);
