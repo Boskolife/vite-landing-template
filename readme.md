@@ -34,13 +34,10 @@ _Сучасний, швидкий та ефективний конструкто
 
 ## ✨ What's This? / Що це?
 
-<div align="center">
-
 **A powerful, modern landing page template** that combines the speed of Vite with the flexibility of modern web technologies.
 
 **Потужний, сучасний шаблон лендінгової сторінки**, який поєднує швидкість Vite з гнучкістю сучасних веб-технологій.
 
-</div>
 
 ### 🎯 Perfect For / Ідеально для
 
@@ -78,8 +75,6 @@ npm run dev
 
 ## 🛠️ Available Commands / Доступні команди
 
-<div align="center">
-
 | Command / Команда | Description / Опис                                       |
 | :---------------: | :------------------------------------------------------- |
 |   `npm run dev`   | 🚀 Start development server / Запуск сервера розробки    |
@@ -88,13 +83,9 @@ npm run dev
 |  `npm run lint`   | 🔍 Run code linting / Запуск перевірки коду              |
 | `npm run format`  | 💅 Format code / Форматування коду                       |
 
-</div>
-
 ---
 
 ## 🎨 Key Features / Ключові особливості
-
-<div align="center">
 
 ### ⚡ **Performance** / **Продуктивність**
 
@@ -126,13 +117,12 @@ npm run dev
 - **ESLint** - Code quality / Якість коду
 - **Git hooks** - Automated checks / Автоматичні перевірки
 
-</div>
-
 ---
 
-## 📚 Documentation / Документація
 
 <div align="center">
+
+## 📚 Documentation / Документація
 
 |                   📖 **Complete Guides** / **Повні гіди**                    |                    📋 **Quick References** / **Швидкі довідники**                     |
 | :--------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
@@ -147,13 +137,9 @@ npm run dev
 
 ## 🎯 Current Status / Поточний статус
 
-<div align="center">
-
 [![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.0.3-blue?style=for-the-badge)](https://github.com/Boskolife/vite-landing-template/releases/tag/v1.0.3)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](#)
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-A%20Grade-brightgreen?style=for-the-badge)](#)
-
-</div>
 
 **Version / Версія**: `1.0.3` - Production Ready / Готовий до продакшену  
 **Status / Статус**: ✅ Stable / Стабільний  
@@ -161,31 +147,11 @@ npm run dev
 
 ---
 
-## 🌟 What's New? / Що нового?
-
-<div align="center">
-
-### 🎉 **Latest Updates** / **Останні оновлення**
-
-- ✨ **Simplified release system** with 3 commands / Спрощена система релізів з 3 командами
-- 🚀 **GitHub integration** for automated releases / Інтеграція з GitHub для автоматичних релізів
-- 🖼️ **WebP optimization** for better performance / Оптимізація WebP для кращої продуктивності
-- 📚 **Comprehensive documentation** in English & Ukrainian / Вичерпна документація англійською та українською
-- 🔧 **Modern tooling** with ESLint, Prettier, and Git hooks / Сучасні інструменти з ESLint, Prettier та Git хуками
-
-</div>
-
----
-
 ## 🤝 Contributing / Внесок
-
-<div align="center">
 
 We welcome contributions! Here's how you can help:
 
 Ми вітаємо внески! Ось як ви можете допомогти:
-
-</div>
 
 - 🐛 **Report bugs** / **Повідомляйте про помилки**
 - 💡 **Suggest features** / **Пропонуйте функції**
@@ -198,9 +164,10 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-## 📄 License / Ліцензія
 
 <div align="center">
+
+## 📄 License / Ліцензія
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
