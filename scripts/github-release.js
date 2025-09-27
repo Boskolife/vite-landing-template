@@ -115,16 +115,20 @@ ${category}
 
 `;
 
-  // Replace [Unreleased] with new version section
-  const updatedChangelog = changelogContent.replace(
-    unreleasedPattern,
-    newVersionSection.trim()
-  );
-
-  // Add new unreleased section at the end
-  const newUnreleasedSection = `
-
-## [Unreleased] - In Development
+  // Add new version section right after the header and before existing versions
+  const headerEndIndex = changelogContent.indexOf('\n## [Unreleased]');
+  if (headerEndIndex === -1) {
+    throw new Error('Could not find [Unreleased] section in CHANGELOG.md!');
+  }
+  
+  const beforeUnreleased = changelogContent.substring(0, headerEndIndex);
+  const afterUnreleased = changelogContent.substring(headerEndIndex);
+  
+  // Remove the [Unreleased] section temporarily
+  const withoutUnreleased = afterUnreleased.replace(/## \[Unreleased\] - In Development[\s\S]*?(?=## \[|$)/, '');
+  
+  // Combine: header + new version + existing versions + new unreleased section
+  const newUnreleasedSection = `## [Unreleased] - In Development
 
 ### Added
 
@@ -136,7 +140,7 @@ ${category}
 
 `;
 
-  const finalChangelog = updatedChangelog + newUnreleasedSection;
+  const finalChangelog = beforeUnreleased + newVersionSection + withoutUnreleased + newUnreleasedSection;
   fs.writeFileSync(CHANGELOG_PATH, finalChangelog);
   log(`✅ CHANGELOG.md updated with version ${newVersion}`, 'green');
 }
