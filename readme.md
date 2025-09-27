@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS">
   <img src="https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white" alt="Handlebars">
 </div>
@@ -11,12 +11,12 @@
 
 ## 🇺🇸 English
 
-A modern, fast, and efficient landing page builder built with Vite, TypeScript, SCSS, and Handlebars templates. Perfect for creating responsive landing pages with hot reload and optimized builds.
+A modern, fast, and efficient landing page builder built with Vite, JavaScript, SCSS, and Handlebars templates. Perfect for creating responsive landing pages with hot reload and optimized builds.
 
 ### ✨ Features
 
 - ⚡ **Vite 7** - Lightning-fast build tool with HMR
-- 📝 **TypeScript 5.4** - Type-safe JavaScript development
+- 📝 **JavaScript ES6+** - Modern JavaScript development
 - 🎨 **SCSS** - Advanced CSS preprocessing with variables and mixins
 - 📄 **Handlebars** - Template engine for reusable components
 - 🔧 **ESLint + Prettier** - Code quality and formatting
@@ -84,7 +84,7 @@ vite-landing-template/
 ├── .prettierrc                # Prettier configuration
 ├── .gitignore                 # Git ignore rules
 ├── package.json               # Dependencies and scripts
-├── tsconfig.json              # TypeScript configuration
+├── tsconfig.json              # JavaScript configuration
 ├── vite.config.js             # Vite configuration
 └── CHANGELOG.md               # Project changelog
 ```
@@ -99,7 +99,7 @@ vite-landing-template/
 | `npm run lint` | Run ESLint |
 | `npm run lint:fix` | Fix ESLint errors |
 | `npm run format` | Format code with Prettier |
-| `npm run type-check` | Run TypeScript type checking |
+| `npm run type-check` | Run JavaScript type checking |
 
 ### 🎨 Customization
 
@@ -154,12 +154,12 @@ The template includes built-in SEO protection:
 
 ## 🇺🇦 Українська
 
-Сучасний, швидкий та ефективний конструктор лендінг-сторінок, створений з Vite, TypeScript, SCSS та шаблонами Handlebars. Ідеально підходить для створення адаптивних лендінг-сторінок з гарячою перезавантаженням та оптимізованими збірками.
+Сучасний, швидкий та ефективний конструктор лендінг-сторінок, створений з Vite, JavaScript, SCSS та шаблонами Handlebars. Ідеально підходить для створення адаптивних лендінг-сторінок з гарячою перезавантаженням та оптимізованими збірками.
 
 ### ✨ Можливості
 
 - ⚡ **Vite 7** - Надзвичайно швидкий інструмент збірки з HMR
-- 📝 **TypeScript 5.4** - Розробка JavaScript з типізацією
+- 📝 **JavaScript ES6+** - Сучасна розробка JavaScript
 - 🎨 **SCSS** - Розширена попередня обробка CSS з змінними та міксинами
 - 📄 **Handlebars** - Движок шаблонів для багаторазових компонентів
 - 🔧 **ESLint + Prettier** - Якість коду та форматування
@@ -227,7 +227,7 @@ vite-landing-template/
 ├── .prettierrc                # Конфігурація Prettier
 ├── .gitignore                 # Правила ігнорування Git
 ├── package.json               # Залежності та скрипти
-├── tsconfig.json              # Конфігурація TypeScript
+├── tsconfig.json              # Конфігурація JavaScript
 ├── vite.config.js             # Конфігурація Vite
 └── CHANGELOG.md               # Журнал змін проекту
 ```
@@ -242,7 +242,7 @@ vite-landing-template/
 | `npm run lint` | Запустити ESLint |
 | `npm run lint:fix` | Виправити помилки ESLint |
 | `npm run format` | Форматувати код з Prettier |
-| `npm run type-check` | Запустити перевірку типів TypeScript |
+| `npm run type-check` | Запустити перевірку типів JavaScript |
 
 ### 🎨 Налаштування
 
@@ -312,6 +312,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ---
 
 <div align="center">
-  <p>Made with ❤️ using Vite, TypeScript, and SCSS</p>
-  <p>Зроблено з ❤️ використовуючи Vite, TypeScript та SCSS</p>
+  <p>Made with ❤️ using Vite, JavaScript, and SCSS</p>
+  <p>Зроблено з ❤️ використовуючи Vite, JavaScript та SCSS</p>
 </div>
