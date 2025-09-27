@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: removed TypeScript dependencies and tsconfig.json
 - feat: updated ESLint configuration for JavaScript only
 
+
 ### Added
 
 - feat: replaced Roboto font with Space Mono with full character set
