@@ -44,6 +44,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Updated dependencies in package.json
   - Updated files: docs/guides/RELEASE.md, package.json, scripts/release.js
 
+
+### Added
+- feat: implement release-only CHANGELOG updates
 ## [0.9.0] - 2025-09-27
 
 ### Changed

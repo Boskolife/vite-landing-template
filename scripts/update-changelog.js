@@ -75,13 +75,16 @@ function addEntryToChangelog(commitMessage) {
   
   const changelogContent = fs.readFileSync(CHANGELOG_PATH, 'utf8');
   
-  // Find unreleased section
-  const unreleasedMatch = changelogContent.match(/## \[Unreleased\] - In Development\n([\s\S]*?)(?=## \[|\Z)/);
+  // Find unreleased section (handle both \n and \r\n line endings)
+  const unreleasedMatch = changelogContent.match(/## \[Unreleased\] - In Development\r?\n([\s\S]*?)(?=## \[|$)/);
   
   if (unreleasedMatch) {
     const unreleasedSectionContent = unreleasedMatch[1];
-    const unreleasedSectionStart = unreleasedMatch.index! + unreleasedMatch[0].indexOf(unreleasedSectionContent);
+    const unreleasedSectionStart = unreleasedMatch.index + unreleasedMatch[0].indexOf(unreleasedSectionContent);
     const unreleasedSectionEnd = unreleasedSectionStart + unreleasedSectionContent.length;
+    
+    const beforeUnreleased = changelogContent.substring(0, unreleasedSectionStart);
+    const afterUnreleased = changelogContent.substring(unreleasedSectionEnd);
     
     // Find the category section
     const categoryRegex = new RegExp(`### ${category}\\n([\\s\\S]*?)(?=### |\\Z)`);
@@ -99,8 +102,6 @@ function addEntryToChangelog(commitMessage) {
         `### ${category}\n${newCategoryContent}`
       );
       
-      const beforeUnreleased = changelogContent.substring(0, unreleasedSectionStart);
-      const afterUnreleased = changelogContent.substring(unreleasedSectionEnd);
       const newContent = beforeUnreleased + newUnreleasedContent + afterUnreleased;
       
       fs.writeFileSync(CHANGELOG_PATH, newContent, 'utf8');
@@ -110,7 +111,7 @@ function addEntryToChangelog(commitMessage) {
       // Category doesn't exist, create it
       const newCategory = `\n### ${category}\n${entry}\n`;
       const newUnreleasedContent = unreleasedSectionContent + newCategory;
-      const newContent = beforeUnreleased + newUnreleasedContent + afterUnreleased.substring(unreleasedSectionEnd);
+      const newContent = beforeUnreleased + newUnreleasedContent + afterUnreleased;
       fs.writeFileSync(CHANGELOG_PATH, newContent, 'utf8');
       console.log(`✅ Created ${category} section and added entry`);
     }
