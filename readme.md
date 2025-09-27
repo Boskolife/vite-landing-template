@@ -45,8 +45,6 @@ A modern, fast, and efficient landing page builder built with Vite, JavaScript, 
 - 🎨 **SCSS** - Advanced CSS preprocessing / Розширений CSS препроцесинг
 - 📄 **Handlebars** - Template engine / Движок шаблонів
 - 🖼️ **WebP Support** - Automatic image optimization / Автоматична оптимізація зображень
-- 🔄 **Release Automation** - Automated GitHub releases / Автоматизовані GitHub релізи
-- 📚 **Multilingual Docs** - Ukrainian + English / Багатомовна документація
 
 ### 🛠️ Quick Start / Швидкий старт
 
@@ -72,8 +70,6 @@ npm run preview          # Preview build / Попередній перегляд
 | **Usage Guide** / **Керівництво використання** | [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)                       | [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)                       |
 | **Quick Start** / **Швидкий старт**            | [docs/guides/QUICK_START.md](docs/guides/QUICK_START.md)         | [docs/guides/QUICK_START.md](docs/guides/QUICK_START.md)         |
 | **Development** / **Розробка**                 | [docs/guides/DEVELOPMENT.md](docs/guides/DEVELOPMENT.md)         | [docs/guides/DEVELOPMENT.md](docs/guides/DEVELOPMENT.md)         |
-| **Release Guide** / **Керівництво релізів**    | [docs/guides/RELEASE.md](docs/guides/RELEASE.md)                 | [docs/guides/RELEASE.md](docs/guides/RELEASE.md)                 |
-| **GitHub Releases** / **GitHub релізи**        | [docs/guides/GITHUB_RELEASES.md](docs/guides/GITHUB_RELEASES.md) | [docs/guides/GITHUB_RELEASES.md](docs/guides/GITHUB_RELEASES.md) |
 
 ### 🎯 Current Status / Поточний статус
 
