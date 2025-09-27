@@ -257,6 +257,9 @@ npm run format
   - Обновлены зависимости в package.json
   - Изменены файлы: .github/workflows/release.yml, docs/guides/GITHUB_RELEASES.md, package.json, scripts/github-release.js
 
+- chore: обновление проекта
+  - Изменены файлы: README_EN.md, README_UA.md, readme.md
+
 ## [Unreleased] - In Development / [Не випущено] - В розробці
 
 ### Added / Додано

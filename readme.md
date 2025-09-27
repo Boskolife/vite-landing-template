@@ -7,333 +7,83 @@
   <img src="https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white" alt="Handlebars">
 </div>
 
----
-
-## 🇺🇸 English
-
-A modern, fast, and efficient landing page builder built with Vite, JavaScript, SCSS, and Handlebars templates. Perfect for creating responsive landing pages with hot reload and optimized builds.
-
-### ✨ Features
-
-- ⚡ **Vite 7** - Lightning-fast build tool with HMR
-- 📝 **JavaScript ES6+** - Modern JavaScript development
-- 🎨 **SCSS** - Advanced CSS preprocessing with variables and mixins
-- 📄 **Handlebars** - Template engine for reusable components
-- 🔧 **ESLint + Prettier** - Code quality and formatting
-- 📱 **Responsive Design** - Mobile-first approach with custom breakpoints
-- 🎯 **Swiper 12** - Modern slider component included
-- 🚀 **Optimized Build** - Production-ready with code splitting and minification
-- 🔤 **Space Mono Font** - Modern monospace typography
-- 🛡️ **No-Index Setup** - SEO protection with robots.txt and meta tags
-- 🖼️ **WebP Support** - Automatic image optimization with WebP conversion
-
-### 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd vite-landing-template
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
-### 📁 Project Structure
-
-```
-vite-landing-template/
-├── src/
-│   ├── index.html              # Main page entry point
-│   ├── js/
-│   │   └── main.js             # Main JavaScript file
-│   ├── styles/
-│   │   ├── main.scss           # Main SCSS entry point
-│   │   ├── base/               # Base styles and utilities
-│   │   │   ├── _variables.scss # SCSS variables
-│   │   │   ├── _mixins.scss    # Reusable mixins
-│   │   │   ├── _functions.scss # SCSS functions
-│   │   │   ├── _adaptive.scss  # Responsive mixins
-│   │   │   ├── _fonts.scss     # Font imports
-│   │   │   ├── _reset.scss     # CSS reset
-│   │   │   ├── _typography.scss# Typography styles
-│   │   │   ├── _forms.scss     # Form styles
-│   │   │   └── _helpers.scss   # Utility classes
-│   │   ├── layout/             # Layout-specific styles
-│   │   │   ├── _header.scss    # Header styles
-│   │   │   ├── _footer.scss    # Footer styles
-│   │   │   └── _common.scss    # Common layout styles
-│   │   └── vendors/            # Third-party styles
-│   │       ├── _normalize.scss # Normalize.css
-│   │       └── _include-media.scss # Media query mixins
-│   └── templates/              # Handlebars partials
-│       ├── header.html         # Header template
-│       └── footer.html         # Footer template
-├── public/                     # Static assets
-│   ├── fonts/                  # Space Mono font files
-│   └── robots.txt              # SEO protection
-├── dist/                       # Production build output
-├── eslint.config.js           # ESLint configuration
-├── .prettierrc                # Prettier configuration
-├── .gitignore                 # Git ignore rules
-├── package.json               # Dependencies and scripts
-├── tsconfig.json              # JavaScript configuration
-├── vite.config.js             # Vite configuration
-└── CHANGELOG.md               # Project changelog
-```
-
-### 🛠️ Available Scripts
-
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start development server with hot reload |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-| `npm run lint:fix` | Fix ESLint errors |
-| `npm run format` | Format code with Prettier |
-| `npm run type-check` | Run JavaScript type checking |
-
-### 🎨 Customization
-
-#### Colors and Variables
-Edit `src/styles/base/_variables.scss` to customize:
-- Color palette
-- Typography settings
-- Breakpoints
-- Spacing values
-
-#### Fonts
-The template uses **Space Mono** font family. Font files are located in `public/fonts/` and configured in `src/styles/base/_fonts.scss`.
-
-#### Templates
-Modify Handlebars templates in `src/templates/` to customize:
-- Header structure
-- Footer content
-- Navigation menus
-
-### 🔧 Configuration
-
-#### Vite Configuration
-The build process is configured in `vite.config.js`:
-- Base path: `/vite-landing-template`
-- Handlebars context variables
-- Build optimization settings
-- Development server settings
-
-#### ESLint & Prettier
-- ESLint configuration: `eslint.config.js`
-- Prettier configuration: `.prettierrc`
-- Both tools work together for code quality
-
-### 📱 Responsive Design
-
-The template uses a mobile-first approach with custom breakpoints:
-- **xs-phone**: 320px
-- **phone**: 480px
-- **tablet**: 768px
-- **tablet_x**: 860px
-- **desktop**: 1024px
-- **widescreen**: 1200px
-
-### 🛡️ SEO Protection
-
-The template includes built-in SEO protection:
-- `robots.txt` - Blocks all search engine crawlers
-- Meta tags - Prevents indexing and caching
-- No-index directives for all major search engines
-
-### 🖼️ WebP Image Optimization
-
-The template includes automatic WebP conversion:
-- **Automatic conversion** - PNG, JPG, JPEG, GIF → WebP
-- **Fallback support** - Automatic format selection
-- **Lazy loading** - Performance optimization
-- **SCSS mixins** - Ready-to-use WebP mixins
-- **JavaScript utilities** - WebP detection and optimization
-
-See [WebP Guide](docs/WEBP_GUIDE.md) for detailed usage instructions.
-
-### 📚 Documentation
-
-- **[Complete Documentation](docs/README.md)** - Full project documentation
-- **[Quick Start](docs/guides/QUICK_START.md)** - Get started quickly
-- **[Technologies](docs/technologies/)** - Detailed technology guides
-- **[Development Guide](docs/guides/DEVELOPMENT.md)** - Development workflow
-- **[Deployment Guide](docs/guides/DEPLOYMENT.md)** - Deployment instructions
-- **[Examples](docs/examples/)** - Code examples and usage patterns
+<div align="center">
+  <img src="https://img.shields.io/badge/Version-0.9.0-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Status-Pre--release-orange?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+</div>
 
 ---
 
-## 🇺🇦 Українська
+## 🌍 Choose Language / Оберіть мову
 
-Сучасний, швидкий та ефективний конструктор лендінг-сторінок, створений з Vite, JavaScript, SCSS та шаблонами Handlebars. Ідеально підходить для створення адаптивних лендінг-сторінок з гарячою перезавантаженням та оптимізованими збірками.
+<div align="center">
 
-### ✨ Можливості
+| 🇺🇸 English                             | 🇺🇦 Українська                             |
+| -------------------------------------- | ----------------------------------------- |
+| [📖 **README_EN.md**](README_EN.md)    | [📖 **README_UA.md**](README_UA.md)       |
+| Complete English documentation         | Повна українська документація             |
+| [👉 **Read in English**](README_EN.md) | [👉 **Читати українською**](README_UA.md) |
 
-- ⚡ **Vite 7** - Надзвичайно швидкий інструмент збірки з HMR
-- 📝 **JavaScript ES6+** - Сучасна розробка JavaScript
-- 🎨 **SCSS** - Розширена попередня обробка CSS з змінними та міксинами
-- 📄 **Handlebars** - Движок шаблонів для багаторазових компонентів
-- 🔧 **ESLint + Prettier** - Якість коду та форматування
-- 📱 **Адаптивний дизайн** - Mobile-first підхід з власними breakpoints
-- 🎯 **Swiper 12** - Сучасний слайдер включений
-- 🚀 **Оптимізована збірка** - Готовий до продакшену з розділенням коду та мінімізацією
-- 🔤 **Шрифт Space Mono** - Сучасна моноширинна типографіка
-- 🛡️ **Налаштування No-Index** - Захист SEO з robots.txt та мета-тегами
-- 🖼️ **WebP Підтримка** - Автоматична оптимізація зображень з конвертацією в WebP
+</div>
 
-### 🚀 Швидкий старт
+---
+
+## 🚀 Quick Overview / Швидкий огляд
+
+A modern, fast, and efficient landing page builder built with Vite, JavaScript, SCSS, and Handlebars templates. Perfect for creating responsive landing pages with hot reload, optimized builds, and automated deployment.
+
+Сучасний, швидкий та ефективний конструктор лендінгових сторінок, побудований на Vite, JavaScript, SCSS та Handlebars шаблонах. Ідеальний для створення адаптивних лендінгових сторінок з гарячою заміною, оптимізованими збірками та автоматизованим розгортанням.
+
+### ✨ Key Features / Ключові особливості
+
+- ⚡ **Vite 7** - Lightning-fast build tool / Швидкий інструмент збірки
+- 📝 **JavaScript ES6+** - Modern development / Сучасна розробка
+- 🎨 **SCSS** - Advanced CSS preprocessing / Розширений CSS препроцесинг
+- 📄 **Handlebars** - Template engine / Движок шаблонів
+- 🖼️ **WebP Support** - Automatic image optimization / Автоматична оптимізація зображень
+- 🔄 **Release Automation** - Automated GitHub releases / Автоматизовані GitHub релізи
+- 📚 **Multilingual Docs** - Ukrainian + English / Багатомовна документація
+
+### 🛠️ Quick Start / Швидкий старт
 
 ```bash
-# Клонувати репозиторій
+# Clone and setup / Клонування та налаштування
 git clone <repository-url>
 cd vite-landing-template
-
-# Встановити залежності
 npm install
 
-# Запустити сервер розробки
-npm run dev
+# Development / Розробка
+npm run dev              # Start dev server / Запуск сервера
 
-# Зібрати для продакшену
-npm run build
-
-# Попередній перегляд продакшен збірки
-npm run preview
+# Production / Продакшен
+npm run build            # Build project / Збірка проекту
+npm run preview          # Preview build / Попередній перегляд
 ```
 
-### 📁 Структура проекту
+### 📚 Documentation / Документація
 
-```
-vite-landing-template/
-├── src/
-│   ├── index.html              # Головна точка входу сторінки
-│   ├── js/
-│   │   └── main.js             # Головний JavaScript файл
-│   ├── styles/
-│   │   ├── main.scss           # Головна точка входу SCSS
-│   │   ├── base/               # Базові стилі та утиліти
-│   │   │   ├── _variables.scss # SCSS змінні
-│   │   │   ├── _mixins.scss    # Багаторазові міксини
-│   │   │   ├── _functions.scss # SCSS функції
-│   │   │   ├── _adaptive.scss  # Адаптивні міксини
-│   │   │   ├── _fonts.scss     # Імпорти шрифтів
-│   │   │   ├── _reset.scss     # CSS скидання
-│   │   │   ├── _typography.scss# Стилі типографіки
-│   │   │   ├── _forms.scss     # Стилі форм
-│   │   │   └── _helpers.scss   # Утилітарні класи
-│   │   ├── layout/             # Стилі макету
-│   │   │   ├── _header.scss    # Стилі заголовка
-│   │   │   ├── _footer.scss    # Стилі підвалу
-│   │   │   └── _common.scss    # Загальні стилі макету
-│   │   └── vendors/            # Сторонні стилі
-│   │       ├── _normalize.scss # Normalize.css
-│   │       └── _include-media.scss # Міксини медіа-запитів
-│   └── templates/              # Часткові шаблони Handlebars
-│       ├── header.html         # Шаблон заголовка
-│       └── footer.html         # Шаблон підвалу
-├── public/                     # Статичні ресурси
-│   ├── fonts/                  # Файли шрифту Space Mono
-│   └── robots.txt              # Захист SEO
-├── dist/                       # Вихід продакшен збірки
-├── eslint.config.js           # Конфігурація ESLint
-├── .prettierrc                # Конфігурація Prettier
-├── .gitignore                 # Правила ігнорування Git
-├── package.json               # Залежності та скрипти
-├── tsconfig.json              # Конфігурація JavaScript
-├── vite.config.js             # Конфігурація Vite
-└── CHANGELOG.md               # Журнал змін проекту
-```
+| Type / Тип                                     | English                                                          | Українська                                                       |
+| ---------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Complete Guide** / **Повне керівництво**     | [README_EN.md](README_EN.md)                                     | [README_UA.md](README_UA.md)                                     |
+| **Usage Guide** / **Керівництво використання** | [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)                       | [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)                       |
+| **Quick Start** / **Швидкий старт**            | [docs/guides/QUICK_START.md](docs/guides/QUICK_START.md)         | [docs/guides/QUICK_START.md](docs/guides/QUICK_START.md)         |
+| **Development** / **Розробка**                 | [docs/guides/DEVELOPMENT.md](docs/guides/DEVELOPMENT.md)         | [docs/guides/DEVELOPMENT.md](docs/guides/DEVELOPMENT.md)         |
+| **Release Guide** / **Керівництво релізів**    | [docs/guides/RELEASE.md](docs/guides/RELEASE.md)                 | [docs/guides/RELEASE.md](docs/guides/RELEASE.md)                 |
+| **GitHub Releases** / **GitHub релізи**        | [docs/guides/GITHUB_RELEASES.md](docs/guides/GITHUB_RELEASES.md) | [docs/guides/GITHUB_RELEASES.md](docs/guides/GITHUB_RELEASES.md) |
 
-### 🛠️ Доступні скрипти
+### 🎯 Current Status / Поточний статус
 
-| Скрипт | Опис |
-|--------|------|
-| `npm run dev` | Запустити сервер розробки з гарячою перезавантаженням |
-| `npm run build` | Зібрати для продакшену |
-| `npm run preview` | Попередній перегляд продакшен збірки |
-| `npm run lint` | Запустити ESLint |
-| `npm run lint:fix` | Виправити помилки ESLint |
-| `npm run format` | Форматувати код з Prettier |
-| `npm run type-check` | Запустити перевірку типів JavaScript |
+- **Version / Версія**: 0.9.0 (Pre-release)
+- **Status / Статус**: Active development / Активна розробка
+- **Last Release / Останній реліз**: [v0.9.0](https://github.com/Boskolife/vite-landing-template/releases/tag/v0.9.0)
 
-### 🎨 Налаштування
+### 🔗 Links / Посилання
 
-#### Кольори та змінні
-Редагуйте `src/styles/base/_variables.scss` для налаштування:
-- Кольорової палітри
-- Налаштувань типографіки
-- Breakpoints
-- Значень відступів
-
-#### Шрифти
-Шаблон використовує сімейство шрифтів **Space Mono**. Файли шрифтів знаходяться в `public/fonts/` та налаштовані в `src/styles/base/_fonts.scss`.
-
-#### Шаблони
-Модифікуйте шаблони Handlebars в `src/templates/` для налаштування:
-- Структури заголовка
-- Вмісту підвалу
-- Навігаційних меню
-
-### 🔧 Конфігурація
-
-#### Конфігурація Vite
-Процес збірки налаштований в `vite.config.js`:
-- Базовий шлях: `/vite-landing-template`
-- Змінні контексту Handlebars
-- Налаштування оптимізації збірки
-- Налаштування сервера розробки
-
-#### ESLint & Prettier
-- Конфігурація ESLint: `eslint.config.js`
-- Конфігурація Prettier: `.prettierrc`
-- Обидва інструменти працюють разом для якості коду
-
-### 📱 Адаптивний дизайн
-
-Шаблон використовує mobile-first підхід з власними breakpoints:
-- **xs-phone**: 320px
-- **phone**: 480px
-- **tablet**: 768px
-- **tablet_x**: 860px
-- **desktop**: 1024px
-- **widescreen**: 1200px
-
-### 🛡️ Захист SEO
-
-Шаблон включає вбудований захист SEO:
-- `robots.txt` - Блокує всіх пошукових роботів
-- Мета-теги - Запобігає індексації та кешуванню
-- Директиви no-index для всіх основних пошукових систем
-
-### 🖼️ WebP Оптимізація Зображень
-
-Шаблон включає автоматичну конвертацію WebP:
-- **Автоматична конвертація** - PNG, JPG, JPEG, GIF → WebP
-- **Fallback підтримка** - Автоматичний вибір формату
-- **Lazy loading** - Оптимізація продуктивності
-- **SCSS міксини** - Готові до використання WebP міксини
-- **JavaScript утиліти** - Детекція та оптимізація WebP
-
-Дивіться [WebP Гід](docs/WEBP_GUIDE.md) для детальних інструкцій з використання.
-
-### 📚 Документація
-
-- **[Повна документація](docs/README.md)** - Повна документація проекту
-- **[Швидкий старт](docs/guides/QUICK_START.md)** - Швидке початок роботи
-- **[Технології](docs/technologies/)** - Детальні гіди по технологіям
-- **[Гід розробки](docs/guides/DEVELOPMENT.md)** - Процес розробки
-- **[Гід деплою](docs/guides/DEPLOYMENT.md)** - Інструкції по розгортанню
-- **[Приклади](docs/examples/)** - Приклади коду та шаблони використання
+- **📖 Full English Documentation** / **📖 Повна англійська документація**: [README_EN.md](README_EN.md)
+- **📖 Full Ukrainian Documentation** / **📖 Повна українська документація**: [README_UA.md](README_UA.md)
+- **📚 Complete Documentation** / **📚 Повна документація**: [docs/README.md](docs/README.md)
+- **🚀 Latest Release** / **🚀 Останній реліз**: [GitHub Releases](https://github.com/Boskolife/vite-landing-template/releases)
 
 ---
 
@@ -345,15 +95,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🤝 Contributing / Внесок
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-Внески вітаються! Будь ласка, не соромтеся надсилати Pull Request.
-
----
-
 <div align="center">
-  <p>Made with ❤️ using Vite, JavaScript, and SCSS</p>
-  <p>Зроблено з ❤️ використовуючи Vite, JavaScript та SCSS</p>
+  <p><strong>Made with ❤️ by the Vite Landing Template Team</strong></p>
+  <p><strong>Зроблено з ❤️ командою Vite Landing Template</strong></p>
+  
+  [![GitHub stars](https://img.shields.io/github/stars/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template)
+  [![GitHub forks](https://img.shields.io/github/forks/Boskolife/vite-landing-template?style=social)](https://github.com/Boskolife/vite-landing-template/fork)
+  [![GitHub issues](https://img.shields.io/github/issues/Boskolife/vite-landing-template)](https://github.com/Boskolife/vite-landing-template/issues)
+  [![GitHub pull requests](https://img.shields.io/github/issues-pr/Boskolife/vite-landing-template)](https://github.com/Boskolife/vite-landing-template/pulls)
 </div>
