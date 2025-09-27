@@ -1,272 +1,246 @@
-# Changelog / Журнал змін
+# Changelog
 
-## 🇺🇸 English
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 🇺🇦 Українська
-Всі значні зміни в цьому проекті будуть документовані в цьому файлі.
+## [Unreleased] - In Development
 
-Формат заснований на [Keep a Changelog](https://keepachangelog.com/ru/1.0.0/),
-і цей проект дотримується [Semantic Versioning](https://semver.org/lang/ru/).
+### Added
+
+### Changed
+
+- chore: project update
+  - Изменены файлы: CHANGELOG.md
+
+### Fixed
+
+### Technical
+
+- chore: project update
+  - Updated files: CHANGELOG.md
+
+- chore: project update
+  - Updated files: .gitignore
+
+- chore: project update
+  - Updated files: .husky/pre-commit, CHANGELOG.md
+
+- chore: project update
+  - Updated files: .husky/pre-commit
+
+- chore: configuration update
+  - Updated dependencies in package.json
+
+- chore: configuration update
+  - Updated dependencies in package.json
+  - Updated files: docs/guides/RELEASE.md, package.json, scripts/release.js
 
 ## [0.9.0] - 2025-09-27
 
-### Changed / Змінено
-- feat: migrated project from TypeScript to JavaScript / feat: мігровано проект з TypeScript на JavaScript
-- feat: updated all configuration files for JavaScript support / feat: оновлено всі конфігураційні файли для підтримки JavaScript
-- feat: removed TypeScript dependencies and tsconfig.json / feat: видалено TypeScript залежності та tsconfig.json
-- feat: updated ESLint configuration for JavaScript only / feat: оновлено конфігурацію ESLint тільки для JavaScript
+### Changed
+- feat: migrated project from TypeScript to JavaScript
+- feat: updated all configuration files for JavaScript support
+- feat: removed TypeScript dependencies and tsconfig.json
+- feat: updated ESLint configuration for JavaScript only
 
-### Added / Додано
-- feat: replaced Roboto font with Space Mono with full character set / feat: замінено шрифт Roboto на Space Mono з повним набором начертань
-- feat: added extended noindex settings to prevent site indexing / feat: додано розширені налаштування noindex для запобігання індексації сайту
-- feat: added WebP image optimization with automatic conversion / feat: додано оптимізацію зображень WebP з автоматичною конвертацією
-- feat: added custom Vite plugin for WebP conversion / feat: додано користувацький Vite плагін для конвертації WebP
-- feat: added comprehensive documentation structure in docs/ folder / feat: додано комплексну структуру документації в папці docs/
-- feat: added multilingual documentation support (Ukrainian + English) / feat: додано підтримку багатомовної документації (українська + англійська)
-- feat: added JavaScript utilities for WebP detection and support / feat: додано JavaScript утиліти для виявлення та підтримки WebP
-- feat: added SCSS mixins for WebP background images / feat: додано SCSS міксини для WebP фонових зображень
+### Added
+- feat: replaced Roboto font with Space Mono with full character set
+- feat: added extended noindex settings to prevent site indexing
+- feat: added WebP image optimization with automatic conversion
+- feat: added custom Vite plugin for WebP conversion
+- feat: added comprehensive documentation structure in docs/ folder
+- feat: added multilingual documentation support (Ukrainian + English)
+- feat: added JavaScript utilities for WebP detection and support
+- feat: added SCSS mixins for WebP background images
+- feat: added automated GitHub Releases automation and documentation
+- feat: created separate README files for English and Ukrainian
 
-### Technical / Технічна частина
-- chore: added .cursor/rules to .gitignore to exclude service files / chore: додано .cursor/rules в .gitignore для виключення службових файлів
-- chore: fixed CHANGELOG.md update logic - now updates before commit / chore: виправлено логіку оновлення CHANGELOG.md - тепер оновлюється до коміту
-- feat: integrated vite-plugin-imagemin for image optimization / feat: інтегровано vite-plugin-imagemin для оптимізації зображень
-- feat: added Sharp library for high-performance WebP conversion / feat: додано бібліотеку Sharp для високопродуктивної конвертації WebP
-- feat: created custom WebP conversion plugin with build hooks / feat: створено користувацький плагін конвертації WebP з хуками збірки
+### Technical
+- chore: added .cursor/rules to .gitignore to exclude service files
+- chore: fixed CHANGELOG.md update logic - now updates before commit
+- feat: integrated vite-plugin-imagemin for image optimization
+- feat: added Sharp library for high-performance WebP conversion
+- feat: created custom WebP conversion plugin with build hooks
+- feat: added GitHub Actions workflow for automatic releases
+- feat: created GitHub release script with archive generation
+- feat: added comprehensive GitHub Releases documentation
+- feat: added npm scripts for GitHub releases
+- feat: updated CHANGELOG.md to English-only format
 
 ---
 
-- chore: обновление проекта
-  - Изменены файлы: CHANGELOG.md
-
-- chore: обновление проекта
-  - Изменены файлы: .husky/pre-commit
-
-- chore: обновление проекта
-  - Изменены файлы: .husky/pre-commit, CHANGELOG.md
-
-- chore: обновление проекта
-  - Изменены файлы: .husky/pre-commit
-
-- chore: обновлена конфигурация
-  - Обновлены зависимости в package.json
-  - Изменены файлы: docs/guides/RELEASE.md, package.json, scripts/release.js
-
 ## [0.8.0] - 2024-01-15
 
-### Исправлено (Fixed)
-- Исправлены все Sass deprecation warnings в include-media библиотеке
-- Заменены устаревшие функции: `map-has-key`, `map-get`, `str-index`, `str-slice`, `length`, `nth`, `append`, `unit`, `unquote`, `map-merge`
-- Исправлен порядок @use правил в SCSS файлах
-- Устранена ошибка "at-rule or selector expected" в _include-media.scss
+### Fixed
+- Fixed all Sass deprecation warnings in include-media library
+- Replaced deprecated functions: `map-has-key`, `map-get`, `str-index`, `str-slice`, `length`, `nth`, `append`, `unit`, `unquote`, `map-merge`
+- Fixed order of @use rules in SCSS files
+- Resolved "at-rule or selector expected" error in _include-media.scss
 
-### Изменено (Changed)
-- Обновлена конфигурация ESLint с версии 8 на 9
-- Создан новый eslint.config.js для ESLint 9
-- Убраны console.log из production кода
+### Changed
+- Updated ESLint configuration from version 8 to 9
+- Created new eslint.config.js for ESLint 9
+- Removed console.log from production code
 
-### Техническая часть (Technical)
-- Добавлены современные импорты модулей Sass: `@use 'sass:map'`, `@use 'sass:list'`, `@use 'sass:string'`, `@use 'sass:math'`
-- Обновлены функции в _mixins.scss и _functions.scss для использования модульных функций
-- Добавлены глобальные переменные document и window в ESLint конфигурацию
-- Удалены неиспользуемые eslint-disable директивы
+### Technical
+- Added modern Sass module imports: `@use 'sass:map'`, `@use 'sass:list'`, `@use 'sass:string'`, `@use 'sass:math'`
+- Updated functions in _mixins.scss and _functions.scss to use modular functions
+- Added global variables document and window to ESLint configuration
+- Removed unused eslint-disable directives
 
-### Результат
-- ✅ Проект собирается без ошибок и предупреждений
-- ✅ ESLint не находит проблем
-- ✅ Все Sass функции используют современный синтаксис
-- ✅ Dev сервер запускается без предупреждений
+### Result
+- ✅ Project builds without errors and warnings
+- ✅ ESLint finds no issues
+- ✅ All Sass functions use modern syntax
+- ✅ Dev server starts without warnings
 
 ---
 
 ## [0.7.0] - 2024-01-15
 
-### Добавлено (Added)
-- Полная поддержка Handlebars шаблонов
-- Улучшенная структура SCSS с модульной системой
-- Новые компоненты: header, footer, hero section, features section
-- Конфигурация ESLint и Prettier
-- Лицензия MIT
-- Файл .gitignore
+### Added
+- Full Handlebars template support
+- Improved SCSS structure with modular system
+- New components: header, footer, hero section, features section
+- ESLint and Prettier configuration
+- MIT License
+- .gitignore file
 
-### Изменено (Changed)
-- Обновлен Vite с 5.4.20 до 7.1.7
-- Обновлен ESLint с 8.57.0 до 9.36.0
-- Обновлен Swiper с 11.1.4 до 12.0.2
+### Changed
+- Updated Vite from 5.4.20 to 7.1.7
+- Updated ESLint from 8.57.0 to 9.36.0
+- Updated Swiper from 11.1.4 to 12.0.2
 
-### Техническая часть (Technical)
-- Заменены все @import правила на @use в SCSS
-- Добавлена поддержка JavaScript ES6+
-- Настроена оптимизация сборки с Terser
-- Добавлены source maps для разработки
+### Technical
+- Replaced all @import rules with @use in SCSS
+- Added JavaScript ES6+ support
+- Configured build optimization with Terser
+- Added source maps for development
 
-### Обновленные пакеты
+### Updated Packages
 
-| Пакет | Старая версия | Новая версия | Причина обновления |
-|-------|---------------|--------------|-------------------|
-| **Vite** | 5.4.20 | 7.1.7 | Исправление legacy JS API warnings |
-| **ESLint** | 8.57.0 | 9.36.0 | Новые правила линтинга |
-| **Swiper** | 11.1.4 | 12.0.2 | Улучшения производительности |
+| Package | Old Version | New Version | Update Reason |
+|---------|-------------|-------------|---------------|
+| **Vite** | 5.4.20 | 7.1.7 | Fix legacy JS API warnings |
+| **ESLint** | 8.57.0 | 9.36.0 | New linting rules |
+| **Swiper** | 11.1.4 | 12.0.2 | Performance improvements |
 
-### Команды для обновления:
+### Commands for Update:
 ```bash
 npm install vite@latest eslint@latest swiper@latest
 ```
 
-### Результат
-- ✅ Проект собирается без ошибок
-- ✅ ESLint не находит проблем
-- ✅ Dev сервер запускается без предупреждений
-- ✅ Все зависимости обновлены до последних версий
+### Result
+- ✅ Project builds without errors
+- ✅ ESLint finds no issues
+- ✅ Dev server starts without warnings
+- ✅ All dependencies updated to latest versions
 
 ---
 
 ## [0.6.0] - 2024-01-10
 
-### Добавлено (Added)
-- Базовая структура проекта с Vite
-- Поддержка JavaScript ES6+
-- SCSS с модульной системой
-- Handlebars шаблоны
-- Базовая конфигурация сборки
+### Added
+- Basic project structure with Vite
+- JavaScript ES6+ support
+- SCSS with modular system
+- Handlebars templates
+- Basic build configuration
 
-### Техническая часть (Technical)
-- Настроена сборка с Vite
-- Добавлена поддержка SCSS модулей
-- Базовая конфигурация JavaScript
-- Структура стилей с include-media
-
----
-
-## 🔧 Исправленные критические проблемы
-
-### 1. Миграция с TypeScript на JavaScript
-**Проблема**: Проект был настроен на TypeScript, но нужно было перейти на чистый JavaScript.
-
-**Решение**: 
-- Удалены все TypeScript зависимости
-- Обновлена конфигурация ESLint для JavaScript
-- Удален tsconfig.json
-- Обновлены все упоминания TypeScript на JavaScript
-
-### 2. Проблемы с SCSS модулями
-**Проблема**: Использование устаревших @import правил в SCSS.
-
-**Решение**:
-- Заменены все @import на @use
-- Добавлены современные импорты модулей Sass
-- Обновлены функции для использования модульного синтаксиса
-
-### 3. Конфигурация ESLint
-**Проблема**: ESLint конфигурация была несовместима с версией 9.
-
-**Решение**:
-- Создан новый eslint.config.js
-- Обновлены правила линтинга
-- Добавлены глобальные переменные
+### Technical
+- Configured build with Vite
+- Added SCSS module support
+- Basic JavaScript configuration
+- Style structure with include-media
 
 ---
 
-## 📋 Инструкции по использованию
+## 🔧 Fixed Critical Issues
 
-### Установка зависимостей
+### 1. Migration from TypeScript to JavaScript
+**Problem**: Project was configured for TypeScript but needed to switch to pure JavaScript.
+
+**Solution**: 
+- Removed all TypeScript dependencies
+- Updated ESLint configuration for JavaScript
+- Removed tsconfig.json
+- Updated all TypeScript references to JavaScript
+
+### 2. SCSS Module Issues
+**Problem**: Using deprecated @import rules in SCSS.
+
+**Solution**:
+- Replaced all @import with @use
+- Added modern Sass module imports
+- Updated functions to use modular syntax
+
+### 3. ESLint Configuration
+**Problem**: ESLint configuration was incompatible with version 9.
+
+**Solution**:
+- Created new eslint.config.js
+- Updated linting rules
+- Added global variables
+
+---
+
+## 📋 Usage Instructions
+
+### Install Dependencies
 ```bash
 npm install
 ```
 
-### Запуск dev сервера
+### Start Dev Server
 ```bash
 npm run dev
 ```
 
-### Сборка для production
+### Build for Production
 ```bash
 npm run build
 ```
 
-### Предварительный просмотр сборки
+### Preview Build
 ```bash
 npm run preview
 ```
 
-### Линтинг
+### Linting
 ```bash
 npm run lint
 npm run lint:fix
 ```
 
-### Форматирование кода
+### Code Formatting
 ```bash
 npm run format
 ```
 
 ---
 
-## 🎯 Цели проекта
+## 🎯 Project Goals
 
-- ✅ Современный стек технологий (Vite, JavaScript, SCSS)
-- ✅ Быстрая разработка с hot reload
-- ✅ Качественный код с линтингом и форматированием
-- ✅ Оптимизированная сборка для production
-- ✅ Модульная архитектура стилей
-- ✅ Поддержка шаблонов Handlebars
+- ✅ Modern technology stack (Vite, JavaScript, SCSS)
+- ✅ Fast development with hot reload
+- ✅ Quality code with linting and formatting
+- ✅ Optimized build for production
+- ✅ Modular style architecture
+- ✅ Handlebars template support
+- ✅ WebP image optimization
+- ✅ Automated release management
+- ✅ Comprehensive documentation
+- ✅ Multilingual support
 
 ---
 
-## 📝 Примечания
+## 📝 Notes
 
-- Проект использует современные стандарты веб-разработки
-- Все зависимости обновлены до последних стабильных версий
-- Конфигурация оптимизирована для производительности
-- Код соответствует лучшим практикам JavaScript и SCSS
-
-## [Не выпущено] - В разработке
-
-### Техническая часть (Technical)
-- chore: обновление проекта
-  - Изменены файлы: CHANGELOG.md, LICENSE, readme.md
-
-
-- chore: обновлена конфигурация
-  - Обновлены зависимости в package.json
-
-- chore: обновлена конфигурация
-  - Обновлены зависимости в package.json
-
-- chore: обновление проекта
-  - Изменены файлы: CHANGELOG.md
-
-
-
-### Technical / Технічна частина
-- chore: обновлена конфигурация
-  - Обновлены зависимости в package.json
-  - Изменены файлы: CHANGELOG.md, package.json
-
-- chore: обновление проекта
-  - Изменены файлы: .gitignore
-
-- chore: обновлена конфигурация
-  - Обновлены зависимости в package.json
-  - Изменены файлы: CHANGELOG.md, package.json
-
-- chore: обновлена конфигурация
-  - Обновлены зависимости в package.json
-  - Изменены файлы: .github/workflows/release.yml, docs/guides/GITHUB_RELEASES.md, package.json, scripts/github-release.js
-
-- chore: обновление проекта
-  - Изменены файлы: README_EN.md, README_UA.md, readme.md
-
-## [Unreleased] - In Development / [Не випущено] - В розробці
-
-### Added / Додано
-
-### Changed / Змінено
-
-### Fixed / Виправлено
-
-### Technical / Технічна частина
-
+- Project uses modern web development standards
+- All dependencies updated to latest stable versions
+- Configuration optimized for performance
+- Code follows JavaScript and SCSS best practices
+- Includes automated GitHub releases
+- Supports both English and Ukrainian documentation
