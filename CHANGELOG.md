@@ -246,6 +246,9 @@ npm run format
   - Обновлены зависимости в package.json
   - Изменены файлы: CHANGELOG.md, package.json
 
+- chore: обновление проекта
+  - Изменены файлы: .gitignore
+
 ## [Unreleased] - In Development / [Не випущено] - В розробці
 
 ### Added / Додано

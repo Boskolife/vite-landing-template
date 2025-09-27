@@ -52,6 +52,8 @@ temp/
 # Development rules and internal documentation
 PROJECT_RULES.md
 
+RELEASE.md
+
 # Documentation reports and temporary files
 *_REPORT.md
 *_COMPLETE.md
