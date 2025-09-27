@@ -5,7 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - In Development
+## [0.10.1] - 2025-09-27
+
+### Fixed
+- Test clean CHANGELOG with proper version ordering
 
 ### Added
 
@@ -61,3 +64,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: added comprehensive GitHub Releases documentation
 - feat: added npm scripts for GitHub releases
 - feat: updated CHANGELOG.md to English-only format
+
+## [Unreleased] - In Development
+
+### Added
+
+### Changed
+
+### Fixed
+
+### Technical
+
