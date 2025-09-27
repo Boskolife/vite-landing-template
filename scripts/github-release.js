@@ -111,7 +111,20 @@ ${category}
   // Find the end of the header section
   const headerEndMatch = changelogContent.match(/(.*and this project adheres to \[Semantic Versioning\].*\n)/);
   if (!headerEndMatch) {
-    throw new Error('Could not find header section in CHANGELOG.md!');
+    // Fallback: find the end of the header by looking for the first version section
+    const firstVersionMatch = changelogContent.match(/\n## \[/);
+    if (!firstVersionMatch) {
+      throw new Error('Could not find header section or version section in CHANGELOG.md!');
+    }
+    const headerEndIndex = firstVersionMatch.index;
+    const headerPart = changelogContent.substring(0, headerEndIndex);
+    const contentPart = changelogContent.substring(headerEndIndex);
+    
+    // Add new version section right after header
+    const finalChangelog = headerPart + newVersionSection + contentPart;
+    fs.writeFileSync(CHANGELOG_PATH, finalChangelog);
+    log(`✅ CHANGELOG.md updated with version ${newVersion}`, 'green');
+    return;
   }
   
   const headerEndIndex = headerEndMatch.index + headerEndMatch[0].length;
