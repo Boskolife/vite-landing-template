@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- feat: updated configuration
+  - Обновлены зависимости в package.json
+  - Изменены файлы: .gitignore, docs/guides/GITHUB_RELEASES.md, package.json, scripts/update-changelog.js
+
 ### Changed
 
 - chore: project update

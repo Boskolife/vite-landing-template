@@ -51,7 +51,7 @@ temp/
 # Project-specific files (not needed for end users)
 # Development rules and internal documentation
 PROJECT_RULES.md
-
+CHANGELOG_MANAGEMENT.md
 RELEASE.md
 
 # Documentation reports and temporary files

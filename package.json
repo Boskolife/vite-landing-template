@@ -23,7 +23,9 @@
     "github:release": "node scripts/github-release.js",
     "github:patch": "npm run github:release patch",
     "github:minor": "npm run github:release minor",
-    "github:major": "npm run github:release major"
+    "github:major": "npm run github:release major",
+    "changelog:manual": "node scripts/update-changelog.js",
+    "changelog:add": "npm run changelog:manual"
   },
   "devDependencies": {
     "eslint": "^9.36.0",
