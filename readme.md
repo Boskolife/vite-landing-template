@@ -51,8 +51,6 @@ _Сучасний, швидкий та ефективний конструкто
 
 ## 🚀 Quick Start / Швидкий старт
 
-<div align="center">
-
 ```bash
 # 1️⃣ Clone the repository / Клонуйте репозиторій
 git clone https://github.com/Boskolife/vite-landing-template.git
@@ -64,12 +62,6 @@ npm install
 # 3️⃣ Start development / Запустіть розробку
 npm run dev
 ```
-
-**🎉 That's it! Your server is running at `http://localhost:3000`**
-
-**🎉 Готово! Ваш сервер працює на `http://localhost:3000`**
-
-</div>
 
 ---
 
