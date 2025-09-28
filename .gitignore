@@ -83,6 +83,9 @@ __tests__/
 *.tmp
 *~
 
+# Patch files
+*.patch
+
 # Editor and IDE specific files
 .vscode/settings.json
 .vscode/launch.json
