@@ -26,6 +26,9 @@ Welcome to the project documentation! Here you will find detailed guides for all
 ### 🎯 Examples / Приклади
 - **[WebP Images](examples/WEBP_EXAMPLES.md)** - WebP usage examples
 
+### 🧩 Components / Компоненти
+- **[JavaScript Components](components/README.md)** - Interactive UI components
+
 ## 🚀 Quick Start / Швидкий старт
 
 1. **Install dependencies:**
@@ -57,6 +60,13 @@ See full command list in [COMMANDS.md](./COMMANDS.md)
 | `npm run format` | Code formatting |
 
 ## 🎨 Main Features / Основні можливості
+
+### 🧩 Interactive Components / Інтерактивні компоненти
+- ✅ **Accordion** - Collapsible content sections / Згортаючі розділи контенту
+- ✅ **Dropdown** - Toggleable menus / Перемикаючі меню
+- ✅ **Select** - Custom select dropdowns / Користувацькі випадаючі списки
+- ✅ **Tabs** - Tabbed content interface / Інтерфейс контенту з вкладками
+- ✅ **Utility Functions** - Animation and DOM helpers / Помічники анімацій та DOM
 
 - ⚡ **Vite 7** - Ultra-fast build
 - 🎨 **SCSS** - Modern styles
