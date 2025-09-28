@@ -8,6 +8,12 @@ yarn-error.log*
 dist/
 build/
 
+# Development scripts (not needed for end users)
+scripts/
+
+# Internal development documentation
+LANGUAGE_RULES.md
+
 # Environment variables
 .env
 .env.local
@@ -26,9 +32,6 @@ build/
 
 # Husky temporary files (keep .husky/ directory)
 .husky/_
-
-# Language rules
-LANGUAGE_RULES.md
 
 # OS
 .DS_Store

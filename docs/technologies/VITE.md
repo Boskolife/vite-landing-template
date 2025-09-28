@@ -79,21 +79,21 @@ export default defineConfig({
 });
 ```
 
-### 2. **Сервер разработки**
+### 2. **Development Server / Сервер розробки**
 
 ```javascript
 server: {
   port: 3000,        // Server port / Порт сервера
   open: true,        // Auto-open browser / Автоматичне відкриття браузера
   host: true,        // Access from other devices / Доступ з інших пристроїв
-  cors: true,        // CORS поддержка
+  cors: true,        // CORS support
   proxy: {           // Proxy for API / Проксі для API
     '/api': 'http://localhost:8080'
   }
 }
 ```
 
-### 3. **Сборка для продакшена**
+### 3. **Production Build / Збірка для продакшену**
 
 ```javascript
 build: {
@@ -111,7 +111,7 @@ build: {
 }
 ```
 
-## 🎯 Используемые плагины
+## 🎯 Used Plugins / Використовувані плагіни
 
 ### 1. **vite-plugin-handlebars**
 ```javascript
@@ -128,10 +128,10 @@ plugins: [
 ]
 ```
 
-**Возможности:**
-- Компиляция Handlebars шаблонов
-- Поддержка партиалов
-- Передача контекста в шаблоны
+**Features: / Можливості:**
+- Handlebars templates compilation / Компіляція Handlebars шаблонів
+- Partials support / Підтримка парціалів
+- Context passing to templates / Передача контексту в шаблони
 
 ### 2. **vite-plugin-imagemin**
 ```javascript
@@ -148,12 +148,12 @@ plugins: [
 ]
 ```
 
-**Возможности:**
-- Автоматическая оптимизация изображений
-- Сжатие PNG, JPEG, GIF, SVG
-- Настройка качества сжатия
+**Features: / Можливості:**
+- Automatic image optimization / Автоматична оптимізація зображень
+- PNG, JPEG, GIF, SVG compression / Стискання PNG, JPEG, GIF, SVG
+- Compression quality settings / Налаштування якості стискання
 
-### 3. **Кастомный WebP плагин**
+### 3. **Custom WebP Plugin / Користувацький WebP плагін**
 ```javascript
 import { webpPlugin } from './vite-webp-plugin.js';
 
@@ -165,18 +165,18 @@ plugins: [
 ]
 ```
 
-**Возможности:**
-- Автоматическая конвертация в WebP
-- Настройка качества
-- Генерация fallback версий
+**Features: / Можливості:**
+- Automatic WebP conversion / Автоматична конвертація в WebP
+- Quality settings / Налаштування якості
+- Fallback versions generation / Генерація fallback версій
 
-## 📁 Структура проекта для Vite
+## 📁 Project Structure for Vite / Структура проекту для Vite
 
 See [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) for detailed project structure.
 
 Дивіться [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) для детальної структури проекту.
 
-## 🚀 Команды и скрипты
+## 🚀 Commands and Scripts / Команди та скрипти
 
 See [COMMANDS.md](../COMMANDS.md) for full command list.
 
@@ -184,13 +184,13 @@ See [COMMANDS.md](../COMMANDS.md) for full command list.
 
 ## 🔥 Hot Module Replacement (HMR)
 
-Vite обеспечивает мгновенное обновление модулей:
+Vite provides instant module updates: / Vite забезпечує миттєве оновлення модулів:
 
 ### CSS/SCSS
 ```scss
 /* Style changes are applied instantly / Зміни в стилях застосовуються миттєво */
 .my-class {
-  color: red; /* ← Изменение применится без перезагрузки */
+  color: red; /* ← Change will apply without reload */
 }
 ```
 
@@ -198,19 +198,19 @@ Vite обеспечивает мгновенное обновление моду
 ```javascript
 // JS module changes update instantly / Зміни в JS модулях оновлюються миттєво
 export function myFunction() {
-  console.log('Updated!'); // ← Изменение применится мгновенно
+  console.log('Updated!'); // ← Change will apply instantly
 }
 ```
 
 ### HTML
 ```html
 <!-- HTML changes update on save / Зміни в HTML оновлюються при збереженні -->
-<h1>Updated Title</h1> <!-- ← Обновится при сохранении -->
+<h1>Updated Title</h1> <!-- ← Will update on save -->
 ```
 
-## 📦 Импорт модулей
+## 📦 Module Import / Імпорт модулів
 
-### ES модули
+### ES Modules / ES модулі
 ```javascript
 // Import styles / Імпорт стилів
 import '../styles/main.scss';
@@ -235,7 +235,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 ```
 
-## 🎯 Оптимизация сборки
+## 🎯 Build Optimization / Оптимізація збірки
 
 ### Code Splitting / Розділення коду
 ```javascript
@@ -264,14 +264,14 @@ build: {
 }
 ```
 
-### Source Maps
+### Source Maps / Карти джерел
 ```javascript
 build: {
   sourcemap: true    // For debugging in production / Для відлагодження в продакшені
 }
 ```
 
-## 🔧 Переменные окружения
+## 🔧 Environment Variables / Змінні середовища
 
 ### Creating `.env` Files / Створення `.env` файлів
 ```bash
@@ -279,7 +279,7 @@ build: {
 VITE_API_URL=https://api.example.com
 VITE_APP_NAME=My App
 
-# .env.local (локальные настройки)
+# .env.local (local settings)
 VITE_DEBUG=true
 ```
 
@@ -293,29 +293,29 @@ const isDebug = import.meta.env.VITE_DEBUG === 'true';
 ## 🚨 Troubleshooting
 
 ### Problem: Slow Start / Проблема: Повільний старт
-**Решение:**
-- Убедитесь, что используете Node.js 16+
-- Проверьте размер node_modules
-- Очистите кеш: `npm run dev -- --force`
+**Solution: / Рішення:**
+- Make sure you're using Node.js 16+ / Переконайтеся, що використовуєте Node.js 16+
+- Check node_modules size / Перевірте розмір node_modules
+- Clear cache: `npm run dev -- --force` / Очистіть кеш: `npm run dev -- --force`
 
 ### Problem: HMR Not Working / Проблема: HMR не працює
-**Решение:**
-- Проверьте, что файлы сохраняются
-- Убедитесь в правильности импортов
-- Перезапустите сервер разработки
+**Solution: / Рішення:**
+- Check that files are being saved / Перевірте, що файли зберігаються
+- Ensure import correctness / Переконайтеся в правильності імпортів
+- Restart development server / Перезапустіть сервер розробки
 
 ### Problem: Build Errors / Проблема: Помилки збірки
-**Решение:**
-- Проверьте синтаксис в vite.config.js
-- Убедитесь в корректности путей
-- Проверьте совместимость плагинов
+**Solution: / Рішення:**
+- Check syntax in vite.config.js / Перевірте синтаксис в vite.config.js
+- Ensure path correctness / Переконайтеся в коректності шляхів
+- Check plugin compatibility / Перевірте сумісність плагінів
 
-## 📚 Полезные ссылки
+## 📚 Useful Links / Корисні посилання
 
-- [Официальная документация Vite](https://vitejs.dev/)
-- [Плагины для Vite](https://github.com/vitejs/awesome-vite)
-- [Руководство по миграции](https://vitejs.dev/guide/migration.html)
+- [Official Vite Documentation](https://vitejs.dev/) / [Офіційна документація Vite](https://vitejs.dev/)
+- [Vite Plugins](https://github.com/vitejs/awesome-vite) / [Плагіни для Vite](https://github.com/vitejs/awesome-vite)
+- [Migration Guide](https://vitejs.dev/guide/migration.html) / [Керівництво по міграції](https://vitejs.dev/guide/migration.html)
 
 ---
 
-**Vite делает разработку быстрой и приятной! ⚡**
+**Vite makes development fast and enjoyable! / Vite робить розробку швидкою та приємною! ⚡**

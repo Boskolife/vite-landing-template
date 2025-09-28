@@ -1,72 +1,69 @@
-# 📋 Команды проекта / Project Commands
+# 📋 Project Commands / Команди проекту
 
-## 🚀 Основные команды / Main Commands
+## 🚀 Main Commands / Основні команди
 
-### Установка / Installation
+### Installation / Встановлення
 ```bash
 npm install
 ```
 
-### Разработка / Development
+### Development / Розробка
 ```bash
 npm run dev
-# Сервер будет доступен на http://localhost:3000
 # Server will be available at http://localhost:3000
 ```
 
-### Сборка / Build
+### Build / Збірка
 ```bash
 npm run build
-# Результат в папке dist/
 # Result in dist/ folder
 ```
 
-### Предварительный просмотр / Preview
+### Preview / Попередній перегляд
 ```bash
 npm run preview
-# Сервер будет доступен на http://localhost:4173
 # Server will be available at http://localhost:4173
 ```
 
-### Проверка кода / Code Check
+### Code Check / Перевірка коду
 ```bash
 npm run lint
 ```
 
-### Исправление ошибок / Fix Errors
+### Fix Errors / Виправлення помилок
 ```bash
 npm run lint:fix
 ```
 
-### Форматирование / Formatting
+### Formatting / Форматування
 ```bash
 npm run format
 ```
 
-## 📊 Таблица команд / Commands Table
+## 📊 Commands Table / Таблиця команд
 
-| Команда / Command | Описание / Description |
+| Command / Команда | Description / Опис |
 |-------------------|------------------------|
-| `npm run dev` | Запуск сервера разработки / Start development server |
-| `npm run build` | Сборка проекта / Build project |
-| `npm run preview` | Предварительный просмотр сборки / Preview build |
-| `npm run lint` | Проверка кода / Code check |
-| `npm run lint:fix` | Исправление ошибок / Fix errors |
-| `npm run format` | Форматирование кода / Format code |
+| `npm run dev` | Start development server / Запуск сервера розробки |
+| `npm run build` | Build project / Збірка проекту |
+| `npm run preview` | Preview build / Попередній перегляд збірки |
+| `npm run lint` | Code check / Перевірка коду |
+| `npm run lint:fix` | Fix errors / Виправлення помилок |
+| `npm run format` | Format code / Форматування коду |
 
-## 🔧 Дополнительные команды / Additional Commands
+## 🔧 Additional Commands / Додаткові команди
 
-### Очистка кеша / Clear Cache
+### Clear Cache / Очищення кешу
 ```bash
 npm run dev -- --force
 ```
 
-### Сборка с анализом / Build with Analysis
+### Build with Analysis / Збірка з аналізом
 ```bash
 npm run build -- --analyze
 ```
 
-### Сборка для продакшена / Production Build
+### Production Build / Збірка для продакшену
 ```bash
 NODE_ENV=production npm run build
 ```

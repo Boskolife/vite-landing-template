@@ -40,7 +40,7 @@ src/styles/
     └── _include-media.scss # Media queries / Медіа-запити
 ```
 
-## 🔧 Модульная система @use
+## 🔧 @use Module System / Модульна система @use
 
 ### Module Import / Імпорт модулів
 ```scss
@@ -65,7 +65,7 @@ $primary-color: variables.$blue; // Through prefix / Через префікс
 $primary-color: vars.$blue; // Through alias / Через псевдонім
 ```
 
-## 🎨 Переменные (_variables.scss)
+## 🎨 Variables (_variables.scss) / Змінні (_variables.scss)
 
 ### Colors / Кольори
 ```scss
@@ -123,7 +123,7 @@ $transition-fast: all 0.15s ease;
 $transition-slow: all 0.5s ease;
 ```
 
-## 🔧 Миксины (_mixins.scss)
+## 🔧 Mixins (_mixins.scss) / Міксини (_mixins.scss)
 
 ### Adaptive Mixins / Адаптивні міксини
 ```scss
@@ -150,7 +150,7 @@ $transition-slow: all 0.5s ease;
 
 ### Utility Mixins / Утилітарні міксини
 ```scss
-// Flexbox центрирование
+// Flexbox centering
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -173,29 +173,57 @@ $transition-slow: all 0.5s ease;
 }
 ```
 
-### WebP миксины
+### Image Mixins / Міксини зображень
 ```scss
-// Background image with WebP / Фонове зображення з WebP
-@mixin webp-bg-image($image-path, $fallback-extension: 'jpg') {
-  background-image: url('#{$image-path}.#{$fallback-extension}');
-  
-  .webp & {
-    background-image: url('#{$image-path}.webp');
-  }
+// Simple background image / Просте фонове зображення
+@mixin bg-image($image-path) {
+  background-image: url('#{$image-path}');
 }
 
-// Hero изображение
-@mixin webp-hero-image($image-path, $fallback-extension: 'jpg', $height: 100vh) {
-  position: relative;
-  height: $height;
+// Background image with cover / Фонове зображення з cover
+@mixin bg-cover($image-path) {
+  @include bg-image($image-path);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Background image with contain / Фонове зображення з contain
+@mixin bg-contain($image-path) {
+  @include bg-image($image-path);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Hero section with background / Hero секція з фоном
+@mixin hero-bg($image-path, $height: 100vh) {
+  position: relative;
+  height: $height;
+  overflow: hidden;
   
-  @include webp-bg-image-multi($image-path, $fallback-extension);
+  @include bg-cover($image-path);
+  
+  // Overlay for text readability
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 2;
+  }
 }
 ```
 
-## 🧮 Функции (_functions.scss)
+## 🧮 Functions (_functions.scss) / Функції (_functions.scss)
 
 ### Working with Units / Робота з одиницями
 ```scss
@@ -250,7 +278,7 @@ $transition-slow: all 0.5s ease;
 }
 ```
 
-## 📐 Встроенные модули Sass
+## 📐 Built-in Sass Modules / Вбудовані модулі Sass
 
 ### sass:list
 ```scss
@@ -316,7 +344,7 @@ $index: string.index($text, "World"); // 7
 $substring: string.slice($text, 7, 11); // "World"
 ```
 
-## 🎯 Практические примеры
+## 🎯 Practical Examples / Практичні приклади
 
 ### Creating Spacing System / Створення системи відступів
 ```scss
@@ -387,9 +415,9 @@ $font-sizes: (
 }
 ```
 
-## 🔄 Циклы и условия
+## 🔄 Loops and Conditions / Цикли та умови
 
-### @for цикл
+### @for Loop / @for цикл
 ```scss
 // Create grid columns / Створення grid колонок
 @for $i from 1 through 12 {
@@ -399,7 +427,7 @@ $font-sizes: (
 }
 ```
 
-### @each цикл
+### @each Loop / @each цикл
 ```scss
 // Create buttons of different sizes / Створення кнопок різних розмірів
 $button-sizes: (
@@ -416,7 +444,7 @@ $button-sizes: (
 }
 ```
 
-### @if условия
+### @if Conditions / @if умови
 ```scss
 // Adaptive margins / Адаптивні відступи
 @mixin responsive-padding($mobile, $desktop) {
@@ -433,33 +461,33 @@ $button-sizes: (
 }
 ```
 
-## 🎨 Лучшие практики
+## 🎨 Best Practices / Найкращі практики
 
-### 1. **Именование переменных**
+### 1. **Variable Naming / Іменування змінних**
 ```scss
-// ✅ Хорошо
+// ✅ Good
 $primary-color: #007bff;
 $font-size-base: 16px;
 $spacing-unit: 8px;
 
-// ❌ Плохо
+// ❌ Bad
 $color1: #007bff;
 $size: 16px;
 $space: 8px;
 ```
 
-### 2. **Организация импортов**
+### 2. **Import Organization / Організація імпортів**
 ```scss
-// ✅ Правильный порядок
+// ✅ Correct order
 @use 'base/variables' as *;    // First variables / Спочатку змінні
 @use 'base/functions' as *;    // Then functions / Потім функції
 @use 'base/mixins' as *;       // Then mixins / Потім міксини
 @use 'layout/header' as *;     // Finally components / Нарешті компоненти
 ```
 
-### 3. **Использование миксинов**
+### 3. **Using Mixins / Використання міксинів**
 ```scss
-// ✅ Хорошо - переиспользуемый код
+// ✅ Good - reusable code
 @mixin button-base {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -475,9 +503,9 @@ $space: 8px;
 }
 ```
 
-### 4. **Вложенность селекторов**
+### 4. **Selector Nesting / Вкладеність селекторів**
 ```scss
-// ✅ Хорошо - не глубже 3 уровней
+// ✅ Good - no deeper than 3 levels
 .card {
   border: 1px solid $gray;
   
@@ -495,32 +523,32 @@ $space: 8px;
 ## 🚨 Troubleshooting
 
 ### Problem: Variables Not Working / Проблема: Змінні не працюють
-**Решение:**
+**Solution: / Рішення:**
 ```scss
 // Make sure variables are imported / Переконайтеся, що змінні імпортовані
 @use 'base/variables' as *;
 ```
 
 ### Problem: Mixins Not Found / Проблема: Міксини не знайдені
-**Решение:**
+**Solution: / Рішення:**
 ```scss
 // Check import order / Перевірте порядок імпортів
 @use 'base/mixins' as *;
 ```
 
 ### Problem: Circular Dependencies / Проблема: Циклічні залежності
-**Решение:**
+**Solution: / Рішення:**
 ```scss
 // Avoid import A → B → A / Уникайте імпорту A → B → A
 // Use common variables in separate file / Використовуйте загальні змінні в окремому файлі
 ```
 
-## 📚 Полезные ссылки
+## 📚 Useful Links / Корисні посилання
 
-- [Официальная документация Sass](https://sass-lang.com/)
-- [Руководство по миграции с @import на @use](https://sass-lang.com/documentation/at-rules/use)
+- [Official Sass Documentation](https://sass-lang.com/) / [Офіційна документація Sass](https://sass-lang.com/)
+- [Migration Guide from @import to @use](https://sass-lang.com/documentation/at-rules/use) / [Керівництво по міграції з @import на @use](https://sass-lang.com/documentation/at-rules/use)
 - [Sass Guidelines](https://sass-guidelin.es/)
 
 ---
 
-**SCSS делает CSS мощным и поддерживаемым! 🎨**
+**SCSS makes CSS powerful and maintainable! / SCSS робить CSS потужним та підтримуваним! 🎨**

@@ -43,9 +43,4 @@ export const initWebPSupport = () => {
   addWebPClass();
 };
 
-// Auto-initialize on DOM load
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initWebPSupport);
-} else {
-  initWebPSupport();
-}
+// Note: initWebPSupport() should be called from main.js

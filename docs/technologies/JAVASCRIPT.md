@@ -30,16 +30,16 @@ src/js/
     └── modal.js         # Modal windows / Модальні вікна
 ```
 
-## 📦 ES6 Модули
+## 📦 ES6 Modules / ES6 Модулі
 
-### 1. **Импорт модулей**
+### 1. **Module Import / Імпорт модулів**
 ```javascript
 // main.js
 // Import styles / Імпорт стилів
 import '../styles/main.scss';
 
 // Import utilities / Імпорт утиліт
-import { initWebPSupport, preloadCriticalImages } from './utils/webp.js';
+import { initWebPSupport } from './utils/webp.js';
 import { debounce, throttle } from './utils/dom.js';
 
 // Import libraries / Імпорт бібліотек
@@ -47,28 +47,28 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 ```
 
-### 2. **Экспорт функций**
+### 2. **Function Export / Експорт функцій**
 ```javascript
 // utils/webp.js
 export const isWebPSupported = () => {
   return new Promise((resolve) => {
-    // логика проверки WebP
+    // WebP support check logic
   });
 };
 
 export const addWebPClass = (className = 'webp') => {
-  // логика добавления класса
+  // class addition logic
 };
 
 // Named export by default / Іменований експорт за замовчуванням
 export default {
   isWebPSupported,
   addWebPClass,
-  optimizeImages
+  // optimizeImages - not implemented
 };
 ```
 
-### 3. **Динамические импорты**
+### 3. **Dynamic Imports / Динамічні імпорти**
 ```javascript
 // Lazy loading modules / Ліниве завантаження модулів
 const loadComponent = async (componentName) => {
@@ -81,7 +81,7 @@ const sliderModule = await loadComponent('slider');
 sliderModule.init();
 ```
 
-## 🎯 Современный синтаксис ES6+
+## 🎯 Modern ES6+ Syntax / Сучасний синтаксис ES6+
 
 ### 1. **Arrow Functions**
 ```javascript
@@ -93,10 +93,10 @@ function add(a, b) {
 // Arrow function
 const add = (a, b) => a + b;
 
-// Arrow function с одним параметром
+// Arrow function with single parameter
 const square = x => x * x;
 
-// Arrow function с блоком
+// Arrow function with block
 const processData = (data) => {
   const result = data.map(item => item.value);
   return result.filter(value => value > 0);
@@ -109,7 +109,7 @@ const processData = (data) => {
 const user = { name: 'John', email: 'john@example.com', age: 30 };
 
 const { name, email, age } = user;
-// или с переименованием
+// or with renaming
 const { name: userName, email: userEmail } = user;
 
 // Array destructuring / Деструктуризація масивів
@@ -144,18 +144,18 @@ const discount = 0.1;
 const finalPrice = `Price: $${price * (1 - discount)}`;
 ```
 
-### 4. **Spread и Rest операторы**
+### 4. **Spread and Rest Operators / Spread та Rest оператори**
 ```javascript
-// Spread для массивов
+// Spread for arrays
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
 const combined = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
 
-// Spread для объектов
+// Spread for objects
 const user = { name: 'John', age: 30 };
 const extendedUser = { ...user, email: 'john@example.com' };
 
-// Rest параметры
+// Rest parameters
 const sum = (...numbers) => {
   return numbers.reduce((total, num) => total + num, 0);
 };
@@ -163,12 +163,12 @@ const sum = (...numbers) => {
 sum(1, 2, 3, 4, 5); // 15
 ```
 
-## 🔧 Утилиты и вспомогательные функции
+## 🔧 Utilities and Helper Functions / Утиліти та допоміжні функції
 
-### 1. **WebP утилиты (webp.js)**
+### 1. **WebP Utilities (webp.js) / WebP утиліти (webp.js)**
 ```javascript
 /**
- * Проверка поддержки WebP
+ * WebP support check
  */
 export const isWebPSupported = () => {
   return new Promise((resolve) => {
@@ -181,7 +181,7 @@ export const isWebPSupported = () => {
 };
 
 /**
- * Добавление класса WebP поддержки
+ * Adding WebP support class
  */
 export const addWebPClass = (className = 'webp') => {
   isWebPSupported().then((supported) => {
@@ -196,10 +196,10 @@ export const addWebPClass = (className = 'webp') => {
 };
 ```
 
-### 2. **DOM утилиты (dom.js)**
+### 2. **DOM Utilities (dom.js) / DOM утиліти (dom.js)**
 ```javascript
 /**
- * Debounce функция
+ * Debounce function
  */
 export const debounce = (func, wait) => {
   let timeout;
@@ -214,7 +214,7 @@ export const debounce = (func, wait) => {
 };
 
 /**
- * Throttle функция
+ * Throttle function
  */
 export const throttle = (func, limit) => {
   let inThrottle;
@@ -228,7 +228,7 @@ export const throttle = (func, limit) => {
 };
 
 /**
- * Поиск элемента
+ * Element search
  */
 export const $ = (selector, context = document) => {
   return context.querySelector(selector);
@@ -239,7 +239,7 @@ export const $$ = (selector, context = document) => {
 };
 
 /**
- * Создание элемента
+ * Element creation
  */
 export const createElement = (tag, className, textContent) => {
   const element = document.createElement(tag);
@@ -249,10 +249,10 @@ export const createElement = (tag, className, textContent) => {
 };
 ```
 
-### 3. **Storage утилиты (storage.js)**
+### 3. **Storage Utilities (storage.js) / Storage утиліти (storage.js)**
 ```javascript
 /**
- * Работа с localStorage
+ * Working with localStorage
  */
 export const storage = {
   set: (key, value) => {
@@ -283,7 +283,7 @@ export const storage = {
 };
 
 /**
- * Работа с sessionStorage
+ * Working with sessionStorage
  */
 export const sessionStorage = {
   set: (key, value) => {
@@ -306,10 +306,10 @@ export const sessionStorage = {
 };
 ```
 
-### 4. **Валидация форм (validation.js)**
+### 4. **Form Validation (validation.js) / Валідація форм (validation.js)**
 ```javascript
 /**
- * Валидация email
+ * Email validation
  */
 export const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -317,7 +317,7 @@ export const isValidEmail = (email) => {
 };
 
 /**
- * Валидация телефона
+ * Phone validation
  */
 export const isValidPhone = (phone) => {
   const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
@@ -325,7 +325,7 @@ export const isValidPhone = (phone) => {
 };
 
 /**
- * Валидация формы
+ * Form validation
  */
 export const validateForm = (formData, rules) => {
   const errors = {};
@@ -348,9 +348,9 @@ export const validateForm = (formData, rules) => {
 };
 ```
 
-## 🎨 Работа с DOM
+## 🎨 Working with DOM / Робота з DOM
 
-### 1. **События**
+### 1. **Events / Події**
 ```javascript
 // Simple event / Проста подія
 document.addEventListener('DOMContentLoaded', () => {
@@ -372,7 +372,7 @@ const handleScroll = debounce(() => {
 window.addEventListener('scroll', handleScroll);
 ```
 
-### 2. **Анимации**
+### 2. **Animations / Анімації**
 ```javascript
 // Smooth element appearance / Плавна поява елемента
 const fadeIn = (element, duration = 300) => {
@@ -407,7 +407,7 @@ const scrollToElement = (element, offset = 0) => {
 
 ### 3. **Lazy Loading**
 ```javascript
-// Lazy loading изображений
+// Lazy loading images
 const lazyImages = document.querySelectorAll('img[data-src]');
 
 const imageObserver = new IntersectionObserver((entries) => {
@@ -425,9 +425,9 @@ const imageObserver = new IntersectionObserver((entries) => {
 lazyImages.forEach(img => imageObserver.observe(img));
 ```
 
-## 📱 Responsive функции
+## 📱 Responsive Functions / Адаптивні функції
 
-### 1. **Определение устройства**
+### 1. **Device Detection / Визначення пристрою**
 ```javascript
 export const device = {
   isMobile: () => window.innerWidth <= 768,
@@ -442,7 +442,7 @@ export const device = {
 };
 ```
 
-### 2. **Адаптивные обработчики**
+### 2. **Responsive Handlers / Адаптивні обробники**
 ```javascript
 const createResponsiveHandler = (mobileHandler, desktopHandler) => {
   return () => {
@@ -461,7 +461,7 @@ const handleNavigation = createResponsiveHandler(
 );
 ```
 
-## 🎯 Асинхронное программирование
+## 🎯 Asynchronous Programming / Асинхронне програмування
 
 ### 1. **Promises**
 ```javascript
@@ -517,9 +517,9 @@ const initializeUserProfile = async () => {
 };
 ```
 
-## 🔧 Обработка ошибок
+## 🔧 Error Handling / Обробка помилок
 
-### 1. **Try/Catch блоки**
+### 1. **Try/Catch Blocks / Try/Catch блоки**
 ```javascript
 const safeJSONParse = (jsonString) => {
   try {
@@ -531,7 +531,7 @@ const safeJSONParse = (jsonString) => {
 };
 ```
 
-### 2. **Глобальная обработка ошибок**
+### 2. **Global Error Handling / Глобальна обробка помилок**
 ```javascript
 // Handle unhandled errors / Обробка необроблених помилок
 window.addEventListener('error', (event) => {
@@ -550,38 +550,38 @@ window.addEventListener('unhandledrejection', (event) => {
 ## 🚨 Troubleshooting
 
 ### Problem: Modules not loading / Проблема: Модулі не завантажуються
-**Решение:**
+**Solution: / Рішення:**
 ```javascript
 // Make sure import paths are correct / Переконайтеся в правильності шляхів імпорту
 import { functionName } from './utils/module.js';
 
 // Check export in module / Перевірте експорт в модулі
 export const functionName = () => {
-  // код функции
+  // function code
 };
 ```
 
 ### Problem: Events not working / Проблема: Події не працюють
-**Решение:**
+**Solution: / Рішення:**
 ```javascript
 // Make sure DOM is loaded / Переконайтеся, що DOM завантажений
 document.addEventListener('DOMContentLoaded', () => {
-  // код обработчиков событий
+  // event handlers code
 });
 ```
 
-### Проблема: Асинхронные операции
-**Решение:**
+### Problem: Asynchronous operations / Проблема: Асинхронні операції
+**Solution: / Рішення:**
 ```javascript
 // Use async/await or .then() / Використовуйте async/await або .then()
 const result = await asyncFunction();
-// или
+// or
 asyncFunction().then(result => {
-  // обработка результата
+  // result processing
 });
 ```
 
-## 📚 Полезные ссылки
+## 📚 Useful Links / Корисні посилання
 
 - [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - [ES6 Features](https://es6-features.org/)
@@ -589,4 +589,4 @@ asyncFunction().then(result => {
 
 ---
 
-**JavaScript делает веб-приложения интерактивными! 📝**
+**JavaScript makes web applications interactive! / JavaScript робить веб-додатки інтерактивними! 📝**

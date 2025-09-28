@@ -25,7 +25,7 @@ npm run dev
 ```
 
 
-## 🎯 Первые шаги
+## 🎯 First Steps / Перші кроки
 
 ### 1. **Changing Site Name / Зміна назви сайту**
 Open `vite.config.js` and change:
@@ -33,7 +33,7 @@ Open `vite.config.js` and change:
 Відкрийте `vite.config.js` та змініть:
 ```javascript
 context: {
-  siteName: 'Ваше название сайта',
+  siteName: 'Your site name', // Ваша назва сайту
   currentYear: new Date().getFullYear()
 }
 ```
@@ -54,34 +54,34 @@ Place images in:
 
 See [COMMANDS.md](../COMMANDS.md) for full command list / Дивіться [COMMANDS.md](../COMMANDS.md) для повного списку команд.
 
-| Команда | Описание |
-|---------|----------|
-| `npm run dev` | Запуск сервера разработки |
-| `npm run build` | Сборка проекта |
-| `npm run preview` | Предварительный просмотр |
-| `npm run lint` | Проверка кода |
+| Command | Description / Опис |
+|---------|-------------------|
+| `npm run dev` | Start development server / Запуск сервера розробки |
+| `npm run build` | Build project / Збірка проекту |
+| `npm run preview` | Preview build / Попередній перегляд |
+| `npm run lint` | Code check / Перевірка коду |
 
-## 🎨 Основы работы
+## 🎨 Work Basics / Основи роботи
 
-### SCSS стили
-- Редактируйте файлы в `src/styles/`
-- Используйте переменные из `_variables.scss`
-- Применяйте миксины из `_mixins.scss`
+### SCSS Styles / SCSS стилі
+- Edit files in `src/styles/` / Редагуйте файли в `src/styles/`
+- Use variables from `_variables.scss` / Використовуйте змінні з `_variables.scss`
+- Apply mixins from `_mixins.scss` / Застосовуйте міксини з `_mixins.scss`
 
 ### JavaScript
-- Добавляйте код в `src/js/main.js`
-- Используйте утилиты из `src/js/utils/`
+- Add code to `src/js/main.js` / Додавайте код в `src/js/main.js`
+- Use utilities from `src/js/utils/` / Використовуйте утиліти з `src/js/utils/`
 
-### Handlebars шаблоны
-- Редактируйте шаблоны в `src/templates/`
-- Используйте переменные из контекста
+### Handlebars Templates / Handlebars шаблони
+- Edit templates in `src/templates/` / Редагуйте шаблони в `src/templates/`
+- Use variables from context / Використовуйте змінні з контексту
 
-## 📚 Дополнительная документация
+## 📚 Additional Documentation / Додаткова документація
 
-- **[Технологии](technologies/)** - Подробные руководства по технологиям
-- **[Разработка](DEVELOPMENT.md)** - Процесс разработки
-- **[Деплой](DEPLOYMENT.md)** - Развертывание проекта
+- **[Technologies](technologies/)** - Detailed technology guides / Детальні керівництва по технологіям
+- **[Development](DEVELOPMENT.md)** - Development process / Процес розробки
+- **[Deployment](DEPLOYMENT.md)** - Project deployment / Розгортання проекту
 
 ---
 
-**Готово! Теперь вы можете начать разработку! 🎉**
+**Done! Now you can start development! / Готово! Тепер ви можете почати розробку! 🎉**

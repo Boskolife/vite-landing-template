@@ -48,14 +48,14 @@ plugins: [
 
 ### Plugin Settings / Налаштування плагіна
 
-- **partialDirectory** - Папка с партиалами
-- **context** - Глобальный контекст для всех шаблонов
-- **helpers** - Пользовательские хелперы
-- **compileOptions** - Опции компиляции Handlebars
+- **partialDirectory** - Folder with partials / Папка з парціалами
+- **context** - Global context for all templates / Глобальний контекст для всіх шаблонів
+- **helpers** - Custom helpers / Користувацькі хелпери
+- **compileOptions** - Handlebars compilation options / Опції компіляції Handlebars
 
-## 📄 Основы синтаксиса
+## 📄 Syntax Basics / Основи синтаксису
 
-### 1. **Простые выражения**
+### 1. **Simple Expressions / Прості вирази**
 ```html
 <!-- Variable output / Вивід змінної -->
 <h1>{{title}}</h1>
@@ -67,7 +67,7 @@ plugins: [
 <div>{{{htmlContent}}}</div>
 ```
 
-### 2. **Вложенные свойства**
+### 2. **Nested Properties / Вкладені властивості**
 ```html
 <!-- Access to nested object properties / Доступ до вкладених властивостей об'єкта -->
 <h2>{{user.name}}</h2>
@@ -77,7 +77,7 @@ plugins: [
 <p>{{user?.profile?.bio}}</p>
 ```
 
-### 3. **Партиалы (включения)**
+### 3. **Partials (Inclusions) / Парціали (включення)**
 ```html
 <!-- Include partial / Включення парціала -->
 {{> header }}
@@ -128,7 +128,7 @@ plugins: [
 </footer>
 ```
 
-### 3. **Пользовательская карточка**
+### 3. **User Card / Картка користувача**
 ```html
 <!-- src/templates/user-card.html -->
 <div class="user-card">
@@ -146,9 +146,9 @@ plugins: [
 </div>
 ```
 
-## 🔀 Условные выражения
+## 🔀 Conditional Expressions / Умовні вирази
 
-### 1. **if/else условия**
+### 1. **if/else Conditions / if/else умови**
 ```html
 <!-- Simple condition / Проста умова -->
 {{#if user}}
@@ -168,7 +168,7 @@ plugins: [
 {{/unless}}
 ```
 
-### 2. **Сложные условия**
+### 2. **Complex Conditions / Складні умови**
 ```html
 <!-- Logical operators / Логічні оператори -->
 {{#if (and user.isLoggedIn user.isAdmin)}}
@@ -185,9 +185,9 @@ plugins: [
 {{/if}}
 ```
 
-## 🔄 Циклы и итерация
+## 🔄 Loops and Iteration / Цикли та ітерація
 
-### 1. **each цикл**
+### 1. **each Loop / each цикл**
 ```html
 <!-- Array iteration / Ітерація по масиву -->
 <ul class="menu">
@@ -217,7 +217,7 @@ plugins: [
 </dl>
 ```
 
-### 2. **Цикл с контекстом**
+### 2. **Loop with Context / Цикл з контекстом**
 ```html
 <!-- Access to parent context / Доступ до батьківського контексту -->
 {{#each posts}}
@@ -229,9 +229,9 @@ plugins: [
 {{/each}}
 ```
 
-## 🎯 Пользовательские хелперы
+## 🎯 Custom Helpers / Користувацькі хелпери
 
-### 1. **Регистрация хелперов**
+### 1. **Helper Registration / Реєстрація хелперів**
 ```javascript
 // vite.config.js
 import handlebars from 'vite-plugin-handlebars';
@@ -264,7 +264,7 @@ plugins: [
 ]
 ```
 
-### 2. **Использование хелперов**
+### 2. **Using Helpers / Використання хелперів**
 ```html
 <!-- Date formatting / Форматування дати -->
 <p class="post__date">{{formatDate publishedAt}}</p>
@@ -283,9 +283,9 @@ plugins: [
 <p class="post__excerpt">{{truncate description 150}}</p>
 ```
 
-## 📊 Работа с данными
+## 📊 Working with Data / Робота з даними
 
-### 1. **Передача данных в шаблоны**
+### 1. **Passing Data to Templates / Передача даних у шаблони**
 ```javascript
 // vite.config.js
 context: {
@@ -304,7 +304,7 @@ context: {
 }
 ```
 
-### 2. **Использование в HTML**
+### 2. **Usage in HTML / Використання в HTML**
 ```html
 <!-- src/index.html -->
 <!doctype html>
@@ -337,9 +337,9 @@ context: {
 </html>
 ```
 
-## 🔧 Продвинутые техники
+## 🔧 Advanced Techniques / Продвинуті техніки
 
-### 1. **Вложенные партиалы**
+### 1. **Nested Partials / Вкладені парціали**
 ```html
 <!-- src/templates/post-list.html -->
 <div class="post-list">
@@ -360,7 +360,7 @@ context: {
 </article>
 ```
 
-### 2. **Условные партиалы**
+### 2. **Conditional Partials / Умовні парціали**
 ```html
 <!-- Include partial by condition / Включення парціала за умовою -->
 {{#if hasComments}}
@@ -371,7 +371,7 @@ context: {
 {{> button text="Save" type="submit" class="primary"}}
 ```
 
-### 3. **Динамические имена партиалов**
+### 3. **Dynamic Partial Names / Динамічні імена парціалів**
 ```html
 <!-- Using variable for partial name / Використання змінної для імені парціала -->
 {{#each components}}
@@ -379,9 +379,9 @@ context: {
 {{/each}}
 ```
 
-## 📝 Практические примеры
+## 📝 Practical Examples / Практичні приклади
 
-### 1. **Навигационное меню**
+### 1. **Navigation Menu / Навігаційне меню**
 ```html
 <!-- src/templates/navigation.html -->
 <nav class="navigation">
@@ -401,7 +401,7 @@ context: {
 </nav>
 ```
 
-### 2. **Карточка товара**
+### 2. **Product Card / Картка товару**
 ```html
 <!-- src/templates/product-card.html -->
 <div class="product-card">
@@ -437,7 +437,7 @@ context: {
 </div>
 ```
 
-### 3. **Форма с валидацией**
+### 3. **Form with Validation / Форма з валідацією**
 ```html
 <!-- src/templates/contact-form.html -->
 <form class="contact-form" action="/contact" method="POST">
@@ -484,25 +484,25 @@ context: {
 
 ## 🚨 Troubleshooting
 
-### Проблема: Партиалы не загружаются
-**Решение:**
+### Problem: Partials not loading / Проблема: Парціали не завантажуються
+**Solution: / Рішення:**
 ```javascript
 // Check partials path in vite.config.js / Перевірте шлях до парціалів в vite.config.js
 partialDirectory: resolve(__dirname, 'src/templates')
 ```
 
-### Проблема: Переменные не отображаются
-**Решение:**
+### Problem: Variables not displaying / Проблема: Змінні не відображаються
+**Solution: / Рішення:**
 ```javascript
 // Make sure variables are passed to context / Переконайтеся, що змінні передані в context
 context: {
   siteName: 'My Site',
-  // другие переменные
+  // other variables
 }
 ```
 
-### Проблема: Хелперы не работают
-**Решение:**
+### Problem: Helpers not working / Проблема: Хелпери не працюють
+**Solution: / Рішення:**
 ```javascript
 // Check helpers registration / Перевірте реєстрацію хелперів
 helpers: {
@@ -512,12 +512,12 @@ helpers: {
 }
 ```
 
-## 📚 Полезные ссылки
+## 📚 Useful Links / Корисні посилання
 
-- [Официальная документация Handlebars](https://handlebarsjs.com/)
-- [Руководство по хелперам](https://handlebarsjs.com/guide/builtin-helpers.html)
+- [Official Handlebars Documentation](https://handlebarsjs.com/) / [Офіційна документація Handlebars](https://handlebarsjs.com/)
+- [Helpers Guide](https://handlebarsjs.com/guide/builtin-helpers.html) / [Керівництво по хелперам](https://handlebarsjs.com/guide/builtin-helpers.html)
 - [vite-plugin-handlebars](https://github.com/alexlafroscia/vite-plugin-handlebars)
 
 ---
 
-**Handlebars делает шаблоны мощными и переиспользуемыми! 📄**
+**Handlebars makes templates powerful and reusable! / Handlebars робить шаблони потужними та перевикористовуваними! 📄**

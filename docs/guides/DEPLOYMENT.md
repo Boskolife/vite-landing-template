@@ -20,7 +20,7 @@ npm run build
 npm run preview
 ```
 
-### 2. **Настройка для продакшена**
+### 2. **Production Configuration / Налаштування для продакшену**
 ```javascript
 // vite.config.js
 export default defineConfig({
@@ -40,9 +40,9 @@ export default defineConfig({
 });
 ```
 
-### 3. **Удаление SEO защиты**
+### 3. **SEO Protection Removal / Видалення SEO захисту**
 ```html
-<!-- src/index.html - УДАЛИТЕ эти мета-теги -->
+<!-- src/index.html - REMOVE these meta tags / ВИДАЛІТЬ ці мета-теги -->
 <!-- <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,notranslate,noimageindex">
 <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,notranslate,noimageindex">
 <meta name="bingbot" content="noindex,nofollow,noarchive,nosnippet,notranslate,noimageindex">
@@ -58,7 +58,7 @@ export default defineConfig({
 <meta name="twitter:card" content="summary_large_image">
 ```
 
-### 4. **Обновление robots.txt**
+### 4. **robots.txt Update / Оновлення robots.txt**
 ```txt
 # public/robots.txt
 User-agent: *
@@ -67,41 +67,41 @@ Allow: /
 Sitemap: https://yourdomain.com/sitemap.xml
 ```
 
-## 🌐 Способы деплоя
+## 🌐 Deployment Methods / Способи розгортання
 
 ### 1. **Netlify**
 
-#### Автоматический деплой из Git
-1. Подключите репозиторий к Netlify
-2. Настройте сборку:
+#### Automatic deployment from Git / Автоматичне розгортання з Git
+1. Connect repository to Netlify / Підключіть репозиторій до Netlify
+2. Configure build / Налаштуйте збірку:
    ```
    Build command: npm run build
    Publish directory: dist
    ```
-3. Настройте переменные окружения (если нужно)
-4. Деплой произойдет автоматически при push
+3. Configure environment variables (if needed) / Налаштуйте змінні середовища (якщо потрібно)
+4. Deployment will happen automatically on push / Розгортання відбудеться автоматично при push
 
-#### Ручной деплой
+#### Manual deployment / Ручне розгортання
 ```bash
-# Соберите проект
+# Build project / Зберіть проект
 npm run build
 
-# Перетащите папку dist/ в Netlify Drop
-# или используйте Netlify CLI
+# Drag dist/ folder to Netlify Drop / Перетягніть папку dist/ в Netlify Drop
+# or use Netlify CLI / або використовуйте Netlify CLI
 npm install -g netlify-cli
 netlify deploy --prod --dir=dist
 ```
 
-#### Настройка _redirects
+#### _redirects Configuration / Налаштування _redirects
 ```txt
-# public/_redirects (для SPA)
+# public/_redirects (for SPA / для SPA)
 /*    /index.html   200
 ```
 
 ### 2. **Vercel**
 
-#### Автоматический деплой
-1. Подключите репозиторий к Vercel
+#### Automatic deployment / Автоматичне розгортання
+1. Connect repository to Vercel / Підключіть репозиторій до Vercel
 2. Настройки проекта:
    ```
    Framework Preset: Vite
@@ -109,9 +109,9 @@ netlify deploy --prod --dir=dist
    Output Directory: dist
    Install Command: npm install
    ```
-3. Деплой произойдет автоматически
+3. Deployment will happen automatically / Розгортання відбудеться автоматично
 
-#### vercel.json конфигурация
+#### vercel.json Configuration / vercel.json конфігурація
 ```json
 {
   "builds": [
@@ -131,7 +131,7 @@ netlify deploy --prod --dir=dist
 
 ### 3. **GitHub Pages**
 
-#### Настройка GitHub Actions
+#### GitHub Actions Setup / Налаштування GitHub Actions
 ```yaml
 # .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
@@ -167,25 +167,25 @@ jobs:
         publish_dir: ./dist
 ```
 
-#### Настройка vite.config.js
+#### vite.config.js Setup / Налаштування vite.config.js
 ```javascript
 // vite.config.js
 export default defineConfig({
   base: '/repository-name/', // Replace with your repository name / Замініть на ім'я вашого репозиторію
-  // остальная конфигурация...
+  // rest of configuration / решта конфігурації...
 });
 ```
 
 ### 4. **Firebase Hosting**
 
-#### Установка Firebase CLI
+#### Firebase CLI Installation / Встановлення Firebase CLI
 ```bash
 npm install -g firebase-tools
 firebase login
 firebase init hosting
 ```
 
-#### firebase.json конфигурация
+#### firebase.json Configuration / firebase.json конфігурація
 ```json
 {
   "hosting": {
@@ -205,7 +205,7 @@ firebase init hosting
 }
 ```
 
-#### Деплой
+#### Deployment / Розгортання
 ```bash
 npm run build
 firebase deploy
@@ -213,44 +213,44 @@ firebase deploy
 
 ### 5. **AWS S3 + CloudFront**
 
-#### Настройка S3
+#### S3 Setup / Налаштування S3
 ```bash
-# Установите AWS CLI
+# Install AWS CLI / Встановіть AWS CLI
 aws configure
 
-# Создайте bucket
+# Create bucket / Створіть bucket
 aws s3 mb s3://your-bucket-name
 
-# Настройте статический хостинг
+# Configure static hosting / Налаштуйте статичний хостинг
 aws s3 website s3://your-bucket-name --index-document index.html --error-document index.html
 ```
 
-#### Загрузка файлов
+#### File Upload / Завантаження файлів
 ```bash
 npm run build
 aws s3 sync dist/ s3://your-bucket-name --delete
 ```
 
-#### Настройка CloudFront
-1. Создайте CloudFront distribution
-2. Укажите S3 bucket как origin
-3. Настройте Default Root Object: `index.html`
-4. Добавьте Error Pages для SPA:
+#### CloudFront Setup / Налаштування CloudFront
+1. Create CloudFront distribution / Створіть CloudFront distribution
+2. Specify S3 bucket as origin / Вкажіть S3 bucket як origin
+3. Configure Default Root Object: `index.html` / Налаштуйте Default Root Object: `index.html`
+4. Add Error Pages for SPA / Додайте Error Pages для SPA:
    ```
    HTTP Error Code: 404
    Response Page Path: /index.html
    HTTP Response Code: 200
    ```
 
-### 6. **Обычный хостинг (cPanel, FTP)**
+### 6. **Regular Hosting (cPanel, FTP) / Звичайний хостинг (cPanel, FTP)**
 
-#### Подготовка файлов
+#### File Preparation / Підготовка файлів
 ```bash
 npm run build
-# Скопируйте содержимое папки dist/ на сервер
+# Copy contents of dist/ folder to server / Скопіюйте вміст папки dist/ на сервер
 ```
 
-#### Настройка .htaccess (Apache)
+#### .htaccess Setup (Apache) / Налаштування .htaccess (Apache)
 ```apache
 # .htaccess
 RewriteEngine On
@@ -286,41 +286,41 @@ RewriteRule . /index.html [L]
 </IfModule>
 ```
 
-## 🔧 Настройка домена
+## 🔧 Domain Configuration / Налаштування домену
 
-### 1. **Пользовательский домен**
+### 1. **Custom Domain / Користувацький домен**
 ```javascript
 // vite.config.js
 export default defineConfig({
   base: 'https://yourdomain.com/', // For absolute URLs / Для абсолютних URL
-  // или
+  // or / або
   base: '/', // For root domain / Для кореневого домену
 });
 ```
 
-### 2. **SSL сертификат**
-- **Let's Encrypt** - бесплатный SSL
-- **Cloudflare** - бесплатный SSL + CDN
-- **AWS Certificate Manager** - для AWS
+### 2. **SSL Certificate / SSL сертифікат**
+- **Let's Encrypt** - free SSL / безкоштовний SSL
+- **Cloudflare** - free SSL + CDN / безкоштовний SSL + CDN
+- **AWS Certificate Manager** - for AWS / для AWS
 
-### 3. **DNS настройки**
+### 3. **DNS Configuration / DNS налаштування**
 ```
-# A запись для корневого домена
+# A record for root domain / A запис для кореневого домену
 @    A    YOUR_SERVER_IP
 
-# CNAME для www
+# CNAME for www / CNAME для www
 www  CNAME yourdomain.com
 
-# Для CloudFront
+# For CloudFront / Для CloudFront
 @    CNAME d1234567890.cloudfront.net
 ```
 
-## 📊 Оптимизация производительности
+## 📊 Performance Optimization / Оптимізація продуктивності
 
-### 1. **Сжатие**
+### 1. **Compression / Стискання**
 ```bash
-# Gzip сжатие (обычно настроено на сервере)
-# Brotli сжатие (современные серверы)
+# Gzip compression (usually configured on server) / Gzip стискання (зазвичай налаштовано на сервері)
+# Brotli compression (modern servers) / Brotli стискання (сучасні сервери)
 ```
 
 ### 2. **CDN**
@@ -330,7 +330,7 @@ www  CNAME yourdomain.com
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: ['react', 'vue'], // если используете CDN версии
+      external: ['react', 'vue'], // if using CDN versions / якщо використовуєте CDN версії
       output: {
         globals: {
           react: 'React',
@@ -342,7 +342,7 @@ export default defineConfig({
 });
 ```
 
-### 3. **Preload критических ресурсов**
+### 3. **Critical Resources Preload / Preload критичних ресурсів**
 ```html
 <!-- In head / В head -->
 <link rel="preload" href="/fonts/space-mono.woff2" as="font" type="font/woff2" crossorigin>
@@ -350,7 +350,7 @@ export default defineConfig({
 <link rel="preload" href="/js/main.js" as="script">
 ```
 
-## 🔍 Мониторинг и аналитика
+## 🔍 Monitoring and Analytics / Моніторинг та аналітика
 
 ### 1. **Google Analytics**
 ```html
@@ -365,13 +365,13 @@ export default defineConfig({
 ```
 
 ### 2. **Google Search Console**
-1. Добавьте свойство в Search Console
-2. Подтвердите владение доменом
-3. Отправьте sitemap.xml
+1. Add property to Search Console / Додайте властивість в Search Console
+2. Verify domain ownership / Підтвердіть володіння доменом
+3. Submit sitemap.xml / Відправте sitemap.xml
 
-### 3. **Мониторинг ошибок**
+### 3. **Error Monitoring / Моніторинг помилок**
 ```javascript
-// Sentry для отслеживания ошибок
+// Sentry for error tracking / Sentry для відстеження помилок
 import * as Sentry from "@sentry/browser";
 
 Sentry.init({
@@ -388,9 +388,9 @@ window.addEventListener('error', (event) => {
 ## 🚨 Troubleshooting
 
 ### Problem: 404 errors on SPA / Проблема: 404 помилки на SPA
-**Решение:**
+**Solution:**
 ```apache
-# .htaccess для Apache
+# .htaccess for Apache / .htaccess для Apache
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -398,7 +398,7 @@ RewriteRule . /index.html [L]
 ```
 
 ### Problem: Incorrect resource paths / Проблема: Неправильні шляхи до ресурсів
-**Решение:**
+**Solution:**
 ```javascript
 // Check base in vite.config.js / Перевірте base в vite.config.js
 export default defineConfig({
@@ -407,14 +407,14 @@ export default defineConfig({
 ```
 
 ### Problem: Slow loading / Проблема: Повільне завантаження
-**Решение:**
-- Включите сжатие на сервере
-- Используйте CDN
-- Оптимизируйте изображения
-- Включите кеширование
+**Solution:**
+- Enable compression on server / Увімкніть стискання на сервері
+- Use CDN / Використовуйте CDN
+- Optimize images / Оптимізуйте зображення
+- Enable caching / Увімкніть кешування
 
 ### Problem: CORS errors / Проблема: CORS помилки
-**Решение:**
+**Solution:**
 ```javascript
 // Configure CORS on server / Налаштуйте CORS на сервері
 // Or use proxy in vite.config.js / Або використовуйте проксі в vite.config.js
@@ -427,30 +427,30 @@ export default defineConfig({
 });
 ```
 
-## 📋 Чек-лист деплоя
+## 📋 Deployment Checklist / Чек-лист деплою
 
-### Перед деплоем
-- [ ] Удалены SEO защиты
-- [ ] Обновлен robots.txt
-- [ ] Настроены правильные мета-теги
-- [ ] Проверена локальная сборка
-- [ ] Настроен правильный base путь
+### Before Deployment / Перед деплоєм
+- [ ] SEO protections removed / Видалені SEO захисти
+- [ ] robots.txt updated / Оновлений robots.txt
+- [ ] Correct meta tags configured / Налаштовані правильні мета-теги
+- [ ] Local build tested / Перевірена локальна збірка
+- [ ] Correct base path configured / Налаштований правильний base шлях
 
-### После деплоя
-- [ ] Проверен доступ к сайту
-- [ ] Проверены все ссылки
-- [ ] Проверена загрузка изображений
-- [ ] Проверена работа JavaScript
-- [ ] Настроена аналитика
-- [ ] Отправлен sitemap в Search Console
+### After Deployment / Після деплою
+- [ ] Site access verified / Перевірений доступ до сайту
+- [ ] All links checked / Перевірені всі посилання
+- [ ] Image loading verified / Перевірена завантаження зображень
+- [ ] JavaScript functionality tested / Перевірена робота JavaScript
+- [ ] Analytics configured / Налаштована аналітика
+- [ ] Sitemap submitted to Search Console / Відправлений sitemap в Search Console
 
-### Мониторинг
-- [ ] Настроен мониторинг ошибок
-- [ ] Настроена аналитика
-- [ ] Настроены уведомления о падениях
-- [ ] Настроено резервное копирование
+### Monitoring / Моніторинг
+- [ ] Error monitoring configured / Налаштований моніторинг помилок
+- [ ] Analytics configured / Налаштована аналітика
+- [ ] Downtime notifications configured / Налаштовані сповіщення про падіння
+- [ ] Backup configured / Налаштоване резервне копіювання
 
-## 📚 Полезные ссылки
+## 📚 Useful Links / Корисні посилання
 
 - [Netlify Documentation](https://docs.netlify.com/)
 - [Vercel Documentation](https://vercel.com/docs)
@@ -459,4 +459,4 @@ export default defineConfig({
 
 ---
 
-**Успешного деплоя! 🚀**
+**Successful deployment! / Успішного деплою! 🚀**

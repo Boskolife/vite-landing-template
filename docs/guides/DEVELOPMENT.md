@@ -30,45 +30,45 @@ npm run dev
 ### 3. **IDE Setup / Налаштування IDE**
 Recommended VS Code extensions / Рекомендовані розширення для VS Code:
 - **ESLint** - JavaScript linting / Лінтінг JavaScript
-- **Prettier** - Форматирование кода
-- **SCSS IntelliSense** - Поддержка SCSS
-- **Handlebars** - Поддержка шаблонов
-- **Auto Rename Tag** - Автоматическое переименование тегов
-- **Bracket Pair Colorizer** - Цветные скобки
+- **Prettier** - Code formatting / Форматування коду
+- **SCSS IntelliSense** - SCSS support / Підтримка SCSS
+- **Handlebars** - Template support / Підтримка шаблонів
+- **Auto Rename Tag** - Automatic tag renaming / Автоматичне перейменування тегів
+- **Bracket Pair Colorizer** - Colored brackets / Кольорові дужки
 
-## 📁 Рабочий процесс
+## 📁 Workflow / Робочий процес
 
-### 1. **Структура папок**
+### 1. **Folder Structure / Структура папок**
 See [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) for detailed project structure.
 
 Дивіться [PROJECT_STRUCTURE_CENTRAL.md](../PROJECT_STRUCTURE_CENTRAL.md) для детальної структури проекту.
 
-### 2. **Команды разработки**
+### 2. **Development Commands / Команди розробки**
 
 See [COMMANDS.md](../COMMANDS.md) for full command list.
 
 Дивіться [COMMANDS.md](../COMMANDS.md) для повного списку команд.
 
-### 3. **Workflow Git**
+### 3. **Git Workflow / Git робочий процес**
 ```bash
-# Создание новой ветки
+# Create new branch / Створення нової гілки
 git checkout -b feature/new-feature
 
-# Коммит изменений
+# Commit changes / Коміт змін
 git add .
 git commit -m "feat: add new feature"
 
-# Отправка изменений
+# Push changes / Відправка змін
 git push origin feature/new-feature
 
-# Создание Pull Request
+# Create Pull Request / Створення Pull Request
 ```
 
-## 📝 Стандарты кодирования
+## 📝 Coding Standards / Стандарти кодування
 
 ### 1. **JavaScript**
 ```javascript
-// ✅ Хорошо
+// ✅ Good / Добре
 const userName = 'John Doe';
 const isLoggedIn = true;
 
@@ -82,7 +82,7 @@ const getUserData = async (userId) => {
   }
 };
 
-// ❌ Плохо
+// ❌ Bad / Погано
 var username = "John Doe";
 var isloggedin = true;
 
@@ -93,16 +93,16 @@ function getUserData(userId) {
 }
 ```
 
-**Правила:**
-- Используйте `const` и `let` вместо `var`
-- Используйте camelCase для переменных и функций
-- Используйте async/await вместо Promise.then()
-- Добавляйте обработку ошибок
-- Используйте template literals для строк
+**Rules:**
+- Use `const` and `let` instead of `var` / Використовуйте `const` та `let` замість `var`
+- Use camelCase for variables and functions / Використовуйте camelCase для змінних та функцій
+- Use async/await instead of Promise.then() / Використовуйте async/await замість Promise.then()
+- Add error handling / Додавайте обробку помилок
+- Use template literals for strings / Використовуйте template literals для рядків
 
 ### 2. **SCSS**
 ```scss
-// ✅ Хорошо
+// ✅ Good / Добре
 $primary-color: #007bff;
 $font-size-base: 16px;
 
@@ -122,7 +122,7 @@ $font-size-base: 16px;
   }
 }
 
-// ❌ Плохо
+// ❌ Bad / Погано
 .BTN {
   display: inline-block;
   padding: 8px 16px;
@@ -137,15 +137,15 @@ $font-size-base: 16px;
 }
 ```
 
-**Правила:**
-- Используйте BEM методологию
-- Используйте переменные для повторяющихся значений
-- Не превышайте 3 уровня вложенности
-- Используйте миксины для повторяющегося кода
+**Rules:**
+- Use BEM methodology / Використовуйте BEM методологію
+- Use variables for repeated values / Використовуйте змінні для повторюваних значень
+- Don't exceed 3 nesting levels / Не перевищуйте 3 рівні вкладеності
+- Use mixins for repeated code / Використовуйте міксини для повторюваного коду
 
 ### 3. **HTML**
 ```html
-<!-- ✅ Хорошо -->
+<!-- ✅ Good / Добре -->
 <article class="post-card">
   <header class="post-card__header">
     <h2 class="post-card__title">{{title}}</h2>
@@ -161,7 +161,7 @@ $font-size-base: 16px;
   </footer>
 </article>
 
-<!-- ❌ Плохо -->
+<!-- ❌ Bad / Погано -->
 <div class="postcard">
   <h2>{{title}}</h2>
   <p>{{excerpt}}</p>
@@ -169,13 +169,13 @@ $font-size-base: 16px;
 </div>
 ```
 
-**Правила:**
-- Используйте семантические теги
-- Используйте BEM для CSS классов
-- Добавляйте alt атрибуты для изображений
-- Используйте loading="lazy" для изображений
+**Rules:**
+- Use semantic tags / Використовуйте семантичні теги
+- Use BEM for CSS classes / Використовуйте BEM для CSS класів
+- Add alt attributes for images / Додавайте alt атрибути для зображень
+- Use loading="lazy" for images / Використовуйте loading="lazy" для зображень
 
-## 🔧 Инструменты разработки
+## 🔧 Development Tools / Інструменти розробки
 
 ### 1. **ESLint**
 ```javascript
@@ -227,9 +227,9 @@ export default [
 }
 ```
 
-## 🎨 Создание компонентов
+## 🎨 Component Creation / Створення компонентів
 
-### 1. **SCSS компонент**
+### 1. **SCSS Component / SCSS компонент**
 ```scss
 // styles/components/_button.scss
 @use '../base/variables' as *;
@@ -291,7 +291,7 @@ export default [
 }
 ```
 
-### 2. **JavaScript компонент**
+### 2. **JavaScript Component / JavaScript компонент**
 ```javascript
 // js/components/Modal.js
 export class Modal {
@@ -363,7 +363,7 @@ const modal = new Modal('#myModal', {
 });
 ```
 
-### 3. **Handlebars шаблон**
+### 3. **Handlebars Template / Handlebars шаблон**
 ```html
 <!-- templates/modal.html -->
 <div class="modal" id="{{id}}">
@@ -398,9 +398,9 @@ const modal = new Modal('#myModal', {
 </div>
 ```
 
-## 🧪 Тестирование
+## 🧪 Testing / Тестування
 
-### 1. **Модульное тестирование**
+### 1. **Unit Testing / Модульне тестування**
 ```javascript
 // tests/utils/webp.test.js
 import { isWebPSupported, addWebPClass } from '../../src/js/utils/webp.js';
@@ -418,7 +418,7 @@ describe('WebP Utils', () => {
 });
 ```
 
-### 2. **E2E тестирование**
+### 2. **E2E Testing / E2E тестування**
 ```javascript
 // tests/e2e/homepage.test.js
 import { test, expect } from '@playwright/test';
@@ -433,9 +433,9 @@ test('homepage loads correctly', async ({ page }) => {
 });
 ```
 
-## 📊 Оптимизация производительности
+## 📊 Performance Optimization / Оптимізація продуктивності
 
-### 1. **Изображения**
+### 1. **Images / Зображення**
 ```javascript
 // Lazy loading images / Ліниве завантаження зображень
 const lazyImages = document.querySelectorAll('img[data-src]');
@@ -453,7 +453,7 @@ const imageObserver = new IntersectionObserver((entries) => {
 lazyImages.forEach(img => imageObserver.observe(img));
 ```
 
-### 2. **CSS оптимизация**
+### 2. **CSS Optimization / CSS оптимізація**
 ```scss
 // Using will-change for animations / Використання will-change для анімацій
 .animated-element {
@@ -472,9 +472,9 @@ lazyImages.forEach(img => imageObserver.observe(img));
 }
 ```
 
-### 3. **JavaScript оптимизация**
+### 3. **JavaScript Optimization / JavaScript оптимізація**
 ```javascript
-// Debounce для обработчиков событий
+// Debounce for event handlers / Debounce для обробників подій
 const debounce = (func, wait) => {
   let timeout;
   return function executedFunction(...args) {
@@ -489,21 +489,21 @@ const debounce = (func, wait) => {
 
 // Usage / Використання
 const handleScroll = debounce(() => {
-  // логика обработки скролла
+  // scroll handling logic / логіка обробки скролу
 }, 100);
 
 window.addEventListener('scroll', handleScroll);
 ```
 
-## 🚨 Отладка
+## 🚨 Debugging / Відлагодження
 
 ### 1. **DevTools**
-- **Console** - Логирование и отладка JavaScript
-- **Network** - Мониторинг загрузки ресурсов
-- **Performance** - Анализ производительности
-- **Lighthouse** - Аудит производительности и SEO
+- **Console** - JavaScript logging and debugging / Логування та відлагодження JavaScript
+- **Network** - Resource loading monitoring / Моніторинг завантаження ресурсів
+- **Performance** - Performance analysis / Аналіз продуктивності
+- **Lighthouse** - Performance and SEO audit / Аудит продуктивності та SEO
 
-### 2. **Логирование**
+### 2. **Logging / Логування**
 ```javascript
 // Structured logging / Структуроване логування
 const logger = {
@@ -533,31 +533,31 @@ export default defineConfig({
     sourcemap: true // For debugging in production / Для відлагодження в продакшені
   },
   css: {
-    devSourcemap: true // Source maps для SCSS
+    devSourcemap: true // Source maps for SCSS / Source maps для SCSS
   }
 });
 ```
 
-## 📚 Лучшие практики
+## 📚 Best Practices / Найкращі практики
 
-### 1. **Код-ревью**
-- Проверяйте функциональность
-- Обращайте внимание на производительность
-- Проверяйте доступность (accessibility)
-- Убедитесь в совместимости с браузерами
+### 1. **Code Review / Код-рев'ю**
+- Check functionality / Перевіряйте функціональність
+- Pay attention to performance / Звертайте увагу на продуктивність
+- Check accessibility / Перевіряйте доступність
+- Ensure browser compatibility / Переконайтеся у сумісності з браузерами
 
-### 2. **Документация**
-- Комментируйте сложную логику
-- Документируйте API функций
-- Обновляйте README при изменениях
-- Используйте JSDoc для JavaScript
+### 2. **Documentation / Документація**
+- Comment complex logic / Коментуйте складну логіку
+- Document API functions / Документуйте API функції
+- Update README when making changes / Оновлюйте README при змінах
+- Use JSDoc for JavaScript / Використовуйте JSDoc для JavaScript
 
-### 3. **Версионирование**
-- Используйте семантическое версионирование
-- Ведите CHANGELOG
-- Тегируйте релизы
-- Документируйте breaking changes
+### 3. **Versioning / Версіонування**
+- Use semantic versioning / Використовуйте семантичне версіонування
+- Maintain CHANGELOG / Ведіть CHANGELOG
+- Tag releases / Тегуйте релізи
+- Document breaking changes / Документуйте breaking changes
 
 ---
 
-**Следуйте этим практикам для качественной разработки! 🛠️**
+**Follow these practices for quality development! / Дотримуйтеся цих практик для якісної розробки! 🛠️**

@@ -41,7 +41,7 @@ public/
 
 ### 1. Vite Configuration / Конфігурація Vite
 
-WebP плагин уже настроен в `vite.config.js`:
+WebP plugin is already configured in `vite.config.js`:
 
 ```javascript
 import webp from 'vite-plugin-webp';
@@ -67,66 +67,57 @@ export default defineConfig({
 });
 ```
 
-### 2. Автоматическая инициализация
+### 2. Automatic Initialization / Автоматична ініціалізація
 
-WebP поддержка автоматически инициализируется в `main.js`:
+WebP support is automatically initialized in `main.js`:
 
 ```javascript
-import { initWebPSupport, preloadCriticalImages } from './utils/webp.js';
+import { initWebPSupport } from './utils/webp.js';
 
 // Automatic initialization / Автоматична ініціалізація
 initWebPSupport();
-
-// Preload critical images / Попереднє завантаження критичних зображень
-const criticalImages = [
-  '/images/hero-bg.jpg',
-  '/images/logo.png'
-];
-preloadCriticalImages(criticalImages);
 ```
 
 ## 🎨 Usage in HTML / Використання в HTML
 
-### 1. **Размещение изображений**
+### 1. **Image Placement / Розміщення зображень**
 
 All images must be placed in the `public/images/` folder:
 
-Всі зображення повинні знаходитися в папці `public/images/`:
-
 ```
 public/images/
-├── logo.png          # Логотип
-├── hero-bg.jpg       # Фоновое изображение
-├── icon-heart.png    # Иконки
-└── gallery-*.jpg     # Изображения галереи
+├── logo.png          # Logo
+├── hero-bg.jpg       # Background image
+├── icon-heart.png    # Icons
+└── gallery-*.jpg     # Gallery images
 ```
 
-### 2. Обычное изображение с WebP fallback
+### 2. Regular Image with WebP Fallback / Звичайне зображення з WebP fallback
 
 ```html
 <img 
   src="/images/example.jpg" 
   data-webp="/images/example.webp"
-  alt="Пример изображения"
+  alt="Example image"
   loading="lazy"
 >
 ```
 
-### 2. Picture element (рекомендуется)
+### 3. Picture Element (Recommended) / Picture елемент (рекомендується)
 
 ```html
 <picture>
   <source srcset="/images/example.webp" type="image/webp">
-  <img src="/images/example.jpg" alt="Пример изображения" loading="lazy">
+  <img src="/images/example.jpg" alt="Example image" loading="lazy">
 </picture>
 ```
 
-### 3. Фоновое изображение
+### 4. Background Image / Фонове зображення
 
 ```html
 <div class="hero-section">
   <div class="hero-content">
-    <!-- Content / Контент -->
+    <!-- Content -->
   </div>
 </div>
 ```
@@ -140,84 +131,67 @@ public/images/
 }
 ```
 
-## 🎯 SCSS Миксины
+## 🎯 SCSS Mixins / SCSS міксини
 
-### 1. Фоновое изображение с WebP
+### 1. Background Image / Фонове зображення
 
 ```scss
 .my-element {
-  @include webp-bg-image('/images/background', 'jpg');
-  background-size: cover;
-  background-position: center;
+  @include bg-cover('/images/background.jpg');
 }
 ```
 
-### 2. Responsive фоновое изображение
+### 2. Background Image with Contain / Фонове зображення з contain
 
 ```scss
 .responsive-bg {
-  @include webp-responsive-bg('/images/bg', 'jpg', (
-    'phone': 'sm',
-    'tablet': 'md',
-    'desktop': 'lg'
-  ));
+  @include bg-contain('/images/bg.jpg');
+  background-size: contain;
 }
 ```
 
-### 3. Hero изображение
+### 3. Hero Image / Hero зображення
 
 ```scss
 .hero {
-  @include webp-hero-image('/images/hero', 'jpg', 100vh);
-  
-  &::before {
-    // Overlay для лучшей читаемости
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-  }
+  @include hero-bg('/images/hero.jpg', 100vh);
 }
 ```
 
-### 4. Логотип с WebP
+### 4. Simple Background Image / Просте фонове зображення
 
 ```scss
 .logo {
-  @include webp-logo('/images/logo', 'png', 200px, 80px);
+  @include bg-image('/images/logo.png');
+  background-size: 200px 80px;
+  background-repeat: no-repeat;
 }
 ```
 
-### 5. Иконки с WebP
+### 5. Icon Background / Фонове зображення іконки
 
 ```scss
 .icon {
-  @include webp-icon('/images/icon', 'png', 24px);
+  @include bg-image('/images/icon.png');
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
 }
 ```
 
 ## 🔧 JavaScript API
 
-### 1. Проверка поддержки WebP
+### 1. WebP Support Check / Перевірка підтримки WebP
 
 ```javascript
-import { isWebPSupported, isWebPSupportedSync } from './utils/webp.js';
+import { isWebPSupported } from './utils/webp.js';
 
-// Asynchronous check (recommended) / Асинхронна перевірка (рекомендується)
+// Asynchronous check / Асинхронна перевірка
 isWebPSupported().then(supported => {
   console.log('WebP supported:', supported);
 });
-
-// Synchronous check / Синхронна перевірка
-const supported = isWebPSupportedSync();
-console.log('WebP supported:', supported);
 ```
 
-### 2. Добавление класса поддержки
+### 2. Adding Support Class / Додавання класу підтримки
 
 ```javascript
 import { addWebPClass } from './utils/webp.js';
@@ -226,47 +200,18 @@ import { addWebPClass } from './utils/webp.js';
 addWebPClass('webp');
 ```
 
-### 3. Оптимизация изображений
+### 3. Manual WebP Class Management / Ручне керування WebP класами
 
 ```javascript
-import { optimizeImages } from './utils/webp.js';
+import { addWebPClass } from './utils/webp.js';
 
-// Optimizes all images with data-webp attribute / Оптимізує всі зображення з атрибутом data-webp
-optimizeImages('img[data-webp]');
+// Manual initialization with custom class name / Ручна ініціалізація з користувацьким ім'ям класу
+addWebPClass('webp-enabled');
 ```
 
-### 4. Создание оптимизированного picture элемента
+## 📱 Responsive Images / Адаптивні зображення
 
-```javascript
-import { createOptimizedPicture } from './utils/webp.js';
-
-const picture = createOptimizedPicture(
-  '/images/example.jpg',
-  '/images/example.webp',
-  'Описание изображения',
-  'my-image-class'
-);
-
-document.body.appendChild(picture);
-```
-
-### 5. Предзагрузка критических изображений
-
-```javascript
-import { preloadCriticalImages } from './utils/webp.js';
-
-const criticalImages = [
-  '/images/hero-bg.jpg',
-  '/images/logo.png',
-  '/images/featured-product.jpg'
-];
-
-preloadCriticalImages(criticalImages);
-```
-
-## 📱 Responsive изображения
-
-### 1. Адаптивные размеры
+### 1. Adaptive Sizes / Адаптивні розміри
 
 ```scss
 .responsive-image {
@@ -283,32 +228,33 @@ preloadCriticalImages(criticalImages);
 }
 ```
 
-### 2. Responsive WebP фоновые изображения
+### 2. Responsive Background Images / Адаптивні фонові зображення
 
 ```scss
 .adaptive-bg {
-  @include webp-responsive-bg('/images/bg', 'jpg', (
-    'phone': '320',
-    'tablet': '768',
-    'desktop': '1200'
-  ));
+  @include bg-cover('/images/bg.jpg');
   
-  background-size: cover;
-  background-position: center;
+  @include media('>=tablet') {
+    background-size: contain;
+  }
+  
+  @include media('>=desktop') {
+    background-size: cover;
+  }
 }
 ```
 
-## 🎨 Утилитарные классы
+## 🎨 Utility Classes / Утилітарні класи
 
-### 1. WebP поддержка
+### 1. WebP Support / WebP підтримка
 
 ```html
 <div class="webp-support">
-  Контент только для браузеров с поддержкой WebP
+  Content only for browsers with WebP support
 </div>
 
 <div class="no-webp-support">
-  Контент только для браузеров БЕЗ поддержки WebP
+  Content only for browsers WITHOUT WebP support
 </div>
 ```
 
@@ -318,63 +264,63 @@ preloadCriticalImages(criticalImages);
 <img src="image.jpg" class="lazy-image" loading="lazy">
 ```
 
-### 3. WebP изображения
+### 3. WebP Images / WebP зображення
 
 ```html
 <img src="image.jpg" data-webp="image.webp" class="webp-image" loading="lazy">
 ```
 
-## 🚀 Оптимизация производительности
+## 🚀 Performance Optimization / Оптимізація продуктивності
 
-### 1. Предзагрузка критических изображений
+### 1. Manual Image Preloading / Ручне попереднє завантаження зображень
 
 ```javascript
-// In main.js / В main.js
-const criticalImages = [
-  '/images/hero-bg.jpg',
-  '/images/logo.png'
-];
+// Manual image preloading / Ручне попереднє завантаження зображень
+const preloadImage = (src) => {
+  const img = new Image();
+  img.src = src;
+};
 
-preloadCriticalImages(criticalImages);
+// Preload critical images / Попереднє завантаження критичних зображень
+preloadImage('/images/bg.jpg');
+preloadImage('/images/logo-js.png');
 ```
 
-### 2. Lazy loading для некритических изображений
+### 2. Lazy Loading for Non-Critical Images / Ліниве завантаження для некритичних зображень
 
 ```html
 <img src="image.jpg" data-webp="image.webp" loading="lazy">
 ```
 
-### 3. Оптимизация качества
+### 3. Quality Optimization / Оптимізація якості
 
 Configure quality in `vite.config.js`:
-
-Налаштуйте якість в `vite.config.js`:
 
 ```javascript
 webp({
   sharpOptions: {
-    quality: 80,  // 0-100, рекомендуется 80-90
-    effort: 6     // 0-6, больше = лучше качество, медленнее
+    quality: 80,  // 0-100, recommended 80-90
+    effort: 6     // 0-6, higher = better quality, slower
   }
 })
 ```
 
-## 📊 Результаты оптимизации
+## 📊 Optimization Results / Результати оптимізації
 
-WebP обеспечивает:
+WebP provides:
 
-- **25-35% меньше размер** по сравнению с JPEG
-- **50-80% меньше размер** по сравнению с PNG
-- **Быстрее загрузка** страниц
-- **Лучший UX** для пользователей
-- **Экономия трафика** на мобильных устройствах
+- **25-35% smaller size** compared to JPEG
+- **50-80% smaller size** compared to PNG
+- **Faster page loading**
+- **Better UX** for users
+- **Traffic savings** on mobile devices
 
-## 🔍 Отладка
+## 🔍 Debugging / Відлагодження
 
-### 1. Проверка WebP поддержки
+### 1. WebP Support Check / Перевірка підтримки WebP
 
 ```javascript
-// In browser console / В консолі браузера
+// In browser console
 import('./js/utils/webp.js').then(webp => {
   webp.isWebPSupported().then(supported => {
     console.log('WebP supported:', supported);
@@ -382,42 +328,37 @@ import('./js/utils/webp.js').then(webp => {
 });
 ```
 
-### 2. Проверка классов на body
+### 2. Body Classes Check / Перевірка класів body
 
 ```javascript
-// Check for webp or no-webp classes / Перевірте наявність класів webp або no-webp
+// Check for webp or no-webp classes
 console.log(document.body.className);
 ```
 
-### 3. Проверка загруженных изображений
+### 3. Loaded Images Check / Перевірка завантажених зображень
 
 Open DevTools → Network → Img and check:
 - Are WebP files loading
+- Is fallback working correctly
 
-Відкрийте DevTools → Network → Img та перевірте:
-- Чи завантажуються WebP файли
-- Правильно ли работает fallback
-
-## 📝 Примеры
+## 📝 Examples / Приклади
 
 See the `src/examples/webp-examples.html` file for complete examples of using all WebP capabilities in the project.
-
-Дивіться файл `src/examples/webp-examples.html` для повних прикладів використання всіх можливостей WebP в проекті.
 
 ## 🛠️ Troubleshooting
 
 ### Problem: WebP not loading / Проблема: WebP не завантажується
-**Решение**: Проверьте пути к изображениям и убедитесь, что файлы существуют
+**Solution**: Check image paths and ensure files exist
 
 ### Problem: Fallback not working / Проблема: Fallback не працює
-**Решение**: Убедитесь, что оригинальные изображения доступны по указанным путям
+**Solution**: Ensure original images are available at specified paths
 
 ### Problem: Mixins not working / Проблема: Міксини не працюють
-**Решение**: Проверьте, что `@use 'base/webp' as *;` добавлен в `main.scss`
+**Solution**: Check that `@use 'base/webp' as *;` is added to `main.scss`
 
 ### Problem: JavaScript errors / Проблема: JavaScript помилки
-**Решение**: Убедитесь, что `initWebPSupport()` вызывается после загрузки DOM
+**Solution**: Ensure `initWebPSupport()` is called from `main.js`
 
 ---
 
-**Теперь ваш проект автоматически оптимизирует все изображения в WebP формат! 🚀**
+**Your project now automatically optimizes all images to WebP format! 🚀**
